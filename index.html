@@ -566,22 +566,7 @@ h2{color:#214c43}
 </div>
 
 
-<div class="welcome-cover" id="welcomeCover" aria-label="Wedding invitation opening">
-  <div class="cover-glow glow-one"></div><div class="cover-glow glow-two"></div>
-  <div class="cover-content">
-    <div class="cover-overline">YOU ARE CORDIALLY INVITED</div>
-    <div class="cover-flower">✳</div>
-    <div class="cover-monogram">R <span>&</span> S</div>
-    <div class="cover-names mr">चि. ऋतिकेश <span>आणि</span> चि. सौ. कां. सपना</div>
-    <div class="cover-rule"></div>
-    <p class="cover-date mr">२८ डिसेंबर २०२६</p>
-    <button class="open-invite" id="openInvite" type="button">
-      <span class="open-icon">✉</span> आमंत्रण उघडा <span class="open-arrow">↗</span>
-    </button>
-    <div class="cover-hint">TAP TO OPEN YOUR INVITATION</div>
-  </div>
-  <div class="cover-bottom">MADE WITH LOVE · 2026</div>
-</div>
+
 
 <header class="hero">
  <div class="hero-inner">
@@ -673,7 +658,6 @@ h2{color:#214c43}
    <a class="memory-card" href="https://www.instagram.com/reel/DfWJLy8iRQw/?fqnt=OG50ZXpkY2xneGh1" target="_blank" rel="noopener"><div class="memory-thumb"><span>🎬</span><small>REEL 02</small></div><div class="memory-info"><strong>Our favourite reel</strong><span>Watch on Instagram ↗</span></div></a>
    <a class="memory-card" href="https://www.instagram.com/reel/DfmwMfIh3LR/?knvt=ZXQybW94Mm1xbzU2" target="_blank" rel="noopener"><div class="memory-thumb"><span>🌟</span><small>REEL 03</small></div><div class="memory-info"><strong>Another memory together</strong><span>Watch on Instagram ↗</span></div></a>
   </div>
-  <p class="small" style="text-align:center;color:#766b76">Thumbnail placeholders are used for now. Share the six post images or screenshots and I can replace these with your actual photos.</p>
  </div>
 </section>
 <section>
@@ -702,31 +686,6 @@ tick();setInterval(tick,1000);
 
 <script>
 (() => {
- const cover = document.getElementById('welcomeCover');
- const openButton = document.getElementById('openInvite');
- if (cover && openButton) {
-   openButton.addEventListener('click', () => {
-     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-     if (!reduced) {
-       const symbols = ['✦','✧','❋','•','✺'];
-       for (let i=0;i<22;i++) {
-         const bit=document.createElement('span');
-         bit.className='sparkle';
-         bit.textContent=symbols[i%symbols.length];
-         bit.style.left=(window.innerWidth/2 + (Math.random()-.5)*100)+'px';
-         bit.style.top=(window.innerHeight/2 + (Math.random()-.5)*60)+'px';
-         bit.style.setProperty('--sx',((Math.random()-.5)*window.innerWidth*.8)+'px');
-         bit.style.setProperty('--sy',((Math.random()-.5)*window.innerHeight*.7)+'px');
-         document.body.appendChild(bit);
-         setTimeout(()=>bit.remove(),1300);
-       }
-     }
-     cover.classList.add('is-opening');
-     document.body.style.overflow='';
-     setTimeout(()=>cover.remove(),950);
-   });
- }
- document.body.style.overflow='hidden';
  const revealTargets=document.querySelectorAll('main section, .countdown, .footer, .hero-inner');
  revealTargets.forEach(el=>el.classList.add('reveal'));
  const textTargets=document.querySelectorAll('#invitation h2,#invitation .intro,#invitation .person-detail,#invitation .invite-card>p,.event h3,.event p,#memories h2,#memories .intro,.location-panel h3,.location-panel p');
@@ -759,6 +718,8 @@ tick();setInterval(tick,1000);
  const pages=[1,2,3,4].map(n=>document.getElementById('journeyPage'+n));
  const dots=root.querySelectorAll('.progress-dot');
  let guest='', recipient='both';
+ const answeredGroups=new Set();
+ const autoAdvanced=new Set();
  const go=(n)=>{
   pages.forEach((p,i)=>p.classList.toggle('active',i===n-1));
   dots.forEach((d,i)=>d.classList.toggle('active',i===n-2));
@@ -784,7 +745,7 @@ tick();setInterval(tick,1000);
  };
  const finish=()=>{
   root.classList.add('dismissed');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow='';
   setTimeout(()=>root.remove(),750);
  };
  root.querySelector('.journey-progress').style.display='none';
@@ -817,6 +778,19 @@ tick();setInterval(tick,1000);
    box.classList.remove('answer-correct');
    void box.offsetWidth;
    if(ok){box.classList.add('answer-correct');celebrate(answer);}
+   answeredGroups.add(group);
+   const funGroups=['fun1','fun2','fun3','fun4','fun5'];
+   const dateGroups=['date1','date2','date3'];
+   if(funGroups.every(q=>answeredGroups.has(q)) && !autoAdvanced.has('fun')){
+    autoAdvanced.add('fun');
+    box.textContent += ' सर्व प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
+    setTimeout(()=>{if(root.isConnected && pages[1].classList.contains('active')) go(3);},1250);
+   }
+   if(dateGroups.every(q=>answeredGroups.has(q)) && !autoAdvanced.has('date')){
+    autoAdvanced.add('date');
+    box.textContent += ' सर्व प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
+    setTimeout(()=>{if(root.isConnected && pages[2].classList.contains('active')) go(4);},1250);
+   }
   }
   const rec=e.target.closest('[data-recipient]');
   if(rec){
