@@ -333,6 +333,9 @@ h2{color:#214c43}
 .journey-next:not(:disabled):hover{background:#dc806b;transform:translateY(-2px)}
 .journey-next span{margin-left:10px;color:#f5d28a}
 .journey-back{display:block;margin:13px auto 0;border:0;background:transparent;color:#819087;font:13px 'Tiro Devanagari Marathi',serif;cursor:pointer}
+.journey-skip{display:block;margin:14px auto 0;padding:7px 12px;border:1px solid #d7e2d5;border-radius:999px;background:transparent;color:#84948a;font:12px 'Tiro Devanagari Marathi',serif;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.journey-skip:hover{background:#edf4ec;border-color:#dc806b;color:#d47761}
+.journey-skip:focus-visible{outline:2px solid #dc806b;outline-offset:3px}
 .quiz-feedback{min-height:27px;margin-top:12px;font:14px 'Tiro Devanagari Marathi',serif;color:#2d7468}
 .journey-footnote{margin-top:25px;font:9px 'DM Sans',sans-serif;letter-spacing:.18em;color:#9aa79b}
 @keyframes page-arrive{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
@@ -462,6 +465,7 @@ h2{color:#214c43}
    </div>
    <button class="journey-next" id="journeyStart" disabled>प्रवास सुरू करा <span>→</span></button>
    <div class="journey-footnote">थोडी मजा · खूप साऱ्या शुभेच्छा</div>
+   <button class="journey-skip" id="skipWelcome" type="button">हा टप्पा वगळा · पुढे जा →</button>
   </div>
 
   <div class="journey-progress" aria-label="तीन टप्पे">
@@ -506,6 +510,7 @@ h2{color:#214c43}
     </div><div class="experience-result" id="feedback-fun5">एक पर्याय निवडा.</div>
    </div>
    <button class="journey-next" id="toDates">पुढील टप्पा <span>→</span></button>
+   <button class="journey-skip" id="skipFun" type="button">प्रश्न वगळा · पुढे जा →</button>
    <button class="journey-back" id="backWelcome">← मागे जा</button>
   </div>
 
@@ -538,6 +543,7 @@ h2{color:#214c43}
     </div><div class="experience-result" id="feedback-date3">एक पर्याय निवडा.</div>
    </div>
    <button class="journey-next" id="toMessage">पुढील टप्पा <span>→</span></button>
+   <button class="journey-skip" id="skipDates" type="button">प्रश्न वगळा · पुढे जा →</button>
    <button class="journey-back" id="backNames">← मागील टप्पा</button>
   </div>
 
@@ -548,14 +554,14 @@ h2{color:#214c43}
    <p class="journey-copy">तुमच्या मनातलं प्रेम, शुभेच्छा किंवा एखादी गोड आठवण आम्हाला लिहून पाठवा.</p>
    <div class="experience-panel">
     <label class="experience-label">तुमचे नाव</label><input class="experience-input" id="wishName" placeholder="तुमचे नाव">
-    <div class="experience-note" style="margin:4px 0 12px;color:#31584d;font-family:'Tiro Devanagari Marathi',serif">तुमच्या शुभेच्छा थेट ऋतिकेशकडे पाठवा 🤵</div>
+    <div class="experience-note" style="margin:4px 0 12px;color:#31584d;font-family:'Tiro Devanagari Marathi',serif">तुमच्या शुभेच्छा पाठवा</div>
     <label class="experience-label">तुमचा खास संदेश</label><textarea class="experience-input experience-textarea" id="wishText" placeholder="मनापासून काहीतरी लिहा..."></textarea>
     <button class="experience-action" id="sendWish" type="button">WhatsApp वर शुभेच्छा पाठवा ↗</button>
     <div class="experience-note" id="wishNote">WhatsApp उघडल्यानंतर संदेश तपासा आणि स्वतः Send दाबा. संदेश आपोआप पाठवला जाणार नाही.</div>
    </div>
    <button class="journey-next" id="showInvitation">आमंत्रण पाहा <span>✦</span></button>
    <button class="journey-back" id="backDates">← मागील टप्पा</button>
-   <button class="journey-back" id="skipMessage">संदेश नको, थेट आमंत्रण पाहायचे आहे</button>
+   <button class="journey-skip" id="skipMessage" type="button">हा टप्पा वगळा · आमंत्रण पाहा →</button>
   </div>
  </div>
 </div>
@@ -764,6 +770,9 @@ tick();setInterval(tick,1000);
   document.getElementById('journeyStart').disabled=false;
  }));
  document.getElementById('journeyStart').addEventListener('click',()=>go(2));
+ document.getElementById('skipWelcome').addEventListener('click',()=>go(2));
+ document.getElementById('skipFun').addEventListener('click',()=>go(3));
+ document.getElementById('skipDates').addEventListener('click',()=>go(4));
  document.getElementById('backWelcome').addEventListener('click',()=>go(1));
  toDatesButton.addEventListener('click',()=>{if(funGroups.every(q=>answeredGroups.has(q)))go(3);});
  document.getElementById('backNames').addEventListener('click',()=>go(2));
