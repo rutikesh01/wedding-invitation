@@ -1,179 +1,844 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="mr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#4b1020">
-<meta name="description" content="ऋतिकेश आणि सपना यांच्या शुभविवाहाचे सस्नेह निमंत्रण.">
-<title>शुभविवाह | ऋतिकेश ♥ सपना</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#241b36">
+<title>शुभविवाह | ऋतिकेश & सपना</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
-:root{--wine:#541020;--deep:#2b0912;--red:#8d1d2f;--gold:#c99535;--gold2:#e7c36f;--cream:#fff4df;--paper:#fff3dc;--ink:#4b1720;--muted:#75504a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#783042,#3a0c18 48%,#21070f 100%);color:var(--cream);font-family:'Tiro Devanagari Marathi',Georgia,serif;overflow-x:hidden}
-button,a{font:inherit}button{cursor:pointer}.stars{position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#f4d999 1px,transparent 1.5px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 86%);z-index:0}
-.petal{position:fixed;top:-30px;z-index:8;pointer-events:none;color:#efc96e;animation:fall linear forwards;text-shadow:0 2px 8px #2a0811}
-@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(620deg);opacity:0}}
-.screen{display:none;min-height:100vh;position:relative;z-index:1;padding:28px 15px;place-items:center}.screen.active{display:grid;animation:screenIn .65s ease both}
-@keyframes screenIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.shell{width:min(100%,690px);position:relative;text-align:center;padding:clamp(24px,5vw,46px);background:linear-gradient(155deg,rgba(109,31,52,.97),rgba(43,8,18,.98));border:1px solid rgba(231,195,111,.92);outline:1px solid rgba(231,195,111,.25);outline-offset:6px;box-shadow:0 24px 90px #120208;border-radius:5px;overflow:hidden}
-.shell:before,.shell:after{position:absolute;content:"✦";font-size:23px;color:var(--gold2);top:12px}.shell:before{left:14px}.shell:after{right:14px}
-.kicker{font:600 10px 'DM Sans',Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold2)}
-h1,h2,h3,p{margin-top:0}h1{font-size:clamp(35px,8vw,58px);font-weight:normal;color:#f2d894;line-height:1.22;margin:15px 0;text-shadow:0 3px 25px #1b050d}
-h2{font-size:clamp(24px,5.5vw,36px);font-weight:normal;color:#efd18c;line-height:1.35;margin:12px 0}
-p{font-size:16px;line-height:1.95;color:#f3e2c6;margin:12px auto}.sub{font:12px 'DM Sans',Arial,sans-serif;letter-spacing:1.2px;color:#ddc49a}.orn{color:var(--gold2);letter-spacing:8px;font-size:22px;margin:19px 0}
-.cta{border:1px solid #f8dfa4;color:#35101a;background:linear-gradient(135deg,#f8e4ae,#c29249);padding:13px 24px;border-radius:3px;font-weight:700;box-shadow:0 8px 22px #18050b80;transition:.2s;margin:7px 4px}.cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
-.ghost{border:1px solid #bd965e;color:#f8e8ca;background:#3a101d;padding:12px 18px;border-radius:3px;margin:6px 3px}.ghost:hover{background:#6b2b3d}
-.mandala{width:142px;height:142px;margin:12px auto 18px;display:grid;place-items:center;position:relative;border:1px solid #dcb878;border-radius:50%;box-shadow:0 0 0 7px #dcb87816,0 0 36px #dcb87820}.mandala:before,.mandala:after{content:"";position:absolute;inset:9px;border:1px dashed #e4c58b;border-radius:50%}.mandala:after{inset:-7px;border:1px solid #dcb87855}
-.ganesh-symbol{font-size:52px;color:#f1d18d;filter:drop-shadow(0 5px 8px #21070f)}
-.envelope{width:180px;height:120px;margin:25px auto 22px;position:relative;background:linear-gradient(145deg,#e9ca8a,#b37c38);filter:drop-shadow(0 12px 13px #17040a)}
-.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(35deg,transparent 49%,#f7e5b3 50%,transparent 51%),linear-gradient(-35deg,transparent 49%,#d5ad68 50%,transparent 51%)}
-.envelope:after{content:"श्री";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:#651b2d;color:#f6d990;border:1px solid #f5dc9e;font-size:18px}
-.ribbon{height:2px;width:110px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:20px auto}
-.progress-wrap{margin:25px auto 18px;max-width:430px}.progress-meta{display:flex;justify-content:space-between;font:11px 'DM Sans',Arial,sans-serif;color:#e7d1a9;letter-spacing:1px;margin-bottom:8px}.track{height:5px;background:#6e3a45;border-radius:9px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#b9833d,#f8e4aa);transition:width .55s ease;border-radius:9px}
-.clue-icon{font-size:45px;filter:drop-shadow(0 5px 12px #21070f);margin:10px 0}.prompt{font-size:clamp(22px,5vw,30px);color:#f4dda6;line-height:1.55;margin:8px auto}.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 10px}
-.choice{min-height:105px;border:1px solid #bd9355;background:linear-gradient(155deg,#6c2537,#3c111f);color:#fff0d1;border-radius:5px;padding:12px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;transition:.2s}.choice .emoji{font-size:28px}.choice span:last-child{font-size:14px;line-height:1.45}.choice:hover,.choice:focus-visible{transform:translateY(-4px);background:linear-gradient(155deg,#8a3749,#4d1425);outline:1px solid #f0d18d}.choice:disabled{opacity:.65;cursor:default}
-.feedback{min-height:28px;font-size:14px;color:#f2d48f;margin:10px 0}.hint{font:12px 'DM Sans',Arial,sans-serif;color:#d9c29b}
-.invitation{width:min(100%,650px);position:relative;overflow:hidden;color:var(--ink);background:
- radial-gradient(circle at 13% 18%,#f9eacb 0 1px,transparent 2px),
- radial-gradient(circle at 87% 75%,#f4e2bf 0 1px,transparent 2px),
- linear-gradient(135deg,#fff8e9 0%,#fff0d2 48%,#fff8e9 100%);
- background-size:27px 27px,31px 31px,auto;border:2px solid #c79b49;outline:1px solid #e2c173;outline-offset:-8px;box-shadow:0 20px 60px #16040a9c;padding:clamp(20px,4vw,36px) clamp(13px,4vw,34px) 12px;margin:26px auto 0}
-.invitation:before{content:"";position:absolute;inset:8px;border:1px solid #dfbd77;pointer-events:none}
-.invitation>*{position:relative;z-index:1}
-.motif{position:absolute!important;z-index:0!important;background-image:url('motifs-clean.webp');background-size:270px 145px;background-repeat:no-repeat;pointer-events:none}
-.ganesh-art{width:65px;height:74px;position:relative!important;margin:5px auto 7px;background-position:0 0;filter:drop-shadow(0 5px 4px #a66d2633);animation:appear .9s ease both}
-.wedding-banner{display:flex;align-items:center;justify-content:center;gap:5px;margin:10px auto 18px;position:relative;z-index:2}
-.elephant{position:relative!important;top:auto!important;left:auto!important;right:auto!important;flex:0 0 62px;width:62px;height:60px;background-position:-70px 0}
-.elephant.left{background-position:-70px 0}.elephant.right{background-position:-138px 0}
-.wedding-banner .marriage-title{max-width:none;flex:0 1 auto;margin:0}
-@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
-@keyframes appear{from{opacity:0;transform:translateY(14px) scale(.92)}to{opacity:1;transform:none}}
-.reveal{opacity:0;animation:rise .85s cubic-bezier(.16,1,.3,1) forwards}
-@keyframes rise{from{opacity:0;transform:translateY(18px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
-.reveal.r1{animation-delay:.12s}.reveal.r2{animation-delay:.32s}.reveal.r3{animation-delay:.5s}.reveal.r4{animation-delay:.68s}.reveal.r5{animation-delay:.86s}
-.inv-kicker{font-size:13px;color:#a02735;letter-spacing:.8px}.couple-names{font-size:clamp(30px,7vw,48px);font-weight:normal;line-height:1.25;color:#711927;margin:10px 0 18px;text-shadow:0 1px #fff}
-.name-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:6px auto 16px;max-width:570px}
-.name-card{padding:12px 9px;border-top:1px solid #dcb969;border-bottom:1px solid #dcb969;background:#fff8e8aa}
-.name-card h3{font-size:clamp(22px,4.8vw,29px);color:#8b1c2d;font-weight:normal;margin:2px 0 7px}
-.name-card p{font-size:13px;line-height:1.8;color:#53262a;margin:0}
-.marriage-title{position:relative;background:linear-gradient(120deg,#520b1a,#83172b,#4b0a17);border:2px solid #e3b954;border-radius:50px;padding:12px 36px;color:#f4d77f;font-size:clamp(29px,7vw,43px);width:max-content;max-width:80%;margin:12px auto 20px;box-shadow:0 6px 15px #6c3a252e,inset 0 0 0 3px #5b1220}
-.marriage-title:before,.marriage-title:after{content:"✦";position:absolute;top:50%;transform:translateY(-50%);color:#efce79;font-size:19px}.marriage-title:before{left:12px}.marriage-title:after{right:12px}
-.ceremony-meta{font-size:13px;color:#78413a;margin:4px 0 8px}
-.date-block{padding:15px 10px;margin:12px auto 17px;border-top:1px solid #c99b48;border-bottom:1px solid #c99b48;max-width:540px;background:linear-gradient(90deg,transparent,#f6e5c6aa,transparent)}
-.date-label{font-size:13px;color:#8a3d32}.wedding-date{font-size:clamp(24px,5.6vw,34px);color:#a51f32;line-height:1.5;margin:5px 0;animation:dateGlow 3s ease-in-out infinite}
-@keyframes dateGlow{0%,100%{text-shadow:0 0 0 #d8a94c}50%{text-shadow:0 0 13px #d9b46277}}
-.time-line{font-size:18px;color:#64252a;margin:4px 0}.invite-message{font-size:14px;line-height:1.9;color:#52292a;max-width:530px;margin:10px auto}
-.event-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:550px;margin:15px auto}
-.event-card{position:relative;padding:13px 9px 12px;border:1px solid #d6b46d;background:linear-gradient(145deg,#fff9eb,#f7e7c9);min-height:135px}
-.event-card .event-icon{display:block;margin:0 auto 5px;width:62px;height:42px;background-image:url('motifs-clean.webp');background-repeat:no-repeat;background-size:270px 145px;background-position:-207px 0}
-.event-card h3{font-size:19px;color:#8b1d30;margin:4px 0}.event-card p{font-size:13px;line-height:1.7;color:#583034;margin:4px 0}
-.venue{max-width:540px;margin:17px auto 12px;padding:15px 12px;background:linear-gradient(90deg,transparent,#f5e4c6,#fff6e3,#f5e4c6,transparent);border-top:1px solid #d3ad61;border-bottom:1px solid #d3ad61}
-.venue h3{font-size:22px;color:#8b1b2e;margin:3px 0 6px}.venue p{font-size:14px;line-height:1.8;color:#4e2528;margin:0}
-.map-link{display:inline-block;margin-top:8px;color:#8c1c31;border:1px solid #c49a4f;padding:8px 14px;border-radius:2px;text-decoration:none;font:600 12px 'DM Sans',Arial,sans-serif}
-.map-link:hover{background:#f0dfbc}
-.invokers{max-width:540px;margin:15px auto 8px;padding:12px;border-top:1px solid #d0a85a;border-bottom:1px solid #d0a85a}
-.invokers h3{font-size:20px;color:#8a1d2f;margin:0 0 8px}.invokers p{font-size:13px;line-height:1.85;color:#54282d;margin:0}
-.procession{width:150px;height:45px;max-width:78%;margin:12px auto 0;position:relative!important;background-position:-70px -90px;opacity:.98}
-.couple-photo-wrap{position:relative;width:min(100%,500px);margin:8px auto 0;padding:0 5px;isolation:isolate}
-.couple-photo{display:block;width:91%;height:auto;max-height:390px;object-fit:contain;object-position:center bottom;margin:0 auto;mask-image:radial-gradient(ellipse 76% 88% at 50% 50%,#000 62%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 76% 88% at 50% 50%,#000 62%,transparent 100%);filter:saturate(.88) contrast(.97);mix-blend-mode:multiply;opacity:.96}
-.photo-caption{font-size:14px;color:#8c5b43;margin:-7px auto 8px}
-.invitation-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:18px auto 4px;max-width:600px}
-.link-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #d3b16e;color:#fff0d1;background:#3d101e;padding:11px 15px;border-radius:3px;font:13px 'DM Sans',Arial,sans-serif}
-.link-btn:hover{background:#702a3a}
-.footer-note{font:11px 'DM Sans',Arial,sans-serif;color:#e6d2ac;line-height:1.8;margin-top:20px}
-@media(max-width:520px){.choices{grid-template-columns:1fr;gap:8px}.choice{min-height:0;flex-direction:row;justify-content:flex-start;text-align:left;padding:11px 15px}.choice .emoji{width:38px}.name-grid,.event-row{grid-template-columns:1fr;gap:9px}.name-card{padding:10px 8px}.wedding-banner{gap:3px}.elephant{flex:0 0 48px;width:48px;height:47px;background-size:216px 116px}.elephant.left{background-position:-56px 0}.elephant.right{background-position:-110px 0}.wedding-banner .marriage-title{padding:8px 16px;font-size:clamp(21px,5.7vw,28px)}.ganesh-art{width:55px;height:63px;background-size:230px 124px;background-position:0 0}.event-card .event-icon{width:53px;height:36px;background-size:230px 124px;background-position:-176px 0}.procession{width:128px;height:38px;background-size:230px 124px;background-position:-60px -76px}.couple-photo{max-height:350px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-@media print{body{background:white}.stars,#welcome,#clues,.invitation-actions,.footer-note{display:none!important}#final{display:block!important;padding:0}.shell{box-shadow:none;background:white;border:0;outline:0;padding:0}.invitation{box-shadow:none}.couple-photo-wrap{max-width:340px}}
+:root{--ink:#241b36;--plum:#38254a;--gold:#c99b4a;--cream:#fbf5e9;--muted:#766b76;--rose:#a65e62}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans','Tiro Devanagari Marathi',sans-serif}
+.mr{font-family:'Tiro Devanagari Marathi',serif}
+.hero{min-height:100svh;display:grid;place-items:center;padding:26px 18px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#594166 0,#30223f 48%,#20182e 100%);color:#fff8e9;text-align:center}
+.hero:before,.hero:after{content:"";position:absolute;width:240px;height:240px;border:1px solid #c99b4a55;transform:rotate(45deg);pointer-events:none}
+.hero:before{top:-155px;left:-115px}.hero:after{bottom:-165px;right:-115px}
+.hero-inner{width:min(100%,760px);position:relative;z-index:1;border:1px solid #d7b66b88;padding:clamp(28px,7vw,64px) 22px;background:#ffffff08;backdrop-filter:blur(3px)}
+.eyebrow{letter-spacing:.24em;text-transform:uppercase;color:#e6c982;font-size:11px}
+.ganesh{font-size:19px;color:#e8c981;margin:16px 0 10px}
+.hero h1{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:clamp(42px,9vw,78px);line-height:1.25;margin:10px 0}
+.names{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(25px,5vw,39px);color:#f0d79c;margin:16px 0}
+.amp{font-family:Georgia,serif;color:#d5ad63;font-style:italic;font-size:26px}
+.hero-meta{font-family:'Tiro Devanagari Marathi',serif;font-size:17px;line-height:1.9;color:#f4e8d3}
+.rule{width:76px;height:1px;background:var(--gold);margin:23px auto}
+.scroll{display:inline-block;margin-top:25px;color:#f0d79c;text-decoration:none;border:1px solid #d5ad63;padding:11px 22px;border-radius:30px;font-size:13px;letter-spacing:.05em}
+.elephants{display:flex;justify-content:center;align-items:center;gap:18px;margin:20px 0 0;color:#e4c17c}
+.elephants span{font-size:27px;opacity:.85}.elephants i{width:42px;height:1px;background:#c99b4a88}
+section{padding:76px 20px}.wrap{width:min(100%,920px);margin:auto}.section-kicker{text-align:center;color:var(--rose);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+h2{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;text-align:center;font-size:clamp(29px,5vw,43px);margin:10px 0 15px}
+.intro{text-align:center;max-width:640px;margin:0 auto;color:var(--muted);line-height:1.9;font-family:'Tiro Devanagari Marathi',serif;font-size:17px}
+.invite-card{margin:35px auto 0;max-width:680px;padding:34px 26px;border:1px solid #d8c59e;background:#fffaf1;text-align:center;box-shadow:0 16px 45px #33213a0c;position:relative}
+.invite-card:before{content:"✦";position:absolute;top:12px;left:50%;transform:translateX(-50%);color:var(--gold)}
+.invite-card p{font-family:'Tiro Devanagari Marathi',serif;line-height:2;font-size:17px;margin:10px 0}
+.events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:35px}
+.event{background:#fffaf1;border:1px solid #e3d5bb;padding:26px 22px;text-align:center}
+.event .symbol{font-size:28px}.event h3{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:24px;margin:12px 0 5px}.event p{color:var(--muted);line-height:1.8;margin:0}
+.date{font-size:18px;color:var(--rose);font-weight:600}
+.countdown{background:var(--plum);color:#fff6e8;text-align:center;padding:58px 18px}
+.count-grid{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:26px auto 0}
+.count-box{min-width:76px;padding:15px 12px;border:1px solid #c99b4a88;background:#ffffff08}
+.count-box strong{display:block;font-size:30px;font-weight:500;color:#f0d79c}.count-box span{font-size:11px;color:#e7d9c5}
+.location{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;margin-top:34px}
+.location-panel{padding:28px;background:#fffaf1;border:1px solid #e3d5bb}
+.location-panel h3{font-family:'Tiro Devanagari Marathi',serif;font-size:24px;font-weight:400;margin:0 0 12px}
+.location-panel p{color:var(--muted);line-height:1.9;margin:0 0 18px}
+.map-link,.action{display:inline-block;text-decoration:none;background:var(--ink);color:#fff5e4;padding:12px 18px;border-radius:2px;font-size:13px;border:0;cursor:pointer}
+.map-art{min-height:220px;background:linear-gradient(135deg,#e9ddc5,#f8efdf);display:grid;place-items:center;text-align:center;border:1px solid #e3d5bb;color:var(--plum);padding:20px}
+.map-art .pin{font-size:45px}.map-art p{font-family:'Tiro Devanagari Marathi',serif;font-size:20px;line-height:1.6}
+.footer{background:#20182e;color:#eee0c9;text-align:center;padding:48px 18px}.footer .names{font-size:27px}.footer p{font-family:'Tiro Devanagari Marathi',serif;line-height:1.8;color:#cdbd9f}
+.small{font-size:12px;color:#a99a85;margin-top:25px}
+@media(max-width:650px){.events,.location{grid-template-columns:1fr}.hero-inner{padding:34px 16px}.hero-meta{font-size:15px}section{padding:60px 18px}}
+@media(prefers-reduced-motion:no-preference){.hero-inner{animation:rise .9s ease both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}}
+.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.memory-card{display:block;text-decoration:none;color:var(--ink);background:#fffaf1;border:1px solid #e3d5bb;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.memory-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #33213a18}
+.memory-thumb{aspect-ratio:4/3;background:linear-gradient(145deg,#493451,#9b6b65 58%,#d6b979);display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff5e4;position:relative}
+.memory-thumb span{font-size:48px;filter:drop-shadow(0 3px 8px #241b3666)}
+.memory-thumb small{position:absolute;left:12px;bottom:10px;letter-spacing:.18em;font-size:10px;color:#fff2d9}
+.memory-info{padding:15px 16px;display:flex;flex-direction:column;gap:7px}
+.memory-info strong{font-family:'Tiro Devanagari Marathi',serif;font-weight:400;font-size:17px}
+.memory-info span{font-size:11px;color:var(--rose)}
+@media(max-width:650px){.memory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.memory-info{padding:12px}.memory-info strong{font-size:15px}}
+
+/* --- refined editorial wedding theme --- */
+:root{--ink:#28221e;--plum:#3b2b2b;--gold:#b58a4a;--cream:#f8f4ec;--muted:#776e64;--rose:#986c60}
+body{background:#f8f5ef;color:var(--ink);font-family:'DM Sans','Tiro Devanagari Marathi',sans-serif;letter-spacing:.005em}
+.hero{min-height:100svh;background:linear-gradient(135deg,#211d1a 0%,#3a2c2a 52%,#25201e 100%);padding:34px 18px}
+.hero:before,.hero:after{width:310px;height:310px;border-color:#c6a66a35;transform:rotate(45deg)}
+.hero-inner{max-width:820px;border:1px solid #c6a66a99;background:linear-gradient(145deg,#ffffff0b,#ffffff03);padding:clamp(34px,7vw,76px) 28px;box-shadow:0 25px 90px #0003}
+.eyebrow{font-size:10px;letter-spacing:.3em;color:#d9bd86}
+.ganesh{font-size:21px;color:#e3c58b}
+.hero h1{font-size:clamp(43px,8.8vw,82px);line-height:1.19;letter-spacing:-.025em;margin:18px 0}
+.names{font-size:clamp(28px,5.5vw,43px);letter-spacing:.015em;color:#f0d9ad}
+.amp{font-size:30px;color:#c9a56a}
+.hero-meta{font-size:16px;line-height:2.05;color:#e8ddca}
+.rule{width:92px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.scroll{border-color:#c6a66a;color:#f0d9ad;padding:12px 25px;transition:.2s}
+.scroll:hover{background:#c6a66a;color:#241d19}
+.elephants{opacity:.85;margin-top:25px}
+section{padding:clamp(58px,8vw,96px) 20px}
+.section-kicker{font-size:10px;letter-spacing:.25em;color:#98734b}
+h2{font-size:clamp(30px,5vw,45px);letter-spacing:-.015em;color:#352a27;margin:12px 0 18px}
+.intro{font-size:17px;line-height:2;color:#766c61;max-width:660px}
+.invite-card{background:#fffdf8;border:1px solid #e4d8c5;box-shadow:0 18px 55px #33251a0b;padding:clamp(28px,5vw,48px);max-width:720px}
+.invite-card:before{color:#b58a4a}
+.invite-card p{line-height:2.1}
+.events{gap:18px;margin-top:42px}
+.event{background:#fffdf8;border:1px solid #e7ddcd;padding:30px 24px;transition:transform .2s,box-shadow .2s}
+.event:hover{transform:translateY(-3px);box-shadow:0 14px 35px #33251a10}
+.event .symbol{font-size:26px}
+.event h3{font-size:25px;color:#493735}
+.date{color:#946c55}
+.countdown{background:linear-gradient(135deg,#2b2321,#45312d);padding:72px 18px}
+.countdown h2{color:#fff8ed}
+.count-box{min-width:86px;padding:17px 14px;border:1px solid #c6a66a77;background:#ffffff08;border-radius:2px}
+.count-box strong{font-family:'DM Sans',sans-serif;font-size:32px;color:#e7ca94;font-variant-numeric:tabular-nums}
+.count-box span{font-family:'Tiro Devanagari Marathi',serif;font-size:12px;color:#e2d4c0}
+.location{gap:24px}
+.location-panel{background:#fffdf8;border:1px solid #e7ddcd;padding:32px}
+.location-panel h3{color:#493735}
+.map-link,.action{background:#3b2b2b;color:#fff8ed;padding:13px 20px;transition:background .2s,transform .2s}
+.map-link:hover,.action:hover{background:#75564a;transform:translateY(-1px)}
+.map-art{background:radial-gradient(circle at 50% 35%,#f9f0df,#e9ddc9);border:1px solid #e2d3bc}
+.memory-grid{gap:18px;margin-top:27px}
+.memory-card{background:#fffdf8;border:1px solid #e5dac9;box-shadow:0 8px 24px #34251b08;transition:transform .25s,box-shadow .25s}
+.memory-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #34251b18}
+.memory-thumb{background:linear-gradient(145deg,#493a35,#8f6d5d 60%,#c5a879);aspect-ratio:4/3}
+.memory-thumb span{font-size:43px}
+.memory-info{padding:17px 18px}
+.memory-info strong{font-size:18px;color:#44332e}
+.memory-info span{font-size:11px;letter-spacing:.04em;color:#98704e}
+#memories{background:#f1ece3!important}
+#memories .invite-card{background:#fffdf8}
+.footer{background:#211c1a;color:#f4ead8;padding:58px 18px}
+.footer .names{color:#e6c58e}
+.footer p{color:#d0c1aa}
+.small{color:#a99a85}
+@media(max-width:650px){
+ .hero{padding:20px 14px}
+ .hero-inner{padding:34px 17px}
+ .hero-meta{font-size:14px}
+ .events{gap:12px}
+ .memory-grid{gap:11px}
+ .memory-info{padding:13px}
+ .memory-info strong{font-size:15px}
+ .location-panel{padding:25px}
+ .count-box{min-width:72px}
+}
+
+
+/* --- light, airy, elegant wedding palette --- */
+:root{--ink:#51483f;--plum:#76665b;--gold:#b79a6b;--cream:#fcfaf6;--muted:#887e73;--rose:#b58b83}
+body{background:#fcfaf6;color:#51483f}
+.hero{background:radial-gradient(ellipse at 50% 18%,#fffdf8 0%,#f4eee4 55%,#ebe2d5 100%);color:#554b42}
+.hero:before,.hero:after{border-color:#b79a6b35}
+.hero-inner{border:1px solid #cdbb9d;background:#ffffff70;box-shadow:0 22px 70px #8a76501a;backdrop-filter:blur(5px)}
+.eyebrow{color:#9b805b}
+.ganesh{color:#9e8057}
+.hero .mr[style*="color:#e6c982"]{color:#9e8057!important}
+.hero h1{color:#55483e}
+.names{color:#92734f}
+.amp{color:#b79a6b}
+.hero-meta{color:#74675b}
+.rule{background:linear-gradient(90deg,transparent,#b79a6b,transparent)}
+.scroll{color:#826b4e;border-color:#b79a6b}
+.scroll:hover{background:#b79a6b;color:#fff}
+.elephants{color:#a88c63}
+section{background:#fcfaf6}
+#memories{background:#f4efe7!important}
+.section-kicker{color:#a18461}
+h2{color:#5a4c41}
+.intro{color:#887d71}
+.invite-card{background:#fffefa;border-color:#e8dfd1;box-shadow:0 15px 45px #77654c0d}
+.invite-card p{color:#62564c}
+.event{background:#fffefa;border-color:#e8dfd1;box-shadow:0 8px 24px #77654c08}
+.event h3{color:#645247}
+.date{color:#a17d6d}
+.countdown{background:linear-gradient(135deg,#eee5d8,#e5d8c7);color:#51483f}
+.countdown h2{color:#51483f}
+.countdown .section-kicker{color:#92754f!important}
+.count-box{border-color:#c7b18e;background:#ffffff80}
+.count-box strong{color:#826a4b}
+.count-box span{color:#75695d}
+.location-panel{background:#fffefa;border-color:#e8dfd1}
+.location-panel h3{color:#645247}
+.map-art{background:radial-gradient(circle at 50% 35%,#fffdf8,#eee5d8);border-color:#e5d9c8}
+.map-link,.action{background:#8b7662;color:#fffdf8}
+.map-link:hover,.action:hover{background:#705c4d}
+.memory-card{background:#fffefa;border-color:#e8dfd1;box-shadow:0 7px 22px #77654c0a}
+.memory-thumb{background:linear-gradient(145deg,#d9cbb8,#bca58a 60%,#e8ddcb)}
+.memory-thumb span{filter:none;color:#fffdf8;text-shadow:0 2px 8px #74604a44}
+.memory-thumb small{color:#fffdf8}
+.memory-info strong{color:#625247}
+.memory-info span{color:#a17d6d}
+.footer{background:#eee6da;color:#5b5046;border-top:1px solid #e2d6c5}
+.footer .names{color:#92734f}
+.footer p{color:#75685b}
+.footer .mr[style*="color:#e6c982"]{color:#9e8057!important}
+.small{color:#928578}
+@media(max-width:650px){
+ .hero{background:radial-gradient(ellipse at 50% 18%,#fffdf8 0%,#f3ede3 100%)}
+ .hero-inner{background:#ffffff85}
+}
+
+
+/* === Fresh playful-luxe visual direction: jade, coral, marigold & porcelain === */
+:root{
+ --ink:#203b36;--plum:#174c45;--gold:#e8b95d;--cream:#f5f8f2;
+ --muted:#697b72;--rose:#dc806b;--jade:#2d7468;--coral:#e7836d;
+ --mint:#e8f1e9;--paper:#fffdf7;
+}
+html{scroll-behavior:smooth}
+body{background:#f5f8f2;color:#203b36;overflow-x:hidden}
+.hero{
+ color:#203b36;
+ background:
+  radial-gradient(ellipse at 12% 18%,#f9d9c8 0,transparent 28%),
+  radial-gradient(ellipse at 88% 78%,#d1e7d9 0,transparent 33%),
+  linear-gradient(135deg,#f7f5e9 0%,#e8f2e9 52%,#f8eee4 100%);
+}
+.hero:before,.hero:after{border:1px solid #2d74682b;width:330px;height:330px}
+.hero-inner{
+ border:1px solid #b8cfc0;background:#ffffff80;
+ box-shadow:0 28px 80px #315d4b16;border-radius:3px;
+ animation:hero-arrive 1.1s cubic-bezier(.2,.8,.2,1) both;
+}
+.eyebrow{color:#dc806b}
+.ganesh{color:#b18b45}
+.hero h1{color:#214c43}
+.names{color:#d47761}
+.amp{color:#2d7468}
+.hero-meta{color:#5c7167}
+.rule{background:linear-gradient(90deg,transparent,#e8b95d,transparent)}
+.scroll{background:#1f5b50;color:#fffdf7;border:0;border-radius:999px;box-shadow:0 8px 20px #1f5b5030}
+.scroll:hover{background:#dc806b;color:white;transform:translateY(-3px)}
+.elephants{color:#2d7468}
+.elephants i{background:#e8b95d}
+section{position:relative;background:#f8faf5}
+section[style*="background:#f2e9d9"],#memories{background:#edf4ed!important}
+.section-kicker{color:#d47761}
+h2{color:#214c43}
+.intro{color:#6d7d73}
+.invite-card{background:#fffdf7;border:1px solid #d9e4d8;border-radius:4px;box-shadow:0 20px 55px #315d4b0d}
+.invite-card:before{color:#e8b95d}
+.event{background:#fffdf7;border:1px solid #d9e4d8;border-radius:5px;box-shadow:0 12px 30px #315d4b0a}
+.event h3{color:#28594e}
+.event .symbol{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#f9e9dc}
+.date{color:#d47761}
+.countdown{background:linear-gradient(120deg,#174c45,#28695d 55%,#39796a);color:#fff}
+.countdown h2{color:#fff9ec}
+.countdown .section-kicker{color:#f3cb7c!important}
+.count-box{border:1px solid #ffffff55;background:#ffffff12;border-radius:8px;backdrop-filter:blur(8px)}
+.count-box strong{color:#f5d28a}
+.count-box span{color:#e4f0e8}
+.location-panel{background:#fffdf7;border:1px solid #d9e4d8;border-radius:5px;box-shadow:0 12px 30px #315d4b0a}
+.location-panel h3{color:#28594e}
+.map-art{background:radial-gradient(circle at 50% 30%,#fff8e8,#dcece0);border:1px solid #d9e4d8;border-radius:5px}
+.map-link,.action{background:#1f5b50;color:#fffdf7;border-radius:999px;box-shadow:0 7px 18px #1f5b5022}
+.map-link:hover,.action:hover{background:#dc806b;transform:translateY(-2px)}
+.memory-card{background:#fffdf7;border:1px solid #d9e4d8;border-radius:7px;box-shadow:0 10px 28px #315d4b0a}
+.memory-card:hover{transform:translateY(-7px) rotate(-.35deg);box-shadow:0 20px 42px #315d4b20}
+.memory-thumb{background:linear-gradient(140deg,#2d7468,#9fc6ad 58%,#f0bd78)}
+.memory-card:nth-child(2n) .memory-thumb{background:linear-gradient(140deg,#dc806b,#f1c6a8 60%,#f3d98f)}
+.memory-card:nth-child(3n) .memory-thumb{background:linear-gradient(140deg,#567b9a,#a8c8c2 60%,#e9c987)}
+.memory-info strong{color:#28594e}
+.memory-info span{color:#d47761}
+.footer{background:#173f3a;color:#eff7ec;border-top:5px solid #e8b95d}
+.footer .names{color:#f1ca80}
+.footer p{color:#d2e4d8}
+.small{color:#84958b}
+.welcome-cover{
+ position:fixed;inset:0;z-index:1000;display:grid;place-items:center;overflow:hidden;
+ background:radial-gradient(circle at 50% 40%,#fffdf5 0,#edf4e9 55%,#d9e9df 100%);
+ transition:opacity .9s ease,visibility .9s ease;
+}
+.welcome-cover:before,.welcome-cover:after{
+ content:"";position:absolute;width:min(72vw,560px);aspect-ratio:1;border:1px solid #d6b36d66;
+ transform:rotate(45deg);pointer-events:none;
+}
+.welcome-cover:before{left:-38%;top:-48%;border-radius:38%}
+.welcome-cover:after{right:-38%;bottom:-48%;border-radius:38%}
+.cover-glow{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;animation:float-glow 7s ease-in-out infinite alternate}
+.glow-one{width:240px;height:240px;background:#f6d8c7;top:9%;right:8%}
+.glow-two{width:300px;height:300px;background:#cce4d5;bottom:5%;left:5%;animation-delay:-3s}
+.cover-content{position:relative;z-index:1;text-align:center;width:min(90%,520px);padding:46px 24px 38px;border:1px solid #c8d9c8;background:#ffffff9c;box-shadow:0 28px 90px #446b501c;backdrop-filter:blur(10px)}
+.cover-overline{font-size:10px;letter-spacing:.28em;color:#d47761}
+.cover-flower{font-size:34px;color:#e8b95d;margin:19px 0 8px;animation:slow-spin 18s linear infinite}
+.cover-monogram{font:italic clamp(58px,12vw,82px)/1 Georgia,serif;color:#1f5b50;letter-spacing:-.08em}
+.cover-monogram span{font-size:.45em;color:#dc806b;vertical-align:middle;margin:0 8px}
+.cover-names{font-size:25px;color:#28594e;margin-top:18px}
+.cover-names span{color:#dc806b;font-size:16px}
+.cover-rule{height:1px;width:74px;background:#e8b95d;margin:22px auto}
+.cover-date{font-size:17px;color:#6b7b6f}
+.open-invite{margin-top:22px;border:0;border-radius:999px;background:#1f5b50;color:#fffdf7;padding:14px 24px;font:500 14px 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 10px 24px #1f5b5033;transition:transform .25s,background .25s,box-shadow .25s}
+.open-invite:hover{transform:translateY(-4px);background:#dc806b;box-shadow:0 14px 28px #dc806b44}
+.open-icon{margin-right:9px}.open-arrow{margin-left:12px;color:#f4d48d}
+.cover-hint{margin-top:17px;font-size:9px;letter-spacing:.2em;color:#829188}
+.cover-bottom{position:absolute;bottom:22px;font-size:9px;letter-spacing:.25em;color:#8a9b8e}
+.welcome-cover.is-opening{opacity:0;visibility:hidden;pointer-events:none}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.25,1)}
+.reveal.visible{opacity:1;transform:none}
+.sparkle{position:fixed;z-index:1001;pointer-events:none;color:#d7a94e;font-size:15px;animation:sparkle-out 1.2s ease-out forwards}
+@keyframes hero-arrive{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes float-glow{to{transform:translate(25px,-22px) scale(1.12)}}
+@keyframes slow-spin{to{transform:rotate(360deg)}}
+@keyframes sparkle-out{0%{opacity:0;transform:translate(0,0) scale(.4)}20%{opacity:1}100%{opacity:0;transform:translate(var(--sx),var(--sy)) scale(1.3)}}
+@media(max-width:650px){
+ .cover-content{padding:38px 17px 30px}
+ .cover-names{font-size:22px}
+ .hero-inner{border-radius:2px}
+ .memory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ .reveal{opacity:1;transform:none}
+}
+
+
+.couple-details{display:grid;grid-template-columns:1fr;gap:10px}
+.person-detail{padding:12px 4px}
+.person-detail p{font-family:'Tiro Devanagari Marathi',serif;font-size:16px;line-height:1.85;margin:5px 0;color:#51483f}
+.person-detail .person-name{font-size:25px;color:#d47761;margin:0 0 12px}
+@media(min-width:700px){.couple-details{grid-template-columns:1fr 1fr;gap:24px}.couple-details>p{display:none}.person-detail+ p{display:none}}
+
+
+/* Guest journey: two playful welcome screens before the invitation */
+.guest-journey{position:fixed;inset:0;z-index:1200;display:grid;place-items:center;overflow:auto;padding:24px 15px;background:
+ radial-gradient(circle at 15% 15%,#f8d9cc 0,transparent 28%),
+ radial-gradient(circle at 90% 85%,#cde5d7 0,transparent 32%),
+ linear-gradient(135deg,#fff9ed,#e9f2e9 58%,#fff1e7);transition:opacity .7s ease,visibility .7s ease}
+.guest-journey.dismissed{opacity:0;visibility:hidden;pointer-events:none}
+.journey-orbit{position:absolute;width:min(70vw,480px);aspect-ratio:1;border:1px solid #d4b56d55;border-radius:42% 58% 55% 45%;pointer-events:none;animation:orbit-drift 18s ease-in-out infinite alternate}
+.orbit-a{top:-35%;left:-18%;transform:rotate(25deg)}.orbit-b{bottom:-40%;right:-16%;animation-delay:-7s;transform:rotate(-25deg)}
+.journey-shell{position:relative;z-index:1;width:min(100%,560px);padding:clamp(25px,5vw,48px);border:1px solid #c7d8c8;background:#ffffffc9;box-shadow:0 28px 90px #315d4b1c;backdrop-filter:blur(12px);text-align:center}
+.journey-progress{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 auto 28px;width:110px}
+.progress-dot{width:8px;height:8px;border-radius:50%;background:#d4dcd2;transition:.3s}
+.progress-dot.active{background:#dc806b;box-shadow:0 0 0 4px #dc806b22}
+.progress-line{height:1px;width:30px;background:#d4dcd2}
+.journey-page{display:none;animation:page-arrive .55s cubic-bezier(.2,.8,.2,1) both}
+.journey-page.active{display:block}
+.journey-kicker{font:600 9px 'DM Sans',sans-serif;letter-spacing:.2em;color:#d47761;line-height:1.7}
+.journey-flower{font-size:33px;color:#e8b95d;margin:17px 0 8px;animation:slow-spin 24s linear infinite}
+.journey-monogram{font:italic clamp(55px,10vw,76px)/1 Georgia,serif;color:#1f5b50;letter-spacing:-.08em;margin:7px 0}
+.journey-monogram i{font-size:.42em;color:#dc806b}
+.journey-page h1{font:400 clamp(27px,5vw,36px)/1.5 'Tiro Devanagari Marathi',serif;color:#214c43;margin:14px 0 8px}
+.journey-copy{font:15px/1.9 'Tiro Devanagari Marathi',serif;color:#718077;max-width:410px;margin:0 auto 22px}
+.journey-question{font:600 14px/1.7 'Tiro Devanagari Marathi',serif;color:#526b5e;margin:20px 0 12px}
+.guest-choices,.quiz-choices{display:grid;grid-template-columns:1fr;gap:9px}
+.guest-choices button,.quiz-choices button{width:100%;border:1px solid #d7e2d5;background:#fffefa;color:#3b5c50;border-radius:7px;padding:13px 12px;font:14px 'Tiro Devanagari Marathi',serif;cursor:pointer;transition:transform .2s,border .2s,background .2s,box-shadow .2s}
+.guest-choices button:hover,.quiz-choices button:hover{transform:translateY(-2px);border-color:#e3b96c;box-shadow:0 8px 18px #315d4b12}
+.guest-choices button.selected,.quiz-choices button.selected{background:#e8f2e9;border-color:#2d7468;box-shadow:inset 0 0 0 1px #2d7468}
+.journey-next{margin-top:19px;border:0;border-radius:999px;background:#1f5b50;color:#fffdf7;padding:13px 23px;font:500 14px 'DM Sans','Tiro Devanagari Marathi',sans-serif;cursor:pointer;box-shadow:0 9px 22px #1f5b5028;transition:.2s}
+.journey-next:disabled{opacity:.38;cursor:not-allowed;box-shadow:none}
+.journey-next:not(:disabled):hover{background:#dc806b;transform:translateY(-2px)}
+.journey-next span{margin-left:10px;color:#f5d28a}
+.journey-back{display:block;margin:13px auto 0;border:0;background:transparent;color:#819087;font:13px 'Tiro Devanagari Marathi',serif;cursor:pointer}
+.quiz-feedback{min-height:27px;margin-top:12px;font:14px 'Tiro Devanagari Marathi',serif;color:#2d7468}
+.journey-footnote{margin-top:25px;font:9px 'DM Sans',sans-serif;letter-spacing:.18em;color:#9aa79b}
+@keyframes page-arrive{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+@keyframes orbit-drift{to{transform:rotate(45deg) translate(18px,-15px)}}
+@media(max-width:480px){.journey-shell{padding:25px 18px}.journey-copy{font-size:14px}.journey-question{font-size:13px}}
+
+
+/* Six interactive guest experiences */
+.experience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0 10px}
+.experience-tile{min-height:126px;padding:14px 10px;border:1px solid #d7e2d5;border-radius:9px;background:#fffefa;color:#31584d;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;transition:transform .22s,box-shadow .22s,border .22s}
+.experience-tile:hover{transform:translateY(-4px);border-color:#e5bd73;box-shadow:0 12px 24px #315d4b16}
+.experience-tile span{font-size:25px}
+.experience-tile b{font:600 12px/1.4 'DM Sans',sans-serif}
+.experience-tile small{font:12px/1.5 'Tiro Devanagari Marathi',serif;color:#849188}
+.experience-panel{margin-top:17px;padding:18px 15px;border:1px solid #d7e2d5;border-radius:10px;background:#fffefa;text-align:left;animation:page-arrive .35s ease both}
+.panel-back{border:0;background:transparent;color:#d47761;font:13px 'DM Sans',sans-serif;cursor:pointer;padding:0 0 12px}
+.experience-panel h3{font:400 23px 'Tiro Devanagari Marathi',serif;text-align:center;color:#28594e;margin:5px 0 8px}
+.experience-panel p{font:14px/1.8 'Tiro Devanagari Marathi',serif;color:#758178;text-align:center;margin:5px 0 14px}
+.experience-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.experience-options button,.experience-action{border:1px solid #d7e2d5;border-radius:8px;background:#f6faf5;color:#31584d;padding:11px 9px;font:13px 'Tiro Devanagari Marathi',serif;cursor:pointer;transition:.2s}
+.experience-options button:hover,.experience-options button.chosen{background:#e7f1e8;border-color:#2d7468}
+.experience-result{margin-top:13px;padding:12px;border-radius:8px;background:#f8eee4;color:#946b57;text-align:center;font:13px/1.7 'Tiro Devanagari Marathi',serif}
+.experience-action{display:block;width:100%;margin-top:12px;background:#1f5b50;color:white;border:0;border-radius:999px}
+.experience-input{width:100%;box-sizing:border-box;border:1px solid #d7e2d5;border-radius:8px;background:#fff;padding:11px;font:14px 'Tiro Devanagari Marathi',serif;color:#31584d;margin:5px 0 10px}
+.experience-textarea{min-height:94px;resize:vertical}
+.experience-label{display:block;margin-top:8px;color:#61766a;font:13px 'Tiro Devanagari Marathi',serif}
+.experience-links{display:grid;gap:8px}
+.experience-links a{display:block;padding:12px;border-radius:8px;background:#f2f7f0;color:#31584d;text-decoration:none;font:13px 'Tiro Devanagari Marathi',serif}
+.experience-note{font:11px/1.6 'DM Sans',sans-serif;color:#8a978d;text-align:center;margin-top:10px}
+.invitation-continue{font-size:12px;padding:11px 18px;background:#8b7662}
+@media(max-width:420px){.experience-grid{gap:8px}.experience-tile{min-height:118px;padding:11px 7px}.experience-tile b{font-size:11px}}
+
+
+.journey-progress{width:190px}
+.journey-progress .progress-line{width:34px}
+.journey-step-label{font:12px 'Tiro Devanagari Marathi',serif;color:#8b978d;margin:-18px 0 18px}
+.journey-page .experience-panel{margin-top:14px}
+.journey-page .experience-panel .experience-result{min-height:44px}
+
+/* Refined motion + celebration details */
+@media (prefers-reduced-motion:no-preference) {
+  .hero h1,.hero .names,.hero .hero-meta,.hero .ganesh,.hero .eyebrow { animation: text-rise .85s cubic-bezier(.2,.75,.25,1) both; }
+  .hero .eyebrow{animation-delay:.08s}.hero .ganesh{animation-delay:.16s}
+  .hero h1{animation-delay:.24s}.hero .names{animation-delay:.34s}.hero .hero-meta{animation-delay:.44s}
+  .hero .names,.cover-names{ text-shadow:0 0 22px #e8c98138; }
+  .invite-card,.event,.location-panel,.map-art { position:relative; overflow:hidden; }
+  .invite-card:after,.event:after,.location-panel:after {
+    content:"";position:absolute;inset:8px;border:1px solid #c6a66a35;pointer-events:none;
+  }
+  .invite-card:before{content:"✦  ❖  ✦";top:13px;letter-spacing:.55em;font-size:12px;background:#fffdf8;padding:0 12px}
+  .event .symbol{display:inline-grid;place-items:center;width:58px;height:58px;border:1px solid #c6a66a88;border-radius:50%;background:radial-gradient(circle,#fffaf0,#f2e8d5);animation:soft-glow 3s ease-in-out infinite alternate}
+  .event:nth-child(2) .symbol{animation-delay:1.2s}
+  .section-kicker{animation:kicker-glint 5s ease-in-out infinite}
+  .person-detail .person-name{position:relative;display:inline-block}
+  .person-detail .person-name:after{content:"";display:block;width:54%;height:1px;margin:7px auto 0;background:linear-gradient(90deg,transparent,#c6a66a,transparent)}
+  .text-reveal{opacity:0;transform:translateY(16px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.75,.25,1)}
+  .text-reveal.text-visible{opacity:1;transform:none}
+}
+@keyframes text-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes soft-glow{from{box-shadow:0 0 0 #d4b56d00;transform:translateY(0)}to{box-shadow:0 7px 22px #b58a4a20;transform:translateY(-3px)}}
+@keyframes kicker-glint{0%,82%,100%{opacity:1}88%{opacity:.62}94%{opacity:1}}
+.celebration-burst{position:fixed;z-index:1500;left:0;top:0;width:9px;height:13px;pointer-events:none;animation:confetti-fall 1.45s cubic-bezier(.12,.65,.35,1) forwards}
+@keyframes confetti-fall{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.5)}12%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--spin)) scale(1)}}
+.answer-correct{animation:answer-pop .42s ease}
+@keyframes answer-pop{0%{transform:scale(.97)}55%{transform:scale(1.025)}100%{transform:scale(1)}}
+.invite-ornament{display:flex;align-items:center;justify-content:center;gap:13px;color:#b58a4a;margin:0 auto 16px;font-size:17px;letter-spacing:.2em}
+.invite-ornament:before,.invite-ornament:after{content:"";height:1px;width:min(16vw,90px);background:linear-gradient(90deg,transparent,#c6a66a)}
+.invite-ornament:after{transform:scaleX(-1)}
+.invite-card .couple-details{position:relative;z-index:1}
+.invitation-heading-mark{font-size:22px;color:#b58a4a;text-align:center;margin:0 0 8px}
+@media(prefers-reduced-motion:reduce){.text-reveal{opacity:1;transform:none}.celebration-burst{display:none}}
+
+
+/* Main invitation: celebratory motion and traditional ornamental details */
+.auspicious-line{font-size:clamp(20px,3vw,27px);line-height:1.7;text-align:center;color:#8d2727;font-weight:700;margin:0 auto 22px}
+.auspicious-line span{font-size:clamp(16px,2.3vw,21px);color:#70442f}
+.muhurta-note{font-size:16px!important;color:#59483e}
+.invite-venue{margin:20px auto 0;padding:16px 12px 8px;border-top:1px solid #d8bd83;max-width:460px;display:grid;gap:8px}
+.invite-venue span{font-family:'Tiro Devanagari Marathi',serif;color:#9a2c31;font-size:20px}
+.invite-venue strong{font-family:'Tiro Devanagari Marathi',serif;line-height:1.8;font-size:18px;color:#3e3029}
+.family-hosts{max-width:680px;margin:24px auto 0;padding:22px 18px;text-align:center;border:1px solid #d8c59e;background:linear-gradient(135deg,#fffaf1,#f7edda);box-shadow:0 14px 34px #33213a0c;position:relative}
+.family-hosts:before,.family-hosts:after{content:"❧";position:absolute;color:#c99b4a;font-size:26px;top:8px}
+.family-hosts:before{left:12px}.family-hosts:after{right:12px;transform:scaleX(-1)}
+.family-hosts-title{display:inline-block;padding:5px 28px;background:#6c1f26;color:#fff4df;border-radius:30px;font-family:'Tiro Devanagari Marathi',serif;font-size:19px}
+.family-hosts p{font-family:'Tiro Devanagari Marathi',serif;line-height:1.8;font-size:16px;color:#514238}
+.family-hosts strong{font-family:'Tiro Devanagari Marathi',serif;color:#982b30;font-size:24px}
+.invite-card{background:radial-gradient(ellipse at top,#fffef9 0%,#fff8e9 75%);border:1px solid #c9a65f;box-shadow:0 18px 55px #6d48231a, inset 0 0 0 7px #fffaf0,inset 0 0 0 8px #d8bd834f}
+.invite-card:after{content:"";position:absolute;inset:13px;border:1px solid #d9bd7b70;pointer-events:none}
+.person-detail .person-name{font-size:clamp(25px,4vw,31px);text-shadow:0 2px 0 #f6e5c7}
+.person-detail{transition:transform .55s ease,filter .55s ease}
+.person-detail:hover{transform:translateY(-4px);filter:drop-shadow(0 8px 12px #b58a4a18)}
+.event{border-radius:18px;box-shadow:0 10px 30px #4b2d2410;transition:transform .45s ease,box-shadow .45s ease}
+.event:hover{transform:translateY(-7px);box-shadow:0 18px 36px #4b2d2420}
+.event .symbol{font-size:34px;filter:drop-shadow(0 5px 7px #c99b4a44)}
+.invite-ornament{animation:ornament-float 4s ease-in-out infinite}
+@keyframes ornament-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.main-sparkle{position:absolute;pointer-events:none;color:#e7c77f;opacity:0;animation:sparkle-rise 3.2s ease-in-out infinite}
+@keyframes sparkle-rise{0%{opacity:0;transform:translateY(14px) scale(.55) rotate(0)}35%{opacity:.85}100%{opacity:0;transform:translateY(-30px) scale(1.1) rotate(75deg)}}
+@media(max-width:699px){.family-hosts{margin-left:4px;margin-right:4px}.invite-card{padding:30px 18px}.family-hosts p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.invite-ornament,.event,.person-detail{animation:none;transition:none}}
+
+
+/* Retain the couple portrait from the current website, styled to match this theme. */
+.couple-memory{max-width:640px;margin:34px auto 30px;text-align:center;padding:18px 18px 12px;background:linear-gradient(145deg,#ffffffb8,#e8f1e9b0);border:1px solid #d9e4d8;box-shadow:0 16px 42px #315d4b10}
+.couple-memory img{display:block;width:100%;max-width:560px;max-height:560px;height:auto;object-fit:contain;margin:0 auto;mix-blend-mode:multiply;mask-image:linear-gradient(to bottom,transparent 0%,#000 7%,#000 90%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 7%,#000 90%,transparent 100%)}
+.couple-memory figcaption{font:14px 'Tiro Devanagari Marathi',serif;color:#d47761;margin:5px 0 0}
+@media(max-width:650px){.couple-memory{padding:10px 9px;margin:25px auto}.couple-memory img{max-height:420px}}
+
 </style>
 </head>
 <body>
-<div class="stars"></div>
-<section class="screen active" id="welcome">
- <div class="shell">
-  <div class="kicker">॥ श्री गणेशाय नमः ॥ • सस्नेह निमंत्रण</div>
-  <div class="mandala"><div class="ganesh-symbol">ॐ<br><span style="font-size:36px">श्री</span></div></div>
-  <div class="sub">A LITTLE MYSTERY • A BIG CELEBRATION</div>
-  <h1>एक सुंदर सुरुवात...</h1>
-  <p>दोन कुटुंबं, दोन मनं आणि आयुष्यभराची एक नवी साथ.<br>तुमच्यासाठी एक खास निमंत्रण घेऊन आलो आहोत...</p>
-  <div class="envelope" aria-hidden="true"></div><div class="ribbon"></div>
-  <p class="sub">तीन संकेत उलगडा आणि शुभक्षणाचा साक्षीदार व्हा</p>
-  <button class="cta" onclick="beginJourney()">निमंत्रण उघडा · Open Invitation</button>
-  <div class="footer-note">THE ROYAL WEDDING JOURNEY<br>RUTIKESH ♥ SAPANA</div>
- </div>
-</section>
-<section class="screen" id="clues">
- <div class="shell">
-  <div class="kicker">THE WEDDING MYSTERY • गुपित उलगडा</div>
-  <div class="progress-wrap"><div class="progress-meta"><span id="stepText">पहिला संकेत</span><span id="countText">01 / 03</span></div><div class="track"><div class="fill" id="progress"></div></div></div>
-  <div class="clue-icon" id="clueIcon">🪔</div><h2 class="prompt" id="question"></h2><p id="questionSub" class="sub"></p>
-  <div class="choices" id="choices"></div><div class="feedback" id="feedback" aria-live="polite"></div>
-  <button class="ghost" id="hintButton" onclick="showHint()">एक छोटीशी मदत · Hint</button><button class="ghost" onclick="showScreen('welcome')">मागे जा · Back</button><p class="hint" id="hintText"></p>
- </div>
-</section>
-<section class="screen" id="final">
- <div class="shell">
-  <div class="kicker">THE SECRET IS REVEALED • शुभमंगल सावधान</div>
-  <div class="invitation" id="invitation">
-   <div class="motif ganesh-art"></div>
-   <div class="inv-kicker reveal r1">॥ श्री गणेशाय नमः ॥</div>
-   <div class="inv-kicker reveal r2">कुलस्वामिनी रेणुकामातेच्या कृपेने</div>
-   <h1 class="couple-names reveal r3">चि. ऋतिकेश <span style="color:#bc7d24">♥</span> चि.सौ.का. सपना</h1>
-   <div class="name-grid">
-    <div class="name-card reveal r3"><h3>चि. ऋतिकेश</h3><p>श्री. काशिनाथ शंकर वाघ यांचे नातू,<br>श्री. दादासाहेब अंबादास भागवत (वाकळा) यांचा भाचा.<br><br>सौ. संगीता व श्री. दीपक काशिनाथ वाघ यांचे चिरंजीव.</p></div>
-    <div class="name-card reveal r4"><h3>चि.सौ.का. सपना</h3><p>श्री. निवृत्ती शंभु पवार यांची नात,<br>श्री. सोपान निवृत्ती राऊत (भोकर्गाव) यांची भाची.<br><br>सौ. लता व श्री. विष्णु निवृत्ती पवार यांची कन्या.</p></div>
+
+<div class="guest-journey" id="guestJourney">
+ <div class="journey-orbit orbit-a"></div><div class="journey-orbit orbit-b"></div>
+ <div class="journey-shell">
+  <div class="journey-page active" id="journeyPage1">
+   <div class="journey-kicker">A LITTLE CELEBRATION BEFORE THE CELEBRATION</div>
+   <div class="journey-flower">✿</div>
+   <div class="journey-monogram">R <i>&</i> S</div>
+   <h1 class="mr">आमच्या आनंदात<br>तुमचं स्वागत आहे!</h1>
+   <p class="journey-copy">ऋतिकेश आणि सपनाच्या खास दिवसापर्यंतचा छोटासा मजेशीर प्रवास सुरू करूया.</p>
+   <div class="journey-question">तुम्ही कोणत्या टीमकडून आलात?</div>
+   <div class="guest-choices">
+    <button type="button" data-guest="वरपक्ष">💚 वरपक्ष</button>
+    <button type="button" data-guest="वधूपक्ष">🌸 वधूपक्ष</button>
+    <button type="button" data-guest="दोन्ही कुटुंबे">✨ दोन्ही कुटुंबांचे पाहुणे</button>
    </div>
-   <div class="wedding-banner reveal r4"><div class="motif elephant left"></div><div class="marriage-title">शुभ विवाह</div><div class="motif elephant right"></div></div>
-   <div class="ceremony-meta reveal r4">मिती मार्गशीर्ष वद्य पंचमी शके १९४८</div>
-   <div class="date-block reveal r5">
-    <div class="date-label">आपणांस सस्नेह निमंत्रण</div>
-    <div class="wedding-date">सोमवार, दि. २८ डिसेंबर २०२६</div>
-    <div class="time-line">दुपारी १:१० वाजता</div>
-   </div>
-   <p class="invite-message reveal r5">शुभमुहूर्तावर करण्याचे योजिले आहे, तरी आपण सहपरिवार उपस्थित रहावे, ही नम्र विनंती.</p>
-   <div class="event-row reveal r5">
-    <div class="event-card"><span class="event-icon" aria-hidden="true"></span><h3>हळदी समारंभ</h3><p>रविवार, दि. २७/१२/२०२६<br>सायंकाळी ६ वा.<br>विवाहस्थळी होईल.</p></div>
-    <div class="event-card"><div style="font-size:30px;margin:8px">📍</div><h3>विवाह स्थळ</h3><p>डांगरे वस्ती, जातेगाव,<br>ता. नांदगाव, जि. नाशिक.</p></div>
-   </div>
-   <div class="venue reveal r5">
-    <h3>आपली उपस्थिती, आमचा आनंद</h3>
-    <p>या मंगल प्रसंगी आपण सहकुटुंब उपस्थित राहून नवदाम्पत्यास शुभाशीर्वाद द्यावेत.</p>
-    <a class="map-link" href="https://maps.google.com/?q=Dangare+Vasti+Jategaon+Nandgaon+Nashik+Maharashtra+India" target="_blank" rel="noopener">📍 विवाह स्थळाचा नकाशा पहा</a>
-   </div>
-   <div class="invokers reveal r5">
-    <h3>निमंत्रक</h3>
-    <p>श्री. काशिनाथ शंकर वाघ • श्री. बाबासाहेब काशिनाथ वाघ<br>श्री. पोपट काशिनाथ वाघ • श्री. कैलास काशिनाथ वाघ<br>श्री. दीपक काशिनाथ वाघ • श्री. संतोष काशिनाथ वाघ<br><strong>समस्त वाघ परिवार.</strong></p>
-   </div>
-   <div class="motif procession"></div>
-   <div class="couple-photo-wrap reveal r5">
-    <img class="couple-photo" src="img%20me.jpeg" alt="ऋतिकेश आणि सपना यांचा मूळ फोटो">
-    <div class="photo-caption">ऋतिकेश ♥ सपना • एका नव्या प्रवासाची सुरुवात</div>
-   </div>
+   <button class="journey-next" id="journeyStart" disabled>प्रवास सुरू करा <span>→</span></button>
+   <div class="journey-footnote">थोडी मजा · खूप साऱ्या शुभेच्छा</div>
   </div>
-  <div class="invitation-actions">
-   <a class="link-btn" href="https://maps.google.com/?q=Dangare+Vasti+Jategaon+Nandgaon+Nashik+Maharashtra+India" target="_blank" rel="noopener">📍 Map</a>
-   <button class="link-btn" onclick="saveCalendar()">📅 तारीख जतन करा</button>
-   <button class="link-btn" onclick="shareInvite()">💌 WhatsApp वर शेअर करा</button>
-   <button class="link-btn" onclick="window.print()">🖨️ Print</button>
+
+  <div class="journey-progress" aria-label="तीन टप्पे">
+   <span class="progress-dot active"></span><span class="progress-line"></span><span class="progress-dot"></span><span class="progress-line"></span><span class="progress-dot"></span>
   </div>
-  <button class="ghost" onclick="showScreen('welcome')">पुन्हा सुरुवात करा · Replay</button>
-  <div class="footer-note">आपले स्नेहांकित • वाघ परिवार<br>तुमच्या उपस्थितीची आतुरतेने वाट पाहत आहोत.</div>
+
+  <div class="journey-page" id="journeyPage2">
+   <div class="journey-kicker">टप्पा १ · नाव ओळखा</div>
+   <div class="journey-flower">✿</div>
+   <h1 class="mr">नावांची मजेशीर ओळख 💞</h1>
+   <p class="journey-copy">आमच्या नावांबद्दलचे हे छोटे प्रश्न सोडवा. प्रत्येक उत्तरानंतर योग्य उत्तर लगेच दिसेल.</p>
+   <div class="experience-panel">
+    <h3>१. लग्नात सर्वात छान डान्स कोण करेल? 💃</h3>
+    <div class="experience-options">
+     <button type="button" data-answer="fun1" data-correct="false">ऋतिकेश 🤵</button>
+     <button type="button" data-answer="fun1" data-correct="true">सपना 👰</button>
+     <button type="button" data-answer="fun1" data-correct="false">दोघेही 💚</button>
+    </div><div class="experience-result" id="feedback-fun1">एक पर्याय निवडा.</div>
+    <h3>२. लग्नात कोण जास्त भावूक होईल? 🥹</h3>
+    <div class="experience-options">
+     <button type="button" data-answer="fun2" data-correct="false">ऋतिकेश 🤵</button>
+     <button type="button" data-answer="fun2" data-correct="false">सपना 👰</button>
+     <button type="button" data-answer="fun2" data-correct="true">दोघेही 💚</button>
+    </div><div class="experience-result" id="feedback-fun2">एक पर्याय निवडा.</div>
+    <h3>३. पाहुण्यांचं सर्वात जास्त मनोरंजन कोण करेल? 🎤</h3>
+    <div class="experience-options">
+     <button type="button" data-answer="fun3" data-correct="true">ऋतिकेश 🤵</button>
+     <button type="button" data-answer="fun3" data-correct="false">सपना 👰</button>
+     <button type="button" data-answer="fun3" data-correct="false">दोघेही 💚</button>
+    </div><div class="experience-result" id="feedback-fun3">एक पर्याय निवडा.</div>
+    <h3>४. लग्नाच्या तयारीत कोण जास्त उत्साही असेल? ✨</h3>
+    <div class="experience-options">
+     <button type="button" data-answer="fun4" data-correct="false">ऋतिकेश 🤵</button>
+     <button type="button" data-answer="fun4" data-correct="false">सपना 👰</button>
+     <button type="button" data-answer="fun4" data-correct="true">दोघेही 💚</button>
+    </div><div class="experience-result" id="feedback-fun4">एक पर्याय निवडा.</div>
+    <h3>५. फोटो काढताना पोझ कोण जास्त देईल? 📸</h3>
+    <div class="experience-options">
+     <button type="button" data-answer="fun5" data-correct="false">ऋतिकेश 🤵</button>
+     <button type="button" data-answer="fun5" data-correct="true">सपना 👰</button>
+     <button type="button" data-answer="fun5" data-correct="false">दोघेही 💚</button>
+    </div><div class="experience-result" id="feedback-fun5">एक पर्याय निवडा.</div>
+   </div>
+   <button class="journey-next" id="toDates">पुढील टप्पा <span>→</span></button>
+   <button class="journey-back" id="backWelcome">← मागे जा</button>
+  </div>
+
+  <div class="journey-page" id="journeyPage3">
+   <div class="journey-kicker">टप्पा २ · तारीख आणि ठिकाण ओळखा</div>
+   <div class="journey-flower">✿</div>
+   <h1 class="mr">आमच्या खास दिवसाची माहिती 📅</h1>
+   <p class="journey-copy">हळद, विवाहाचा मुहूर्त आणि स्थळ — किती माहिती आहे पाहूया!</p>
+   <div class="experience-panel">
+    <h3>१. हळदी समारंभ कुठल्या दिवशी आहे?</h3><p>योग्य तारीख निवडा.</p>
+    <div class="experience-options">
+     <button type="button" data-answer="date1" data-correct="false">२६ डिसेंबर २०२६</button>
+     <button type="button" data-answer="date1" data-correct="true">२७ डिसेंबर २०२६</button>
+     <button type="button" data-answer="date1" data-correct="false">२८ डिसेंबर २०२६</button>
+     <button type="button" data-answer="date1" data-correct="false">२९ डिसेंबर २०२६</button>
+    </div><div class="experience-result" id="feedback-date1">एक पर्याय निवडा.</div>
+    <h3>२. विवाहस्थळ कोणते आहे?</h3><p>आमच्या लग्नाचे ठिकाण ओळखा.</p>
+    <div class="experience-options">
+     <button type="button" data-answer="date2" data-correct="true">डांगरे वस्ती, जातेगाव</button>
+     <button type="button" data-answer="date2" data-correct="false">पुणे शहर</button>
+     <button type="button" data-answer="date2" data-correct="false">भोकरगाव</button>
+     <button type="button" data-answer="date2" data-correct="false">नाशिक शहर</button>
+    </div><div class="experience-result" id="feedback-date2">एक पर्याय निवडा.</div>
+    <h3>३. विवाहाचा मुहूर्त किती वाजता आहे?</h3><p>योग्य वेळ निवडा.</p>
+    <div class="experience-options">
+     <button type="button" data-answer="date3" data-correct="false">दुपारी १२:१०</button>
+     <button type="button" data-answer="date3" data-correct="true">दुपारी १:१०</button>
+     <button type="button" data-answer="date3" data-correct="false">दुपारी २:१०</button>
+     <button type="button" data-answer="date3" data-correct="false">सायंकाळी ६:१०</button>
+    </div><div class="experience-result" id="feedback-date3">एक पर्याय निवडा.</div>
+   </div>
+   <button class="journey-next" id="toMessage">पुढील टप्पा <span>→</span></button>
+   <button class="journey-back" id="backNames">← मागील टप्पा</button>
+  </div>
+
+  <div class="journey-page" id="journeyPage4">
+   <div class="journey-kicker">टप्पा ३ · शुभेच्छा पाठवा</div>
+   <div class="journey-flower">✿</div>
+   <h1 class="mr">आम्हाला शुभेच्छा द्या 💌</h1>
+   <p class="journey-copy">तुमच्या मनातलं प्रेम, शुभेच्छा किंवा एखादी गोड आठवण आम्हाला लिहून पाठवा.</p>
+   <div class="experience-panel">
+    <label class="experience-label">तुमचे नाव</label><input class="experience-input" id="wishName" placeholder="तुमचे नाव">
+    <label class="experience-label">संदेश कोणासाठी आहे?</label>
+    <div class="experience-options">
+     <button type="button" data-recipient="groom">ऋतिकेशसाठी 🤵</button>
+     <button type="button" data-recipient="bride">सपनासाठी 👰</button>
+     <button type="button" data-recipient="both">दोघांसाठी 💚</button>
+    </div>
+    <label class="experience-label">तुमचा खास संदेश</label><textarea class="experience-input experience-textarea" id="wishText" placeholder="मनापासून काहीतरी लिहा..."></textarea>
+    <button class="experience-action" id="sendWish" type="button">WhatsApp वर शुभेच्छा पाठवा ↗</button>
+    <div class="experience-note" id="wishNote">WhatsApp उघडल्यानंतर संदेश तपासा आणि स्वतः Send दाबा. संदेश आपोआप पाठवला जाणार नाही.</div>
+   </div>
+   <button class="journey-next" id="showInvitation">आमंत्रण पाहा <span>✦</span></button>
+   <button class="journey-back" id="backDates">← मागील टप्पा</button>
+   <button class="journey-back" id="skipMessage">संदेश नको, थेट आमंत्रण पाहायचे आहे</button>
+  </div>
+ </div>
+</div>
+
+
+<div class="welcome-cover" id="welcomeCover" aria-label="Wedding invitation opening">
+  <div class="cover-glow glow-one"></div><div class="cover-glow glow-two"></div>
+  <div class="cover-content">
+    <div class="cover-overline">YOU ARE CORDIALLY INVITED</div>
+    <div class="cover-flower">✳</div>
+    <div class="cover-monogram">R <span>&</span> S</div>
+    <div class="cover-names mr">चि. ऋतिकेश <span>आणि</span> चि. सौ. कां. सपना</div>
+    <div class="cover-rule"></div>
+    <p class="cover-date mr">२८ डिसेंबर २०२६</p>
+    <button class="open-invite" id="openInvite" type="button">
+      <span class="open-icon">✉</span> आमंत्रण उघडा <span class="open-arrow">↗</span>
+    </button>
+    <div class="cover-hint">TAP TO OPEN YOUR INVITATION</div>
+  </div>
+  <div class="cover-bottom">MADE WITH LOVE · 2026</div>
+</div>
+
+<header class="hero">
+ <div class="hero-inner">
+  <div class="eyebrow">A celebration of togetherness</div>
+  <div class="ganesh mr">॥ श्री गणेशाय नमः ॥</div>
+  <div class="mr" style="font-size:13px;color:#e6c982">कुलस्वामिनी रेणुकामातेच्या कृपेने</div>
+  <div class="rule"></div>
+  <div class="mr" style="font-size:17px;color:#ead8b5">शुभविवाह</div>
+  <h1>दोन मनं,<br>एक सुंदर प्रवास</h1>
+  <div class="names mr">चि. ऋतिकेश <span class="amp">&</span> चि. सौ. कां. सपना</div>
+  <div class="hero-meta">२८ डिसेंबर २०२६ · दुपारी १:१० वाजता<br>डांगरे वस्ती, जातेगाव, ता. नांदगाव, जि. नाशिक</div>
+  <div class="elephants"><i></i><span>🐘</span><span style="font-size:18px">✦</span><span>🐘</span><i></i></div>
+  <a class="scroll" href="#invitation">आमंत्रण पाहा ↓</a>
+ </div>
+</header>
+<main>
+<section id="invitation" class="invitation-main"><span class="main-sparkle" style="top:12%;left:9%">✦</span><span class="main-sparkle" style="top:28%;right:10%;animation-delay:1.1s">✧</span><span class="main-sparkle" style="bottom:14%;left:14%;animation-delay:2s">✦</span>
+ <div class="wrap">
+  <div class="invitation-heading-mark" aria-hidden="true">॥ ✦ मंगल परिणय ✦ ॥</div>
+  <p class="mr auspicious-line">॥ श्री गणेशाय नमः ॥<br><span>कुलस्वामिनी रेणुकामातेच्या कृपेने</span></p>
+  <div class="section-kicker">With the blessings of our families</div>
+  <div class="invite-ornament" aria-hidden="true">❖</div>
+  <h2>आपले सहर्ष निमंत्रण</h2>
+  <p class="intro">आनंदाचे क्षण, प्रेमाची साथ आणि नव्या आयुष्याची सुरुवात… या मंगल सोहळ्याचे साक्षीदार होण्यासाठी आपण सहकुटुंब उपस्थित राहावे, ही आग्रहाची विनंती.</p>
+  <div class="invite-card">
+   <div class="couple-details">
+    <div class="person-detail">
+     <p class="person-name">चि. ऋतिकेश</p>
+     <p>श्री. काशिनाथ शंकर वाघ यांचे नातू</p>
+     <p>श्री. दादासाहेब अंबादास भगवत यांचा भाचा</p>
+     <p>सौ. संगीता व श्री. दिपक काशिनाथ वाघ (वाकला) यांचे चिरंजीव</p>
+    </div>
+    <p style="color:#c99b4a;font-size:25px">✦</p>
+    <div class="person-detail">
+     <p class="person-name">चि. सौ. कां. सपना</p>
+     <p>श्री. निवृत्ती रंभू पवार यांची नात</p>
+     <p>श्री. सोपान निवृत्ती राऊत यांची भाची</p>
+     <p>सौ. लता व श्री. विष्णू निवृत्ती पवार (जातेगाव) यांची कन्या</p>
+    </div>
+   </div>
+   <p>यांचा शुभविवाह सोहळा</p>
+   <p class="mr">मिती मार्गशीर्ष वद्य पंचमी शके १९४८</p>
+   <p class="date">सोमवार, दि. २८ डिसेंबर २०२६, दुपारी १:१० वाजता.</p>
+   <p class="mr muhurta-note">शुभमुहूर्तावर करण्याचे योजिले आहे, तरी आपण सहपरिवार<br>उपस्थित राहावे, ही नम्र विनंती.</p>
+   <div class="invite-venue"><span>📍 विवाह स्थळ</span><strong>डांगरे वस्ती, जातेगाव,<br>ता. नांदगाव, जि. नाशिक.</strong></div>
+  </div>
+  <div class="family-hosts">
+   <div class="family-hosts-title">निमंत्रक</div>
+   <p>श्री. काशिनाथ शंकर वाघ<br>श्री. बाबासाहेब काशिनाथ वाघ<br>श्री. पोपट काशिनाथ वाघ<br>श्री. कैलास काशिनाथ वाघ<br>श्री. दिपक काशिनाथ वाघ<br>श्री. संतोष काशिनाथ वाघ</p>
+   <strong>समस्त वाघ परिवार.</strong>
+  </div>
  </div>
 </section>
+<section style="background:#f2e9d9">
+ <div class="wrap">
+  <div class="section-kicker">Save the celebrations</div><h2>सोहळ्याचे क्षण</h2>
+  <p class="intro">लग्नसोहळ्यापूर्वीचा हळदीचा रंग आणि विवाहाचा मंगल क्षण — दोन्ही दिवस आपल्या उपस्थितीने खास होतील.</p>
+  <div class="events">
+   <article class="event"><div class="symbol">🌼</div><h3>हळदी समारंभ</h3><p class="date">रविवार दि. २७/१२/२०२६ रोजी</p><p>सायंकाळी ६ वा. विवाहस्थळी होईल.</p><p>आनंद, हसू आणि हळदीच्या रंगात रंगण्याचा दिवस</p></article>
+   <article class="event"><div class="symbol">🪔</div><h3>शुभविवाह</h3><p class="date">सोमवार, दि. २८ डिसेंबर २०२६</p><p>दुपारी १:१० वाजता</p><p>नव्या आयुष्याच्या सुंदर सुरुवातीचा मंगल क्षण</p></article>
+  </div>
+ </div>
+</section>
+<div class="countdown"><div class="section-kicker" style="color:#e6c982">The big day is approaching</div><h2 class="mr" style="color:#fff6e8">आनंदाच्या दिवसाची उलटगणती</h2><div class="count-grid" id="timer"><div class="count-box"><strong>—</strong><span>दिवस</span></div><div class="count-box"><strong>—</strong><span>तास</span></div><div class="count-box"><strong>—</strong><span>मिनिटे</span></div><div class="count-box"><strong>—</strong><span>सेकंद</span></div></div></div>
+<section id="memories" style="background:#f2e9d9">
+ <div class="wrap">
+  <div class="section-kicker">A little scroll through our story</div>
+  <h2>आमचा सुंदर प्रवास</h2>
+  <p class="intro">साखरपुड्यापासून आजपर्यंतच्या आठवणी, खास क्षण आणि छोट्या छोट्या गोष्टी — आमच्या नजरेतून आमची गोष्ट पाहा.</p>
+  <figure class="couple-memory">
+   <img src="img%20me.jpeg" alt="ऋतिकेश आणि सपना यांचा मूळ फोटो">
+   <figcaption>ऋतिकेश ♥ सपना · आमची एक सुंदर आठवण</figcaption>
+  </figure>
+  <div class="invite-card" style="max-width:760px;margin-top:30px">
+   <div style="font-size:30px">♡</div>
+   <p style="font-size:22px;color:#8c5960">Vibe with Rutikesh & Sapna</p>
+   <p>आमच्या प्रवासातील निवडक reels आणि photos — प्रत्येक आठवणीवर क्लिक करून मूळ Instagram पोस्ट पाहा.</p>
+   <a class="map-link" href="https://www.instagram.com/vibe.with.rutikesh_sapna/" target="_blank" rel="noopener">Follow our Instagram ↗</a>
+  </div>
+  <h2 style="font-size:30px;margin-top:48px">साखरपुडा · Engagement</h2>
+  <div class="memory-grid">
+   <a class="memory-card" href="https://www.instagram.com/reel/DYv_wANCY5s/?jplx=bWRwdmQxaDFmOWxq" target="_blank" rel="noopener"><div class="memory-thumb"><span>💍</span><small>REEL 01</small></div><div class="memory-info"><strong>Engagement moments</strong><span>Watch on Instagram ↗</span></div></a>
+   <a class="memory-card" href="https://www.instagram.com/reel/DY1T8ROCqgG/?avpt=MTI5YWt3dXpic3dyYQ==" target="_blank" rel="noopener"><div class="memory-thumb"><span>✨</span><small>REEL 02</small></div><div class="memory-info"><strong>A day to remember</strong><span>Watch on Instagram ↗</span></div></a>
+   <a class="memory-card" href="https://www.instagram.com/p/DYyfKEIGavh/?gwpx=MW8xY29kb3B3Z2U0ZA==" target="_blank" rel="noopener"><div class="memory-thumb"><span>📸</span><small>PHOTO 03</small></div><div class="memory-info"><strong>Engagement photograph</strong><span>View on Instagram ↗</span></div></a>
+  </div>
+  <h2 style="font-size:30px;margin-top:52px">आमचे reels आणि क्षण · Our Reels & Moments</h2>
+  <div class="memory-grid">
+   <a class="memory-card" href="https://www.instagram.com/p/DdGAGl0AuG7/?dmpr=dTA1b2cwbW9peXM5" target="_blank" rel="noopener"><div class="memory-thumb"><span>🤍</span><small>PHOTO 01</small></div><div class="memory-info"><strong>Our little moments</strong><span>View on Instagram ↗</span></div></a>
+   <a class="memory-card" href="https://www.instagram.com/reel/DfWJLy8iRQw/?fqnt=OG50ZXpkY2xneGh1" target="_blank" rel="noopener"><div class="memory-thumb"><span>🎬</span><small>REEL 02</small></div><div class="memory-info"><strong>Our favourite reel</strong><span>Watch on Instagram ↗</span></div></a>
+   <a class="memory-card" href="https://www.instagram.com/reel/DfmwMfIh3LR/?knvt=ZXQybW94Mm1xbzU2" target="_blank" rel="noopener"><div class="memory-thumb"><span>🌟</span><small>REEL 03</small></div><div class="memory-info"><strong>Another memory together</strong><span>Watch on Instagram ↗</span></div></a>
+  </div>
+  <p class="small" style="text-align:center;color:#766b76">Thumbnail placeholders are used for now. Share the six post images or screenshots and I can replace these with your actual photos.</p>
+ </div>
+</section>
+<section>
+ <div class="wrap">
+  <div class="section-kicker">Find your way</div><h2>विवाहस्थळ</h2>
+  <div class="location">
+   <div class="location-panel"><h3>डांगरे वस्ती, जातेगाव</h3><p>ता. नांदगाव, जि. नाशिक, महाराष्ट्र</p><a class="map-link" href="https://maps.app.goo.gl/4RtM6Ux7xhdL5Gxs6?g_st=ac" target="_blank" rel="noopener">Google Maps वर दिशा पाहा ↗</a></div>
+   <div class="map-art"><div><div class="pin">📍</div><p>आपली उपस्थिती<br>आमच्यासाठी अनमोल आहे</p></div></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="footer"><div class="mr" style="color:#e6c982">॥ श्री गणेशाय नमः ॥</div><div class="names mr">ऋतिकेश & सपना</div><p>आपली उपस्थिती आणि आशीर्वाद<br>हीच आमच्यासाठी अनमोल भेट.</p><div class="small">With love, from both families · 2026</div></footer>
 <script>
-const clues=[
- {label:"पहिला संकेत",icon:"🪔",q:"दोन कुटुंबांना एका सुंदर नात्यात जोडणारा सोहळा कोणता?",sub:"What special occasion brings two families together?",hint:"हा आयुष्यभराच्या नव्या प्रवासाचा पहिला दिवस असतो.",choices:[["🎂","वाढदिवस","Birthday"],["💍","शुभविवाह","Wedding"],["🎉","स्नेहमेळावा","Get-together"]],answer:1,success:"अगदी बरोबर! दोन मनांचा सुंदर मिलाफ..."},
- {label:"दुसरा संकेत",icon:"🌺",q:"आमच्या आनंदाचा महिना कोणता?",sub:"A little hint: वर्षातील शेवटचा महिना.",hint:"या महिन्यात नाताळ आणि नववर्षाची चाहूल लागते.",choices:[["🍂","ऑक्टोबर","October"],["❄️","डिसेंबर","December"],["🌱","जानेवारी","January"]],answer:1,success:"छान! डिसेंबरमध्ये एक खास दिवस तुमची वाट पाहतोय."},
- {label:"तिसरा संकेत",icon:"🏞️",q:"हा मंगल सोहळा महाराष्ट्रातील कोणत्या जिल्ह्यात रंगणार आहे?",sub:"शेवटचा संकेत: द्राक्षांसाठी प्रसिद्ध असलेला जिल्हा.",hint:"त्र्यंबकेश्वर आणि पंचवटी याच जिल्ह्यात आहेत.",choices:[["🍇","नाशिक","Nashik"],["🏰","पुणे","Pune"],["🐅","नागपूर","Nagpur"]],answer:0,success:"उत्तम! आता राजेशाही निमंत्रण उघडण्यासाठी तयार व्हा."}
-];
-let step=0,locked=false;
-function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'})}
-function beginJourney(){step=0;showScreen('clues');renderClue()}
-function renderClue(){const c=clues[step];locked=false;document.getElementById('stepText').textContent=c.label;document.getElementById('countText').textContent=String(step+1).padStart(2,'0')+' / 03';document.getElementById('progress').style.width=(step/3*100)+'%';document.getElementById('clueIcon').textContent=c.icon;document.getElementById('question').textContent=c.q;document.getElementById('questionSub').textContent=c.sub;document.getElementById('feedback').textContent='';document.getElementById('hintText').textContent='';document.getElementById('hintButton').disabled=false;const wrap=document.getElementById('choices');wrap.innerHTML='';c.choices.forEach((v,i)=>{const b=document.createElement('button');b.className='choice';b.innerHTML='<span class="emoji">'+v[0]+'</span><span>'+v[1]+'<br><small style="font:11px DM Sans,Arial,sans-serif;opacity:.72">'+v[2]+'</small></span>';b.onclick=()=>choose(i);wrap.appendChild(b)})}
-function showHint(){document.getElementById('hintText').textContent=clues[step].hint;document.getElementById('hintButton').disabled=true}
-function choose(i){if(locked)return;const c=clues[step],fb=document.getElementById('feedback');if(i!==c.answer){fb.textContent='पुन्हा प्रयत्न करा! योग्य संकेत शोधा. ✨';return}locked=true;fb.textContent=c.success;document.querySelectorAll('.choice').forEach(b=>b.disabled=true);document.getElementById('progress').style.width=((step+1)/3*100)+'%';setTimeout(()=>{step++;if(step===clues.length){showScreen('final');celebrate()}else renderClue()},950)}
-function celebrate(){for(let i=0;i<42;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✦','❀','✧','•'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'vw';p.style.fontSize=(10+Math.random()*16)+'px';p.style.animationDuration=(3+Math.random()*3)+'s';p.style.setProperty('--drift',(Math.random()*180-90)+'px');document.body.appendChild(p);setTimeout(()=>p.remove(),6500)}}
-function saveCalendar(){const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Royal Wedding//Invitation//MR','BEGIN:VEVENT','UID:rutikesh-sapana-wedding-20261228','DTSTAMP:20261126T000000Z','DTSTART:20261228T074000Z','DTEND:20261228T090000Z','SUMMARY:Wedding of Rutikesh and Sapana','LOCATION:Dangare Vasti, Jategaon, Nandgaon, Nashik, Maharashtra','DESCRIPTION:Wedding ceremony at 1:10 PM IST.','END:VEVENT','END:VCALENDAR'].join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([body],{type:'text/calendar;charset=utf-8'}));a.download='Rutikesh-Sapana-Wedding.ics';a.click();URL.revokeObjectURL(a.href)}
-function shareInvite(){const msg='सस्नेह निमंत्रण! ऋतिकेश ♥ सपना यांच्या शुभविवाहासाठी आपले हार्दिक स्वागत. सोमवार, २८ डिसेंबर २०२६, दुपारी १:१० वाजता. स्थळ: डांगरे वस्ती, जातेगाव, ता. नांदगाव, जि. नाशिक. निमंत्रण: '+location.href;window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener')}
+const target = new Date('2026-12-28T13:10:00+05:30').getTime();
+const timer = document.getElementById('timer');
+function tick(){
+ const diff=target-Date.now();
+ if(diff<=0){timer.innerHTML='<p class="mr">आज आपल्या आनंदाचा दिवस आहे! 🎉</p>';return;}
+ const vals=[Math.floor(diff/86400000),Math.floor(diff%86400000/3600000),Math.floor(diff%3600000/60000),Math.floor(diff%60000/1000)];
+ const labels=['दिवस','तास','मिनिटे','सेकंद'];
+ timer.innerHTML=vals.map((v,i)=>`<div class="count-box"><strong>${String(v).padStart(2,'0')}</strong><span>${labels[i]}</span></div>`).join('');
+}
+tick();setInterval(tick,1000);
 </script>
+
+<script>
+(() => {
+ const cover = document.getElementById('welcomeCover');
+ const openButton = document.getElementById('openInvite');
+ if (cover && openButton) {
+   openButton.addEventListener('click', () => {
+     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+     if (!reduced) {
+       const symbols = ['✦','✧','❋','•','✺'];
+       for (let i=0;i<22;i++) {
+         const bit=document.createElement('span');
+         bit.className='sparkle';
+         bit.textContent=symbols[i%symbols.length];
+         bit.style.left=(window.innerWidth/2 + (Math.random()-.5)*100)+'px';
+         bit.style.top=(window.innerHeight/2 + (Math.random()-.5)*60)+'px';
+         bit.style.setProperty('--sx',((Math.random()-.5)*window.innerWidth*.8)+'px');
+         bit.style.setProperty('--sy',((Math.random()-.5)*window.innerHeight*.7)+'px');
+         document.body.appendChild(bit);
+         setTimeout(()=>bit.remove(),1300);
+       }
+     }
+     cover.classList.add('is-opening');
+     document.body.style.overflow='';
+     setTimeout(()=>cover.remove(),950);
+   });
+ }
+ document.body.style.overflow='hidden';
+ const revealTargets=document.querySelectorAll('main section, .countdown, .footer, .hero-inner');
+ revealTargets.forEach(el=>el.classList.add('reveal'));
+ const textTargets=document.querySelectorAll('#invitation h2,#invitation .intro,#invitation .person-detail,#invitation .invite-card>p,.event h3,.event p,#memories h2,#memories .intro,.location-panel h3,.location-panel p');
+ textTargets.forEach((el,i)=>{el.classList.add('text-reveal');el.style.transitionDelay=(Math.min(i%5,4)*90)+'ms';});
+ if ('IntersectionObserver' in window) {
+   const observer=new IntersectionObserver(entries=>{
+     entries.forEach(entry=>{
+       if(entry.isIntersecting){
+         entry.target.classList.add('visible');
+         entry.target.querySelectorAll('.text-reveal').forEach(el=>el.classList.add('text-visible'));
+         if(entry.target.classList.contains('text-reveal')) entry.target.classList.add('text-visible');
+         observer.unobserve(entry.target);
+       }
+     });
+   },{threshold:.12});
+   revealTargets.forEach(el=>observer.observe(el));
+ } else {
+   revealTargets.forEach(el=>el.classList.add('visible'));
+   textTargets.forEach(el=>el.classList.add('text-visible'));
+ }
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) textTargets.forEach(el=>el.classList.add('text-visible'));
+})();
+</script>
+
+
+<script>
+(() => {
+ const root=document.getElementById('guestJourney');
+ if(!root) return;
+ const pages=[1,2,3,4].map(n=>document.getElementById('journeyPage'+n));
+ const dots=root.querySelectorAll('.progress-dot');
+ let guest='', recipient='both';
+ const go=(n)=>{
+  pages.forEach((p,i)=>p.classList.toggle('active',i===n-1));
+  dots.forEach((d,i)=>d.classList.toggle('active',i===n-2));
+  root.querySelector('.journey-progress').style.display=n===1?'none':'flex';
+ };
+ const celebrate=(origin)=>{
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const rect=origin.getBoundingClientRect();
+  const colors=['#d9ad59','#dc806b','#4d8b76','#f0dcae','#8d739e'];
+  for(let i=0;i<34;i++){
+   const bit=document.createElement('i');
+   bit.className='celebration-burst';
+   bit.style.left=(rect.left+rect.width/2)+'px';
+   bit.style.top=(rect.top+rect.height/2)+'px';
+   bit.style.background=colors[i%colors.length];
+   bit.style.borderRadius=i%3===0?'50%':'2px';
+   bit.style.setProperty('--dx',((Math.random()-.5)*260)+'px');
+   bit.style.setProperty('--dy',(-35-Math.random()*190)+'px');
+   bit.style.setProperty('--spin',(Math.random()*720-360)+'deg');
+   document.body.appendChild(bit);
+   setTimeout(()=>bit.remove(),1550);
+  }
+ };
+ const finish=()=>{
+  root.classList.add('dismissed');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>root.remove(),750);
+ };
+ root.querySelector('.journey-progress').style.display='none';
+ root.querySelectorAll('[data-guest]').forEach(btn=>btn.addEventListener('click',()=>{
+  root.querySelectorAll('[data-guest]').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');guest=btn.dataset.guest;
+  document.getElementById('journeyStart').disabled=false;
+ }));
+ document.getElementById('journeyStart').addEventListener('click',()=>go(2));
+ document.getElementById('backWelcome').addEventListener('click',()=>go(1));
+ document.getElementById('toDates').addEventListener('click',()=>go(3));
+ document.getElementById('backNames').addEventListener('click',()=>go(2));
+ document.getElementById('toMessage').addEventListener('click',()=>go(4));
+ document.getElementById('backDates').addEventListener('click',()=>go(3));
+ root.addEventListener('click',e=>{
+  const answer=e.target.closest('[data-answer]');
+  if(answer){
+   const group=answer.dataset.answer;
+   root.querySelectorAll(`[data-answer="${group}"]`).forEach(b=>b.classList.remove('chosen'));
+   answer.classList.add('chosen');
+   const box=document.getElementById('feedback-'+group);
+   const ok=answer.dataset.correct==='true';
+   const correct={
+    fun1:'सपना 👰',fun2:'दोघेही 💚',fun3:'ऋतिकेश 🤵',fun4:'दोघेही 💚',fun5:'सपना 👰',
+    date1:'२७ डिसेंबर २०२६',date2:'डांगरे वस्ती, जातेगाव',date3:'दुपारी १:१०'
+   };
+   box.textContent=ok?'वा! अगदी बरोबर! 🎉 तुम्ही योग्य उत्तर दिलंत!':'अरेरे! यावेळी चुकलंत. 😊 योग्य उत्तर: '+correct[group]+'.';
+   box.style.background=ok?'#e5f2e7':'#fff0e8';
+   box.style.color=ok?'#24634e':'#a45d48';
+   box.classList.remove('answer-correct');
+   void box.offsetWidth;
+   if(ok){box.classList.add('answer-correct');celebrate(answer);}
+  }
+  const rec=e.target.closest('[data-recipient]');
+  if(rec){
+   recipient=rec.dataset.recipient;
+   root.querySelectorAll('[data-recipient]').forEach(b=>b.classList.toggle('chosen',b===rec));
+  }
+  if(e.target.id==='sendWish'){
+   const name=(document.getElementById('wishName').value||'').trim();
+   const msg=(document.getElementById('wishText').value||'').trim();
+   const note=document.getElementById('wishNote');
+   if(!name||!msg){note.textContent='कृपया तुमचे नाव आणि शुभेच्छा संदेश लिहा.';return;}
+   const text=encodeURIComponent(`ऋतिकेश आणि सपना यांच्या लग्नासाठी शुभेच्छा 💚\\nप्रेषक: ${name}\\nसंदेश: ${msg}`);
+   const groomUrl='https://wa.me/917218736405?text='+text;
+   const brideUrl='https://wa.me/919307568861?text='+text;
+   if(recipient==='groom'){window.open(groomUrl,'_blank','noopener');note.textContent='ऋतिकेश यांच्यासाठी WhatsApp उघडले आहे. संदेश तपासून Send दाबा.';}
+   else if(recipient==='bride'){window.open(brideUrl,'_blank','noopener');note.textContent='सपना यांच्यासाठी WhatsApp उघडले आहे. संदेश तपासून Send दाबा.';}
+   else {note.innerHTML='दोघांनाही शुभेच्छा पाठवण्यासाठी खालील दोन्ही लिंक उघडा आणि प्रत्येक संदेशासाठी Send दाबा:<div class="experience-links"><a target="_blank" rel="noopener" href="'+groomUrl+'">🤵 ऋतिकेश यांना पाठवा ↗</a><a target="_blank" rel="noopener" href="'+brideUrl+'">👰 सपना यांना पाठवा ↗</a></div>';}
+  }
+  if(e.target.id==='showInvitation'||e.target.id==='skipMessage')finish();
+ });
+})();
+</script>
+
 </body>
 </html>
