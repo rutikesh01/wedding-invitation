@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#54111f">
+<title>शुभविवाह | ऋतिकेश & सपना</title>
+<style>
+:root{--wine:#54111f;--deep:#270810;--gold:#d8b66e;--pale:#fff3d9;--ink:#48151d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#8b3a48 0,#3a0c17 48%,#1d060b 100%);color:var(--pale);font-family:Georgia,"Noto Serif Devanagari","Kohinoor Devanagari",serif;min-height:100vh}
+main{min-height:100vh;display:grid;place-items:center;padding:24px 15px}.frame{width:min(100%,650px);position:relative;padding:clamp(22px,5vw,42px);border:1px solid var(--gold);outline:1px solid #d8b66e55;outline-offset:5px;background:linear-gradient(155deg,#671e2eee,#2b0811f7);box-shadow:0 22px 80px #100307;text-align:center;overflow:hidden}
+.frame:before,.frame:after{content:"❖";position:absolute;top:10px;color:var(--gold);font-size:22px}.frame:before{left:13px}.frame:after{right:13px}
+.kicker{font:11px Arial,sans-serif;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(32px,8vw,53px);font-weight:normal;line-height:1.24;color:#efd18a;margin:16px 0;text-shadow:0 2px 16px #19040a}
+h2{font-size:clamp(23px,5.8vw,33px);font-weight:normal;color:#efd18a;margin:12px 0}
+p{font-size:16px;line-height:1.85;color:#f2e0bf;margin:12px auto}.orn{color:var(--gold);font-size:25px;letter-spacing:8px;margin:18px 0}
+button{font:inherit;cursor:pointer}.primary{border:1px solid #f4d894;background:linear-gradient(135deg,#f4dda2,#bd9148);color:#3a0d16;padding:13px 24px;margin:9px 4px;font-weight:bold;border-radius:3px;box-shadow:0 5px 18px #16050a77}.primary:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.choice{display:block;width:100%;padding:13px 12px;margin:9px 0;border:1px solid #b68d50;background:#380f1b;color:#fff1d4;border-radius:3px}.choice:hover,.choice:focus{background:#713344}.choice:disabled{opacity:.65;cursor:default}
+.small{font:12px Arial,sans-serif;color:#ddc69b;letter-spacing:1px}.hidden{display:none!important}.progress{height:4px;background:#75444d;margin:22px 0 10px}.bar{height:100%;width:0;background:var(--gold);transition:width .4s}.feedback{min-height:28px;color:#f5d78d;font-size:14px}.back{background:transparent;border:0;color:#e8d2a8;text-decoration:underline;margin-top:12px}.ganesh{font-size:53px;color:var(--gold);margin:10px}
+.panel{border-top:1px solid #bd9658;border-bottom:1px solid #bd9658;margin:17px 0;padding:13px 8px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:center}.pair h3{font-size:clamp(24px,5vw,32px);color:#f0cf83;font-weight:normal;margin:8px 0}.family{font-size:14px;line-height:1.75;color:#f0dfc2}
+.detail{padding:10px 0;border-bottom:1px solid #a77c4a55}.detail:last-child{border:0}.detail strong{display:block;color:#f1cf82;font-size:18px;margin-bottom:4px}
+.invitation{background:#fff3db;color:var(--ink);padding:23px 17px;margin-top:18px;border:4px double #c1944c;box-shadow:inset 0 0 0 5px #fff3db,inset 0 0 0 6px #d7b66d}
+.invitation p{color:#55212a;font-size:14px}.invitation h2,.invitation h3{color:#8c1d2d}.invite-title{font-size:clamp(28px,7vw,42px);color:#781a2b;font-weight:bold}
+.family-list{font-size:14px;line-height:1.9;color:#55212a}
+.map{display:inline-block;padding:10px 14px;margin:9px 4px;border:1px solid #aa813f;color:#6a2330;text-decoration:none}
+.footer{font:11px Arial,sans-serif;color:#d8c096;letter-spacing:1px;margin-top:22px}
+@media(max-width:480px){.pair{grid-template-columns:1fr;gap:8px}.family{font-size:13px}.frame{padding:25px 17px}.invitation{padding:18px 11px}}
+</style>
+</head>
+<body>
+<main>
+<section class="frame" id="welcome">
+ <div class="kicker">सस्नेह निमंत्रण • A special invitation</div>
+ <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
+ <div class="orn">❖ ✦ ❖</div>
+ <h1>एक सुंदर सुरुवात...</h1>
+ <p>दोन कुटुंबं, दोन मनं आणि आयुष्यभराची एक नवी साथ.<br>या मंगल सोहळ्यापर्यंत पोहोचण्यासाठी तीन संकेत उलगडा!</p>
+ <p class="small">THREE CLUES • ONE SPECIAL CELEBRATION</p>
+ <button class="primary" onclick="start()">रहस्य उलगडा · Begin</button>
+ <div class="footer">THE ROYAL WEDDING MYSTERY</div>
+</section>
+
+<section class="frame hidden" id="game">
+ <div class="kicker" id="stepLabel">पहिला संकेत · CLUE 1 OF 3</div>
+ <div class="progress"><div class="bar" id="bar"></div></div>
+ <div class="orn">❖ ✦ ❖</div>
+ <h2 id="question"></h2><p id="subquestion"></p>
+ <div id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div>
+ <button class="back" onclick="showScreen('welcome')">मागे जा · Back</button>
+</section>
+
+<section class="frame hidden" id="final">
+ <div class="kicker">शुभमंगल सावधान</div><div class="ganesh">✺</div>
+ <h1>आपणांस आग्रहाचे निमंत्रण!</h1>
+ <h2>चि. ऋतिकेश <span style="color:#fff">♥</span> चि.सौ.का. सपना</h2>
+ <p>आमच्या आयुष्यातील या मंगल क्षणी आपण सहपरिवार उपस्थित राहून नवदाम्पत्यास शुभाशीर्वाद द्यावेत, ही नम्र विनंती.</p>
+ <div class="orn">❖ ✦ ❖</div>
+ <div class="invitation">
+  <div class="small" style="color:#8e6530">॥ श्री गणेशाय नमः ॥</div>
+  <div class="invite-title">शुभ विवाह</div>
+  <h2>चि. ऋतिकेश <span style="color:#9b2536">♥</span> चि.सौ.का. सपना</h2>
+  <div class="pair">
+   <div><div class="family">श्री. काशिनाथ शंकर वाघ यांचे नातू,<br>श्री. दादासाहेब अंबादास भागवत यांचा भाचा.<br><br>सौ. संगीता व श्री. दीपक काशिनाथ वाघ (वाकळा) यांचे चिरंजीव.</div></div>
+   <div><div class="family">श्री. निवृत्ती शंभु पवार यांची नात,<br>श्री. सोपान निवृत्ती राऊत यांची भाची.<br><br>सौ. लता व श्री. विष्णु निवृत्ती पवार (जातेगाव) यांची कन्या.</div></div>
+  </div>
+  <div class="panel">
+   <div class="family">मिती मार्गशीर्ष वद्य पंचमी शके १९४८</div>
+   <h2>सोमवार, दि. २८ डिसेंबर २०२६</h2>
+   <p><strong>दुपारी १:१० वाजता</strong></p>
+   <p>शुभमुहूर्तावर करण्याचे योजिले आहे, तरी आपण सहपरिवार उपस्थित रहावे, ही नम्र विनंती.</p>
+  </div>
+  <div class="detail"><strong>हळदी समारंभ</strong><p>रविवार दि. २७/१२/२०२६ रोजी<br>सायंकाळी ६ वा. विवाहस्थळी होईल.</p></div>
+  <div class="detail"><strong>विवाह स्थळ</strong><p>डांगरे वस्ती, जातेगाव,<br>ता. नांदगाव, जि. नाशिक.</p></div>
+  <div class="detail"><strong>निमंत्रक</strong><div class="family-list">श्री. काशिनाथ शंकर वाघ<br>श्री. बाबासाहेब काशिनाथ वाघ<br>श्री. पोपट काशिनाथ वाघ<br>श्री. कैलास काशिनाथ वाघ<br>श्री. दीपक काशिनाथ वाघ<br>श्री. संतोष काशिनाथ वाघ<br><b>समस्त वाघ परिवार.</b></div></div>
+ </div>
+ <p><a class="map" href="https://maps.google.com/?q=Dangare+Vasti+Jategaon+Nandgaon+Nashik+Maharashtra+India" target="_blank" rel="noopener">विवाह स्थळाचा नकाशा पहा · Open map</a></p>
+ <button class="primary" onclick="window.print()">पत्रिका जतन करा · Save / Print</button>
+ <div class="footer">आपले स्नेहांकित • वाघ परिवार</div>
+</section>
+</main>
+<script>
+const clues=[
+ {label:"पहिला संकेत · CLUE 1 OF 3",q:"दोन कुटुंबांना एका सुंदर नात्यात जोडणारा सोहळा कोणता?",sub:"What special occasion brings two families together?",answers:["वाढदिवस · Birthday","शुभविवाह · Wedding","स्नेहमेळावा · Get-together"],correct:1,ok:"अगदी बरोबर! आता पुढचा संकेत उलगडा."},
+ {label:"दुसरा संकेत · CLUE 2 OF 3",q:"आमच्या आनंदाचा महिना कोणता?",sub:"हा सोहळा वर्षाच्या शेवटच्या महिन्यात आहे.",answers:["ऑक्टोबर · October","डिसेंबर · December","जानेवारी · January"],correct:1,ok:"छान! डिसेंबरमध्ये एक खास दिवस तुमची वाट पाहतोय."},
+ {label:"तिसरा संकेत · CLUE 3 OF 3",q:"लग्नसोहळा कोणत्या जिल्ह्यात रंगणार आहे?",sub:"शेवटचा संकेत: महाराष्ट्रातील प्रसिद्ध द्राक्षभूमीचा जिल्हा.",answers:["नाशिक · Nashik","पुणे · Pune","नागपूर · Nagpur"],correct:0,ok:"उत्तम! आता खास निमंत्रण उघडण्यासाठी तयार व्हा."}
+];
+let current=0;
+function showScreen(id){["welcome","game","final"].forEach(s=>document.getElementById(s).classList.toggle("hidden",s!==id))}
+function start(){current=0;showScreen("game");render()}
+function render(){const c=clues[current];document.getElementById("stepLabel").textContent=c.label;document.getElementById("bar").style.width=(current/3*100)+"%";document.getElementById("question").textContent=c.q;document.getElementById("subquestion").textContent=c.sub;document.getElementById("feedback").textContent="";const box=document.getElementById("answers");box.innerHTML="";c.answers.forEach((a,i)=>{const b=document.createElement("button");b.className="choice";b.textContent=a;b.onclick=()=>answer(i);box.appendChild(b)})}
+function answer(i){const c=clues[current],f=document.getElementById("feedback");if(i!==c.correct){f.textContent="पुन्हा प्रयत्न करा! Try another answer.";return}f.textContent=c.ok;document.querySelectorAll("#answers button").forEach(b=>b.disabled=true);setTimeout(()=>{current++;if(current===clues.length){document.getElementById("bar").style.width="100%";showScreen("final")}else render()},750)}
+</script>
+</body>
+</html>
