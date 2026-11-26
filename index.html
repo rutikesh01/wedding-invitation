@@ -3,144 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#3d0c19">
+<meta name="theme-color" content="#4b1020">
 <meta name="description" content="ऋतिकेश आणि सपना यांच्या शुभविवाहाचे सस्नेह निमंत्रण.">
 <title>शुभविवाह | ऋतिकेश ♥ सपना</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
-:root{--wine:#4b1020;--wine2:#2a0912;--wine3:#731f35;--gold:#e1bd75;--gold2:#b98a46;--cream:#fff7e8;--paper:#fff2d8;--ink:#501927;--muted:#e8d5b7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -12%,#87384b 0,#4b1020 42%,#21070f 100%);color:var(--cream);font-family:'Tiro Devanagari Marathi',Georgia,serif;overflow-x:hidden}
-button,a{font:inherit}button{cursor:pointer}.ambient{position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#f5d99b 1px,transparent 1.5px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:0}
-.petal{position:fixed;top:-30px;z-index:4;pointer-events:none;color:#f3d18b;animation:fall linear forwards;text-shadow:0 2px 8px #2a0811}
+:root{--wine:#541020;--deep:#2b0912;--red:#8d1d2f;--gold:#c99535;--gold2:#e7c36f;--cream:#fff4df;--paper:#fff3dc;--ink:#4b1720;--muted:#75504a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#783042,#3a0c18 48%,#21070f 100%);color:var(--cream);font-family:'Tiro Devanagari Marathi',Georgia,serif;overflow-x:hidden}
+button,a{font:inherit}button{cursor:pointer}.stars{position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#f4d999 1px,transparent 1.5px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 86%);z-index:0}
+.petal{position:fixed;top:-30px;z-index:8;pointer-events:none;color:#efc96e;animation:fall linear forwards;text-shadow:0 2px 8px #2a0811}
 @keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(620deg);opacity:0}}
-.screen{display:none;min-height:100vh;position:relative;z-index:1;padding:28px 16px;place-items:center}.screen.active{display:grid;animation:screenIn .65s ease both}
+.screen{display:none;min-height:100vh;position:relative;z-index:1;padding:28px 15px;place-items:center}.screen.active{display:grid;animation:screenIn .65s ease both}
 @keyframes screenIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.shell{width:min(100%,680px);position:relative;text-align:center;padding:clamp(23px,5vw,48px);background:linear-gradient(155deg,rgba(111,33,53,.97),rgba(43,8,18,.98));border:1px solid rgba(225,189,117,.9);outline:1px solid rgba(225,189,117,.25);outline-offset:6px;box-shadow:0 24px 90px #120208;border-radius:5px;overflow:hidden}
-.shell:before,.shell:after{position:absolute;content:"✦";font-size:23px;color:var(--gold);top:12px}.shell:before{left:14px}.shell:after{right:14px}
-.kicker{font:600 10px 'DM Sans',Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
-h1,h2,h3,p{margin-top:0}h1{font-size:clamp(35px,8vw,60px);font-weight:normal;color:#f3d796;line-height:1.22;margin:15px 0;text-shadow:0 3px 25px #1b050d}
-h2{font-size:clamp(24px,5.5vw,37px);font-weight:normal;color:#efd18c;line-height:1.3;margin:12px 0}
-p{font-size:16px;line-height:1.95;color:#f3e2c6;margin:12px auto}.sub{font:12px 'DM Sans',Arial,sans-serif;letter-spacing:1.2px;color:#ddc49a}.orn{color:var(--gold);letter-spacing:8px;font-size:22px;margin:19px 0}
-.cta{border:1px solid #f8dfa4;color:#35101a;background:linear-gradient(135deg,#f8e4ae,#c29249);padding:13px 24px;border-radius:3px;font-weight:700;box-shadow:0 8px 22px #18050b80;transition:.2s;margin:7px 4px}.cta:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 12px 25px #18050b99}
+.shell{width:min(100%,690px);position:relative;text-align:center;padding:clamp(24px,5vw,46px);background:linear-gradient(155deg,rgba(109,31,52,.97),rgba(43,8,18,.98));border:1px solid rgba(231,195,111,.92);outline:1px solid rgba(231,195,111,.25);outline-offset:6px;box-shadow:0 24px 90px #120208;border-radius:5px;overflow:hidden}
+.shell:before,.shell:after{position:absolute;content:"✦";font-size:23px;color:var(--gold2);top:12px}.shell:before{left:14px}.shell:after{right:14px}
+.kicker{font:600 10px 'DM Sans',Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold2)}
+h1,h2,h3,p{margin-top:0}h1{font-size:clamp(35px,8vw,58px);font-weight:normal;color:#f2d894;line-height:1.22;margin:15px 0;text-shadow:0 3px 25px #1b050d}
+h2{font-size:clamp(24px,5.5vw,36px);font-weight:normal;color:#efd18c;line-height:1.35;margin:12px 0}
+p{font-size:16px;line-height:1.95;color:#f3e2c6;margin:12px auto}.sub{font:12px 'DM Sans',Arial,sans-serif;letter-spacing:1.2px;color:#ddc49a}.orn{color:var(--gold2);letter-spacing:8px;font-size:22px;margin:19px 0}
+.cta{border:1px solid #f8dfa4;color:#35101a;background:linear-gradient(135deg,#f8e4ae,#c29249);padding:13px 24px;border-radius:3px;font-weight:700;box-shadow:0 8px 22px #18050b80;transition:.2s;margin:7px 4px}.cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
 .ghost{border:1px solid #bd965e;color:#f8e8ca;background:#3a101d;padding:12px 18px;border-radius:3px;margin:6px 3px}.ghost:hover{background:#6b2b3d}
-.ganesh{font-size:clamp(48px,10vw,70px);color:#f3d28d;margin:13px 0;filter:drop-shadow(0 5px 8px #21070f)}
-.mandala{width:142px;height:142px;margin:10px auto 16px;display:grid;place-items:center;position:relative;border:1px solid #dcb878;border-radius:50%;box-shadow:0 0 0 7px #dcb87816,0 0 36px #dcb87820}
-.mandala:before,.mandala:after{content:"";position:absolute;inset:9px;border:1px dashed #e4c58b;border-radius:50%}.mandala:after{inset:-7px;border:1px solid #dcb87855}
-.envelope{width:180px;height:120px;margin:25px auto 22px;position:relative;background:linear-gradient(145deg,#e9ca8a,#b37c38);clip-path:polygon(0 0,100% 0,100% 100%,0 100%);filter:drop-shadow(0 12px 13px #17040a)}
+.mandala{width:142px;height:142px;margin:12px auto 18px;display:grid;place-items:center;position:relative;border:1px solid #dcb878;border-radius:50%;box-shadow:0 0 0 7px #dcb87816,0 0 36px #dcb87820}.mandala:before,.mandala:after{content:"";position:absolute;inset:9px;border:1px dashed #e4c58b;border-radius:50%}.mandala:after{inset:-7px;border:1px solid #dcb87855}
+.ganesh-symbol{font-size:52px;color:#f1d18d;filter:drop-shadow(0 5px 8px #21070f)}
+.envelope{width:180px;height:120px;margin:25px auto 22px;position:relative;background:linear-gradient(145deg,#e9ca8a,#b37c38);filter:drop-shadow(0 12px 13px #17040a)}
 .envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(35deg,transparent 49%,#f7e5b3 50%,transparent 51%),linear-gradient(-35deg,transparent 49%,#d5ad68 50%,transparent 51%)}
-.envelope:after{content:"ॐ";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#651b2d;color:#f6d990;border:1px solid #f5dc9e;font-size:23px;box-shadow:0 3px 12px #40101d}
-.ribbon{height:2px;width:110px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px auto}
+.envelope:after{content:"श्री";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:#651b2d;color:#f6d990;border:1px solid #f5dc9e;font-size:18px}
+.ribbon{height:2px;width:110px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin:20px auto}
 .progress-wrap{margin:25px auto 18px;max-width:430px}.progress-meta{display:flex;justify-content:space-between;font:11px 'DM Sans',Arial,sans-serif;color:#e7d1a9;letter-spacing:1px;margin-bottom:8px}.track{height:5px;background:#6e3a45;border-radius:9px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#b9833d,#f8e4aa);transition:width .55s ease;border-radius:9px}
-.clue-icon{font-size:45px;filter:drop-shadow(0 5px 12px #21070f);margin:10px 0}
-.prompt{font-size:clamp(22px,5vw,30px);color:#f4dda6;line-height:1.55;margin:8px auto}.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 10px}
-.choice{min-height:105px;border:1px solid #bd9355;background:linear-gradient(155deg,#6c2537,#3c111f);color:#fff0d1;border-radius:5px;padding:12px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;transition:.2s}
-.choice .emoji{font-size:28px}.choice span:last-child{font-size:14px;line-height:1.45}.choice:hover,.choice:focus-visible{transform:translateY(-4px);background:linear-gradient(155deg,#8a3749,#4d1425);outline:1px solid #f0d18d}
+.clue-icon{font-size:45px;filter:drop-shadow(0 5px 12px #21070f);margin:10px 0}.prompt{font-size:clamp(22px,5vw,30px);color:#f4dda6;line-height:1.55;margin:8px auto}.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 10px}
+.choice{min-height:105px;border:1px solid #bd9355;background:linear-gradient(155deg,#6c2537,#3c111f);color:#fff0d1;border-radius:5px;padding:12px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;transition:.2s}.choice .emoji{font-size:28px}.choice span:last-child{font-size:14px;line-height:1.45}.choice:hover,.choice:focus-visible{transform:translateY(-4px);background:linear-gradient(155deg,#8a3749,#4d1425);outline:1px solid #f0d18d}.choice:disabled{opacity:.65;cursor:default}
 .feedback{min-height:28px;font-size:14px;color:#f2d48f;margin:10px 0}.hint{font:12px 'DM Sans',Arial,sans-serif;color:#d9c29b}
-.action-row{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}
-.final-shell{padding:clamp(18px,4vw,36px)}
-.reveal-title{animation:reveal .9s cubic-bezier(.16,1,.3,1) both}@keyframes reveal{from{opacity:0;transform:scale(.86) translateY(15px);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
-.invite-paper{position:relative;background:radial-gradient(circle at 50% 0,#fff9e9,#f6e2bc);color:var(--ink);padding:clamp(18px,4vw,34px);margin:22px auto 10px;border:1px solid #b78b49;outline:1px solid #d9b96f;outline-offset:-7px;box-shadow:0 12px 35px #18050a66;max-width:540px}
-.invite-paper:before,.invite-paper:after{content:"❀";position:absolute;color:#bd9250;font-size:23px;top:10px}.invite-paper:before{left:14px}.invite-paper:after{right:14px}
-.paper-kicker{font-size:13px;color:#8a1e32}.paper-title{font-size:clamp(34px,8vw,49px);color:#8b1f32;margin:8px 0}.couple{font-size:clamp(25px,6vw,36px);color:#651727;line-height:1.5}.paper-text{font-size:14px;line-height:1.85;color:#5a2830}.paper-date{font-size:clamp(20px,4.7vw,28px);color:#8c1d30;line-height:1.5}.gold-line{width:80%;height:1px;background:linear-gradient(90deg,transparent,#bd9250,transparent);margin:17px auto}
-.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}.detail-box{border:1px solid #d1b078;padding:12px 8px;background:#fff8e9aa}.detail-box b{display:block;color:#882035;font-size:17px;margin-bottom:6px}.detail-box span{font-size:13px;color:#5b2931;line-height:1.7}
-.invite-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:18px 0}
-.link-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #d3b16e;color:#fff0d1;background:#3d101e;padding:11px 15px;border-radius:3px;font-size:14px}
+.invitation{width:min(100%,650px);position:relative;overflow:hidden;color:var(--ink);background:
+ radial-gradient(circle at 13% 18%,#f9eacb 0 1px,transparent 2px),
+ radial-gradient(circle at 87% 75%,#f4e2bf 0 1px,transparent 2px),
+ linear-gradient(135deg,#fff8e9 0%,#fff0d2 48%,#fff8e9 100%);
+ background-size:27px 27px,31px 31px,auto;border:2px solid #c79b49;outline:1px solid #e2c173;outline-offset:-8px;box-shadow:0 20px 60px #16040a9c;padding:clamp(20px,4vw,36px) clamp(13px,4vw,34px) 12px;margin:26px auto 0}
+.invitation:before{content:"";position:absolute;inset:8px;border:1px solid #dfbd77;pointer-events:none}
+.invitation>*{position:relative;z-index:1}
+.motif{position:absolute!important;z-index:0!important;background-image:url('file_000000005d4081f5b6609062251d8191.png');background-size:1024px 1536px;background-repeat:no-repeat;pointer-events:none}
+.flower-top{width:160px;height:160px;left:-2px;top:-1px;background-position:0 0;opacity:.96;animation:sway 7s ease-in-out infinite}
+.flower-bottom{width:199px;height:176px;right:-4px;bottom:-1px;background-position:-825px -1360px;opacity:.96;animation:sway 8s ease-in-out infinite reverse}
+.ganesh-art{width:175px;height:175px;position:relative!important;margin:1px auto 0;background-position:-425px -55px;filter:drop-shadow(0 5px 4px #a66d2633);animation:appear .9s ease both}
+.elephant{width:150px;height:165px;position:absolute!important;top:345px;z-index:2!important;background-position:-75px -520px}
+.elephant.left{left:4px}.elephant.right{right:4px;background-position:-805px -520px}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(14px) scale(.92)}to{opacity:1;transform:none}}
+.reveal{opacity:0;animation:rise .85s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(18px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+.reveal.r1{animation-delay:.12s}.reveal.r2{animation-delay:.32s}.reveal.r3{animation-delay:.5s}.reveal.r4{animation-delay:.68s}.reveal.r5{animation-delay:.86s}
+.inv-kicker{font-size:13px;color:#a02735;letter-spacing:.8px}.couple-names{font-size:clamp(30px,7vw,48px);font-weight:normal;line-height:1.25;color:#711927;margin:10px 0 18px;text-shadow:0 1px #fff}
+.name-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:6px auto 16px;max-width:570px}
+.name-card{padding:12px 9px;border-top:1px solid #dcb969;border-bottom:1px solid #dcb969;background:#fff8e8aa}
+.name-card h3{font-size:clamp(22px,4.8vw,29px);color:#8b1c2d;font-weight:normal;margin:2px 0 7px}
+.name-card p{font-size:13px;line-height:1.8;color:#53262a;margin:0}
+.marriage-title{position:relative;background:linear-gradient(120deg,#520b1a,#83172b,#4b0a17);border:2px solid #e3b954;border-radius:50px;padding:12px 36px;color:#f4d77f;font-size:clamp(29px,7vw,43px);width:max-content;max-width:80%;margin:12px auto 20px;box-shadow:0 6px 15px #6c3a252e,inset 0 0 0 3px #5b1220}
+.marriage-title:before,.marriage-title:after{content:"✦";position:absolute;top:50%;transform:translateY(-50%);color:#efce79;font-size:19px}.marriage-title:before{left:12px}.marriage-title:after{right:12px}
+.ceremony-meta{font-size:13px;color:#78413a;margin:4px 0 8px}
+.date-block{padding:15px 10px;margin:12px auto 17px;border-top:1px solid #c99b48;border-bottom:1px solid #c99b48;max-width:540px;background:linear-gradient(90deg,transparent,#f6e5c6aa,transparent)}
+.date-label{font-size:13px;color:#8a3d32}.wedding-date{font-size:clamp(24px,5.6vw,34px);color:#a51f32;line-height:1.5;margin:5px 0;animation:dateGlow 3s ease-in-out infinite}
+@keyframes dateGlow{0%,100%{text-shadow:0 0 0 #d8a94c}50%{text-shadow:0 0 13px #d9b46277}}
+.time-line{font-size:18px;color:#64252a;margin:4px 0}.invite-message{font-size:14px;line-height:1.9;color:#52292a;max-width:530px;margin:10px auto}
+.event-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:550px;margin:15px auto}
+.event-card{position:relative;padding:13px 9px 12px;border:1px solid #d6b46d;background:linear-gradient(145deg,#fff9eb,#f7e7c9);min-height:135px}
+.event-card .event-icon{display:block;margin:0 auto 5px;width:108px;height:70px;background-image:url('file_000000005d4081f5b6609062251d8191.png');background-repeat:no-repeat;background-size:1024px 1536px;background-position:-60px -840px}
+.event-card h3{font-size:19px;color:#8b1d30;margin:4px 0}.event-card p{font-size:13px;line-height:1.7;color:#583034;margin:4px 0}
+.venue{max-width:540px;margin:17px auto 12px;padding:15px 12px;background:linear-gradient(90deg,transparent,#f5e4c6,#fff6e3,#f5e4c6,transparent);border-top:1px solid #d3ad61;border-bottom:1px solid #d3ad61}
+.venue h3{font-size:22px;color:#8b1b2e;margin:3px 0 6px}.venue p{font-size:14px;line-height:1.8;color:#4e2528;margin:0}
+.map-link{display:inline-block;margin-top:8px;color:#8c1c31;border:1px solid #c49a4f;padding:8px 14px;border-radius:2px;text-decoration:none;font:600 12px 'DM Sans',Arial,sans-serif}
+.map-link:hover{background:#f0dfbc}
+.invokers{max-width:540px;margin:15px auto 8px;padding:12px;border-top:1px solid #d0a85a;border-bottom:1px solid #d0a85a}
+.invokers h3{font-size:20px;color:#8a1d2f;margin:0 0 8px}.invokers p{font-size:13px;line-height:1.85;color:#54282d;margin:0}
+.procession{width:260px;height:85px;max-width:78%;margin:12px auto 0;position:relative!important;background-position:-70px -1385px;opacity:.94}
+.couple-photo-wrap{position:relative;width:min(100%,500px);margin:8px auto 0;padding:0 5px;isolation:isolate}
+.couple-photo{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;object-position:center bottom;mask-image:linear-gradient(to bottom,transparent 0%,black 12%,black 78%,transparent 100%),linear-gradient(to right,transparent 0%,black 7%,black 93%,transparent 100%);mask-composite:intersect;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 12%,black 78%,transparent 100%),linear-gradient(to right,transparent 0%,black 7%,black 93%,transparent 100%);-webkit-mask-composite:source-in;filter:saturate(.92) contrast(.98);mix-blend-mode:multiply}
+.photo-caption{font-size:14px;color:#8c5b43;margin:-7px auto 8px}
+.invitation-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:18px auto 4px;max-width:600px}
+.link-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #d3b16e;color:#fff0d1;background:#3d101e;padding:11px 15px;border-radius:3px;font:13px 'DM Sans',Arial,sans-serif}
 .link-btn:hover{background:#702a3a}
-.family-block{font-size:12px;line-height:1.8;color:#71404a;margin:8px auto;max-width:440px}
-.fine-print{font:11px 'DM Sans',Arial,sans-serif;color:#d5bf98;line-height:1.7;margin-top:22px}
-
-.couple-photo-frame{max-width:480px;margin:24px auto 22px;padding:8px;background:linear-gradient(145deg,#f5dfaa,#9e7139,#f7e9c2);border:1px solid #e5c27a;box-shadow:0 15px 38px #16050c88;position:relative}
-.couple-photo{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#32101a}
-.photo-caption{font-size:14px;color:#f0d28f;margin:12px 0 0;letter-spacing:.5px}
-.original-card-frame{max-width:500px;margin:24px auto 12px;padding:9px;background:linear-gradient(145deg,#f8e9c3,#bd9250,#f8e9c3);border:1px solid #e3c27e;box-shadow:0 16px 40px #16050c88}
-.original-card-button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
-.original-card{display:block;width:100%;height:auto}
-.card-hint{font:12px 'DM Sans',Arial,sans-serif;color:#e8d3aa;margin:9px auto 0}
-.card-modal{display:none;position:fixed;inset:0;z-index:20;background:rgba(15,3,8,.94);padding:20px;align-items:center;justify-content:center;cursor:zoom-out}
-.card-modal.open{display:flex}
-.card-modal img{max-width:min(96vw,900px);max-height:94vh;object-fit:contain;box-shadow:0 0 35px #000}
-.card-modal-close{position:fixed;top:12px;right:16px;border:1px solid #e4c27b;background:#41101e;color:#fff2d5;padding:9px 14px;border-radius:3px;font:14px 'DM Sans',Arial,sans-serif}
-
-@media(max-width:500px){.choices{grid-template-columns:1fr;gap:8px}.choice{min-height:0;flex-direction:row;justify-content:flex-start;text-align:left;padding:11px 15px}.choice .emoji{width:38px}.details-grid{grid-template-columns:1fr}.shell{padding:27px 17px}.mandala{width:118px;height:118px}}
+.footer-note{font:11px 'DM Sans',Arial,sans-serif;color:#e6d2ac;line-height:1.8;margin-top:20px}
+@media(max-width:520px){.choices{grid-template-columns:1fr;gap:8px}.choice{min-height:0;flex-direction:row;justify-content:flex-start;text-align:left;padding:11px 15px}.choice .emoji{width:38px}.name-grid,.event-row{grid-template-columns:1fr;gap:9px}.name-card{padding:10px 8px}.elephant{width:105px;height:125px;top:420px;background-size:800px 1200px}.elephant.left{background-position:-59px -406px}.elephant.right{background-position:-629px -406px}.marriage-title{margin-top:17px}.ganesh-art{width:145px;height:145px;background-size:849px 1273px;background-position:-352px -45px}.flower-top{transform:scale(.8);transform-origin:top left}.flower-bottom{transform:scale(.82);transform-origin:bottom right}.couple-photo{max-height:350px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-@media print{body{background:white;color:black}.ambient,.screen:not(#final),.invite-actions,.fine-print{display:none!important}#final{display:block!important;min-height:0;padding:0}.final-shell{box-shadow:none;background:white;border:0;outline:0;color:black}.invite-paper{box-shadow:none;break-inside:avoid}.final-shell>.kicker,.final-shell>.orn,.final-shell>h1,.final-shell>p,.final-shell>.fine-print{display:none!important}}
+@media print{body{background:white}.stars,#welcome,#clues,.invitation-actions,.footer-note{display:none!important}#final{display:block!important;padding:0}.shell{box-shadow:none;background:white;border:0;outline:0;padding:0}.invitation{box-shadow:none}.couple-photo-wrap{max-width:340px}}
 </style>
 </head>
 <body>
-<div class="ambient"></div>
+<div class="stars"></div>
 <section class="screen active" id="welcome">
  <div class="shell">
   <div class="kicker">॥ श्री गणेशाय नमः ॥ • सस्नेह निमंत्रण</div>
-  <div class="mandala"><div class="ganesh">ॐ<br><span style="font-size:38px">श्री</span></div></div>
+  <div class="mandala"><div class="ganesh-symbol">ॐ<br><span style="font-size:36px">श्री</span></div></div>
   <div class="sub">A LITTLE MYSTERY • A BIG CELEBRATION</div>
   <h1>एक सुंदर सुरुवात...</h1>
   <p>दोन कुटुंबं, दोन मनं आणि आयुष्यभराची एक नवी साथ.<br>तुमच्यासाठी एक खास निमंत्रण घेऊन आलो आहोत...</p>
-  <div class="envelope" aria-hidden="true"></div>
-  <div class="ribbon"></div>
+  <div class="envelope" aria-hidden="true"></div><div class="ribbon"></div>
   <p class="sub">तीन संकेत उलगडा आणि शुभक्षणाचा साक्षीदार व्हा</p>
   <button class="cta" onclick="beginJourney()">निमंत्रण उघडा · Open Invitation</button>
-  <div class="fine-print">THE ROYAL WEDDING JOURNEY<br>RUTIKESH ♥ SAPANA</div>
+  <div class="footer-note">THE ROYAL WEDDING JOURNEY<br>RUTIKESH ♥ SAPANA</div>
  </div>
 </section>
-
 <section class="screen" id="clues">
  <div class="shell">
   <div class="kicker">THE WEDDING MYSTERY • गुपित उलगडा</div>
-  <div class="progress-wrap">
-   <div class="progress-meta"><span id="stepText">पहिला संकेत</span><span id="countText">01 / 03</span></div>
-   <div class="track"><div class="fill" id="progress"></div></div>
-  </div>
-  <div class="clue-icon" id="clueIcon">🪔</div>
-  <h2 class="prompt" id="question"></h2>
-  <p id="questionSub" class="sub"></p>
-  <div class="choices" id="choices"></div>
-  <div class="feedback" id="feedback" aria-live="polite"></div>
-  <div class="action-row">
-   <button class="ghost" id="hintButton" onclick="showHint()">एक छोटीशी मदत · Hint</button>
-   <button class="ghost" onclick="showScreen('welcome')">मागे जा · Back</button>
-  </div>
-  <p class="hint" id="hintText"></p>
+  <div class="progress-wrap"><div class="progress-meta"><span id="stepText">पहिला संकेत</span><span id="countText">01 / 03</span></div><div class="track"><div class="fill" id="progress"></div></div></div>
+  <div class="clue-icon" id="clueIcon">🪔</div><h2 class="prompt" id="question"></h2><p id="questionSub" class="sub"></p>
+  <div class="choices" id="choices"></div><div class="feedback" id="feedback" aria-live="polite"></div>
+  <button class="ghost" id="hintButton" onclick="showHint()">एक छोटीशी मदत · Hint</button><button class="ghost" onclick="showScreen('welcome')">मागे जा · Back</button><p class="hint" id="hintText"></p>
  </div>
 </section>
-
 <section class="screen" id="final">
- <div class="shell final-shell">
+ <div class="shell">
   <div class="kicker">THE SECRET IS REVEALED • शुभमंगल सावधान</div>
-  <div class="ganesh reveal-title">✺</div>
-  <h1 class="reveal-title">शुभविवाह!</h1>
-  <p>आनंदाचा क्षण आता उलगडला आहे...<br>आपली उपस्थितीच आमच्यासाठी सर्वात मोठी भेट आहे.</p>
-  
-  <div class="couple-photo-frame">
-   <img class="couple-photo" src="img%20me.jpeg" alt="ऋतिकेश आणि सपना यांचा मूळ फोटो">
-   <div class="photo-caption">ऋतिकेश ♥ सपना • एका नव्या प्रवासाची सुरुवात</div>
+  <div class="invitation" id="invitation">
+   <div class="motif flower-top"></div><div class="motif flower-bottom"></div>
+   <div class="motif ganesh-art"></div>
+   <div class="inv-kicker reveal r1">॥ श्री गणेशाय नमः ॥</div>
+   <div class="inv-kicker reveal r2">कुलस्वामिनी रेणुकामातेच्या कृपेने</div>
+   <h1 class="couple-names reveal r3">चि. ऋतिकेश <span style="color:#bc7d24">♥</span> चि.सौ.का. सपना</h1>
+   <div class="name-grid">
+    <div class="name-card reveal r3"><h3>चि. ऋतिकेश</h3><p>श्री. काशिनाथ शंकर वाघ यांचे नातू,<br>श्री. दादासाहेब अंबादास भागवत (वाकळा) यांचा भाचा.<br><br>सौ. संगीता व श्री. दीपक काशिनाथ वाघ यांचे चिरंजीव.</p></div>
+    <div class="name-card reveal r4"><h3>चि.सौ.का. सपना</h3><p>श्री. निवृत्ती शंभु पवार यांची नात,<br>श्री. सोपान निवृत्ती राऊत (भोकर्गाव) यांची भाची.<br><br>सौ. लता व श्री. विष्णु निवृत्ती पवार यांची कन्या.</p></div>
+   </div>
+   <div class="marriage-title reveal r4">शुभ विवाह</div>
+   <div class="motif elephant left"></div><div class="motif elephant right"></div>
+   <div class="ceremony-meta reveal r4">मिती मार्गशीर्ष वद्य पंचमी शके १९४८</div>
+   <div class="date-block reveal r5">
+    <div class="date-label">आपणांस सस्नेह निमंत्रण</div>
+    <div class="wedding-date">सोमवार, दि. २८ डिसेंबर २०२६</div>
+    <div class="time-line">दुपारी १:१० वाजता</div>
+   </div>
+   <p class="invite-message reveal r5">शुभमुहूर्तावर करण्याचे योजिले आहे, तरी आपण सहपरिवार उपस्थित रहावे, ही नम्र विनंती.</p>
+   <div class="event-row reveal r5">
+    <div class="event-card"><span class="event-icon" aria-hidden="true"></span><h3>हळदी समारंभ</h3><p>रविवार, दि. २७/१२/२०२६<br>सायंकाळी ६ वा.<br>विवाहस्थळी होईल.</p></div>
+    <div class="event-card"><div style="font-size:30px;margin:8px">📍</div><h3>विवाह स्थळ</h3><p>डांगरे वस्ती, जातेगाव,<br>ता. नांदगाव, जि. नाशिक.</p></div>
+   </div>
+   <div class="venue reveal r5">
+    <h3>आपली उपस्थिती, आमचा आनंद</h3>
+    <p>या मंगल प्रसंगी आपण सहकुटुंब उपस्थित राहून नवदाम्पत्यास शुभाशीर्वाद द्यावेत.</p>
+    <a class="map-link" href="https://maps.google.com/?q=Dangare+Vasti+Jategaon+Nandgaon+Nashik+Maharashtra+India" target="_blank" rel="noopener">📍 विवाह स्थळाचा नकाशा पहा</a>
+   </div>
+   <div class="invokers reveal r5">
+    <h3>निमंत्रक</h3>
+    <p>श्री. काशिनाथ शंकर वाघ • श्री. बाबासाहेब काशिनाथ वाघ<br>श्री. पोपट काशिनाथ वाघ • श्री. कैलास काशिनाथ वाघ<br>श्री. दीपक काशिनाथ वाघ • श्री. संतोष काशिनाथ वाघ<br><strong>समस्त वाघ परिवार.</strong></p>
+   </div>
+   <div class="motif procession"></div>
+   <div class="couple-photo-wrap reveal r5">
+    <img class="couple-photo" src="img%20me.jpeg" alt="ऋतिकेश आणि सपना यांचा मूळ फोटो">
+    <div class="photo-caption">ऋतिकेश ♥ सपना • एका नव्या प्रवासाची सुरुवात</div>
+   </div>
   </div>
-  <div class="kicker" style="margin-top:24px">आमची अधिकृत विवाह निमंत्रण पत्रिका</div>
-  <div class="original-card-frame">
-   <button class="original-card-button" onclick="openCard()" aria-label="विवाह पत्रिका मोठी करून पहा">
-    <img class="original-card" src="file_000000005d4081f5b6609062251d8191.png" alt="ऋतिकेश आणि सपना यांची मूळ मराठी विवाह निमंत्रण पत्रिका">
-   </button>
+  <div class="invitation-actions">
+   <a class="link-btn" href="https://maps.google.com/?q=Dangare+Vasti+Jategaon+Nandgaon+Nashik+Maharashtra+India" target="_blank" rel="noopener">📍 Map</a>
+   <button class="link-btn" onclick="saveCalendar()">📅 तारीख जतन करा</button>
+   <button class="link-btn" onclick="shareInvite()">💌 WhatsApp वर शेअर करा</button>
+   <button class="link-btn" onclick="window.print()">🖨️ Print</button>
   </div>
-  <p class="card-hint">पत्रिकेवर टॅप करा आणि ती पूर्ण स्क्रीनमध्ये वाचा · Tap to enlarge</p>
-  <div class="invite-actions">
-   <a class="link-btn" href="https://maps.google.com/?q=Dangare+Vasti+Jategaon+Nandgaon+Nashik+Maharashtra+India" target="_blank" rel="noopener">📍 विवाह स्थळ · Map</a>
-   <button class="link-btn" onclick="saveCalendar()">📅 तारीख जतन करा · Save Date</button>
-   <button class="link-btn" onclick="shareInvite()">💌 शेअर करा · Share</button>
-   <button class="link-btn" onclick="window.print()">🖨️ Print invitation</button>
-  </div>
-  <button class="ghost" onclick="showScreen('welcome')">पुन्हा सुरुवात करा · Replay journey</button>
-  <div class="fine-print">आपले स्नेहांकित • वाघ परिवार<br>तुमच्या उपस्थितीची आतुरतेने वाट पाहत आहोत.</div>
+  <button class="ghost" onclick="showScreen('welcome')">पुन्हा सुरुवात करा · Replay</button>
+  <div class="footer-note">आपले स्नेहांकित • वाघ परिवार<br>तुमच्या उपस्थितीची आतुरतेने वाट पाहत आहोत.</div>
  </div>
 </section>
-
-
-<div class="card-modal" id="cardModal" onclick="closeCard()" role="dialog" aria-modal="true" aria-label="विवाह निमंत्रण पत्रिका">
- <button class="card-modal-close" onclick="closeCard();event.stopPropagation()">✕ बंद करा · Close</button>
- <img src="file_000000005d4081f5b6609062251d8191.png" alt="मूळ विवाह निमंत्रण पत्रिका" onclick="event.stopPropagation()">
-</div>
 <script>
-function openCard(){document.getElementById("cardModal").classList.add("open");document.body.style.overflow="hidden"}
-function closeCard(){document.getElementById("cardModal").classList.remove("open");document.body.style.overflow=""}
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCard()});
 const clues=[
  {label:"पहिला संकेत",icon:"🪔",q:"दोन कुटुंबांना एका सुंदर नात्यात जोडणारा सोहळा कोणता?",sub:"What special occasion brings two families together?",hint:"हा आयुष्यभराच्या नव्या प्रवासाचा पहिला दिवस असतो.",choices:[["🎂","वाढदिवस","Birthday"],["💍","शुभविवाह","Wedding"],["🎉","स्नेहमेळावा","Get-together"]],answer:1,success:"अगदी बरोबर! दोन मनांचा सुंदर मिलाफ..."},
  {label:"दुसरा संकेत",icon:"🌺",q:"आमच्या आनंदाचा महिना कोणता?",sub:"A little hint: वर्षातील शेवटचा महिना.",hint:"या महिन्यात नाताळ आणि नववर्षाची चाहूल लागते.",choices:[["🍂","ऑक्टोबर","October"],["❄️","डिसेंबर","December"],["🌱","जानेवारी","January"]],answer:1,success:"छान! डिसेंबरमध्ये एक खास दिवस तुमची वाट पाहतोय."},
@@ -149,41 +170,12 @@ const clues=[
 let step=0,locked=false;
 function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'})}
 function beginJourney(){step=0;showScreen('clues');renderClue()}
-function renderClue(){
- const c=clues[step];locked=false;
- document.getElementById('stepText').textContent=c.label;
- document.getElementById('countText').textContent=String(step+1).padStart(2,'0')+' / 03';
- document.getElementById('progress').style.width=((step)/3*100)+'%';
- document.getElementById('clueIcon').textContent=c.icon;
- document.getElementById('question').textContent=c.q;
- document.getElementById('questionSub').textContent=c.sub;
- document.getElementById('feedback').textContent='';
- document.getElementById('hintText').textContent='';
- document.getElementById('hintButton').disabled=false;
- const wrap=document.getElementById('choices');wrap.innerHTML='';
- c.choices.forEach((v,i)=>{const b=document.createElement('button');b.className='choice';b.innerHTML='<span class="emoji">'+v[0]+'</span><span>'+v[1]+'<br><small style="font:11px DM Sans,Arial,sans-serif;opacity:.72">'+v[2]+'</small></span>';b.onclick=()=>choose(i);wrap.appendChild(b)});
-}
+function renderClue(){const c=clues[step];locked=false;document.getElementById('stepText').textContent=c.label;document.getElementById('countText').textContent=String(step+1).padStart(2,'0')+' / 03';document.getElementById('progress').style.width=(step/3*100)+'%';document.getElementById('clueIcon').textContent=c.icon;document.getElementById('question').textContent=c.q;document.getElementById('questionSub').textContent=c.sub;document.getElementById('feedback').textContent='';document.getElementById('hintText').textContent='';document.getElementById('hintButton').disabled=false;const wrap=document.getElementById('choices');wrap.innerHTML='';c.choices.forEach((v,i)=>{const b=document.createElement('button');b.className='choice';b.innerHTML='<span class="emoji">'+v[0]+'</span><span>'+v[1]+'<br><small style="font:11px DM Sans,Arial,sans-serif;opacity:.72">'+v[2]+'</small></span>';b.onclick=()=>choose(i);wrap.appendChild(b)})}
 function showHint(){document.getElementById('hintText').textContent=clues[step].hint;document.getElementById('hintButton').disabled=true}
-function choose(i){
- if(locked)return;const c=clues[step],fb=document.getElementById('feedback');
- if(i!==c.answer){fb.textContent='पुन्हा प्रयत्न करा! योग्य संकेत शोधा. ✨';return}
- locked=true;fb.textContent=c.success;document.querySelectorAll('.choice').forEach(b=>b.disabled=true);
- document.getElementById('progress').style.width=((step+1)/3*100)+'%';
- setTimeout(()=>{step++;if(step===clues.length){showScreen('final');celebrate()}else renderClue()},950);
-}
-function celebrate(){
- for(let i=0;i<42;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✦','❀','✧','•'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'vw';p.style.fontSize=(10+Math.random()*16)+'px';p.style.animationDuration=(3+Math.random()*3)+'s';p.style.setProperty('--drift',(Math.random()*180-90)+'px');document.body.appendChild(p);setTimeout(()=>p.remove(),6500)}
-}
-function saveCalendar(){
- const start='20261228T074000Z',end='20261228T090000Z';
- const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Royal Wedding//Invitation//MR','BEGIN:VEVENT','UID:rutikesh-sapana-wedding-20261228','DTSTAMP:20261126T000000Z','DTSTART:'+start,'DTEND:'+end,'SUMMARY:Wedding of Rutikesh and Sapana','LOCATION:Dangare Vasti, Jategaon, Nandgaon, Nashik, Maharashtra','DESCRIPTION:Wedding ceremony at 1:10 PM IST.','END:VEVENT','END:VCALENDAR'].join('\r\n');
- const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([body],{type:'text/calendar;charset=utf-8'}));a.download='Rutikesh-Sapana-Wedding.ics';a.click();URL.revokeObjectURL(a.href);
-}
-function shareInvite(){
- const msg='सस्नेह निमंत्रण! ऋतिकेश ♥ सपना यांच्या शुभविवाहासाठी आपले हार्दिक स्वागत. सोमवार, २८ डिसेंबर २०२६, दुपारी १:१० वाजता. स्थळ: डांगरे वस्ती, जातेगाव, ता. नांदगाव, जि. नाशिक. निमंत्रण उघडा: '+location.href;
- const url='https://wa.me/?text='+encodeURIComponent(msg);window.open(url,'_blank','noopener');
-}
+function choose(i){if(locked)return;const c=clues[step],fb=document.getElementById('feedback');if(i!==c.answer){fb.textContent='पुन्हा प्रयत्न करा! योग्य संकेत शोधा. ✨';return}locked=true;fb.textContent=c.success;document.querySelectorAll('.choice').forEach(b=>b.disabled=true);document.getElementById('progress').style.width=((step+1)/3*100)+'%';setTimeout(()=>{step++;if(step===clues.length){showScreen('final');celebrate()}else renderClue()},950)}
+function celebrate(){for(let i=0;i<42;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✦','❀','✧','•'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'vw';p.style.fontSize=(10+Math.random()*16)+'px';p.style.animationDuration=(3+Math.random()*3)+'s';p.style.setProperty('--drift',(Math.random()*180-90)+'px');document.body.appendChild(p);setTimeout(()=>p.remove(),6500)}}
+function saveCalendar(){const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Royal Wedding//Invitation//MR','BEGIN:VEVENT','UID:rutikesh-sapana-wedding-20261228','DTSTAMP:20261126T000000Z','DTSTART:20261228T074000Z','DTEND:20261228T090000Z','SUMMARY:Wedding of Rutikesh and Sapana','LOCATION:Dangare Vasti, Jategaon, Nandgaon, Nashik, Maharashtra','DESCRIPTION:Wedding ceremony at 1:10 PM IST.','END:VEVENT','END:VCALENDAR'].join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([body],{type:'text/calendar;charset=utf-8'}));a.download='Rutikesh-Sapana-Wedding.ics';a.click();URL.revokeObjectURL(a.href)}
+function shareInvite(){const msg='सस्नेह निमंत्रण! ऋतिकेश ♥ सपना यांच्या शुभविवाहासाठी आपले हार्दिक स्वागत. सोमवार, २८ डिसेंबर २०२६, दुपारी १:१० वाजता. स्थळ: डांगरे वस्ती, जातेगाव, ता. नांदगाव, जि. नाशिक. निमंत्रण: '+location.href;window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener')}
 </script>
-<!-- Fresh deployment trigger after adding original photo and invitation artwork. -->
 </body>
 </html>
