@@ -720,10 +720,23 @@ tick();setInterval(tick,1000);
  let guest='', recipient='both';
  const answeredGroups=new Set();
  const autoAdvanced=new Set();
+ const funGroups=['fun1','fun2','fun3','fun4','fun5'];
+ const dateGroups=['date1','date2','date3'];
+ const toDatesButton=document.getElementById('toDates');
+ const toMessageButton=document.getElementById('toMessage');
+ const syncProgressButtons=()=>{
+  const funComplete=funGroups.every(q=>answeredGroups.has(q));
+  const datesComplete=dateGroups.every(q=>answeredGroups.has(q));
+  toDatesButton.disabled=!funComplete;
+  toMessageButton.disabled=!datesComplete;
+  toDatesButton.innerHTML=funComplete?'सर्व उत्तरे मिळाली · पुढे जात आहोत <span>→</span>':'सर्व ५ प्रश्नांची उत्तरे द्या <span>→</span>';
+  toMessageButton.innerHTML=datesComplete?'सर्व उत्तरे मिळाली · पुढे जात आहोत <span>→</span>':'सर्व ३ प्रश्नांची उत्तरे द्या <span>→</span>';
+ };
  const go=(n)=>{
   pages.forEach((p,i)=>p.classList.toggle('active',i===n-1));
   dots.forEach((d,i)=>d.classList.toggle('active',i===n-2));
   root.querySelector('.journey-progress').style.display=n===1?'none':'flex';
+  root.scrollTop=0;
  };
  const celebrate=(origin)=>{
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -749,6 +762,7 @@ tick();setInterval(tick,1000);
   setTimeout(()=>root.remove(),750);
  };
  root.querySelector('.journey-progress').style.display='none';
+ syncProgressButtons();
  root.querySelectorAll('[data-guest]').forEach(btn=>btn.addEventListener('click',()=>{
   root.querySelectorAll('[data-guest]').forEach(b=>b.classList.remove('selected'));
   btn.classList.add('selected');guest=btn.dataset.guest;
@@ -756,9 +770,9 @@ tick();setInterval(tick,1000);
  }));
  document.getElementById('journeyStart').addEventListener('click',()=>go(2));
  document.getElementById('backWelcome').addEventListener('click',()=>go(1));
- document.getElementById('toDates').addEventListener('click',()=>go(3));
+ toDatesButton.addEventListener('click',()=>{if(funGroups.every(q=>answeredGroups.has(q)))go(3);});
  document.getElementById('backNames').addEventListener('click',()=>go(2));
- document.getElementById('toMessage').addEventListener('click',()=>go(4));
+ toMessageButton.addEventListener('click',()=>{if(dateGroups.every(q=>answeredGroups.has(q)))go(4);});
  document.getElementById('backDates').addEventListener('click',()=>go(3));
  root.addEventListener('click',e=>{
   const answer=e.target.closest('[data-answer]');
@@ -779,17 +793,20 @@ tick();setInterval(tick,1000);
    void box.offsetWidth;
    if(ok){box.classList.add('answer-correct');celebrate(answer);}
    answeredGroups.add(group);
-   const funGroups=['fun1','fun2','fun3','fun4','fun5'];
-   const dateGroups=['date1','date2','date3'];
+   syncProgressButtons();
    if(funGroups.every(q=>answeredGroups.has(q)) && !autoAdvanced.has('fun')){
     autoAdvanced.add('fun');
-    box.textContent += ' सर्व प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
-    setTimeout(()=>{if(root.isConnected && pages[1].classList.contains('active')) go(3);},1250);
+    box.textContent += ' सर्व ५ प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
+    setTimeout(()=>{
+     if(root.isConnected && pages[1].classList.contains('active'))go(3);
+    },900);
    }
    if(dateGroups.every(q=>answeredGroups.has(q)) && !autoAdvanced.has('date')){
     autoAdvanced.add('date');
-    box.textContent += ' सर्व प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
-    setTimeout(()=>{if(root.isConnected && pages[2].classList.contains('active')) go(4);},1250);
+    box.textContent += ' सर्व ३ प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
+    setTimeout(()=>{
+     if(root.isConnected && pages[2].classList.contains('active'))go(4);
+    },900);
    }
   }
   const rec=e.target.closest('[data-recipient]');
