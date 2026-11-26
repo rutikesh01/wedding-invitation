@@ -48,6 +48,19 @@ p{font-size:16px;line-height:1.95;color:#f3e2c6;margin:12px auto}.sub{font:12px 
 .link-btn:hover{background:#702a3a}
 .family-block{font-size:12px;line-height:1.8;color:#71404a;margin:8px auto;max-width:440px}
 .fine-print{font:11px 'DM Sans',Arial,sans-serif;color:#d5bf98;line-height:1.7;margin-top:22px}
+
+.couple-photo-frame{max-width:480px;margin:24px auto 22px;padding:8px;background:linear-gradient(145deg,#f5dfaa,#9e7139,#f7e9c2);border:1px solid #e5c27a;box-shadow:0 15px 38px #16050c88;position:relative}
+.couple-photo{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#32101a}
+.photo-caption{font-size:14px;color:#f0d28f;margin:12px 0 0;letter-spacing:.5px}
+.original-card-frame{max-width:500px;margin:24px auto 12px;padding:9px;background:linear-gradient(145deg,#f8e9c3,#bd9250,#f8e9c3);border:1px solid #e3c27e;box-shadow:0 16px 40px #16050c88}
+.original-card-button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+.original-card{display:block;width:100%;height:auto}
+.card-hint{font:12px 'DM Sans',Arial,sans-serif;color:#e8d3aa;margin:9px auto 0}
+.card-modal{display:none;position:fixed;inset:0;z-index:20;background:rgba(15,3,8,.94);padding:20px;align-items:center;justify-content:center;cursor:zoom-out}
+.card-modal.open{display:flex}
+.card-modal img{max-width:min(96vw,900px);max-height:94vh;object-fit:contain;box-shadow:0 0 35px #000}
+.card-modal-close{position:fixed;top:12px;right:16px;border:1px solid #e4c27b;background:#41101e;color:#fff2d5;padding:9px 14px;border-radius:3px;font:14px 'DM Sans',Arial,sans-serif}
+
 @media(max-width:500px){.choices{grid-template-columns:1fr;gap:8px}.choice{min-height:0;flex-direction:row;justify-content:flex-start;text-align:left;padding:11px 15px}.choice .emoji{width:38px}.details-grid{grid-template-columns:1fr}.shell{padding:27px 17px}.mandala{width:118px;height:118px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media print{body{background:white;color:black}.ambient,.screen:not(#final),.invite-actions,.fine-print{display:none!important}#final{display:block!important;min-height:0;padding:0}.final-shell{box-shadow:none;background:white;border:0;outline:0;color:black}.invite-paper{box-shadow:none;break-inside:avoid}.final-shell>.kicker,.final-shell>.orn,.final-shell>h1,.final-shell>p,.final-shell>.fine-print{display:none!important}}
@@ -96,42 +109,18 @@ p{font-size:16px;line-height:1.95;color:#f3e2c6;margin:12px auto}.sub{font:12px 
   <div class="ganesh reveal-title">✺</div>
   <h1 class="reveal-title">शुभविवाह!</h1>
   <p>आनंदाचा क्षण आता उलगडला आहे...<br>आपली उपस्थितीच आमच्यासाठी सर्वात मोठी भेट आहे.</p>
-  <div class="invite-paper">
-   <div class="paper-kicker">॥ श्री गणेशाय नमः ॥</div>
-   <div class="paper-kicker">कुलस्वामिनी रेणुकामातेच्या कृपेने</div>
-   <div style="font-size:28px;color:#b58c49;margin:8px">❀ ✦ ❀</div>
-   <div class="paper-title">शुभ विवाह</div>
-   <div class="couple">चि. ऋतिकेश <span style="color:#b12a40">♥</span> चि.सौ.का. सपना</div>
-   <div class="gold-line"></div>
-   <div class="family-block">
-    श्री. काशिनाथ शंकर वाघ यांचे नातू,<br>
-    श्री. दादासाहेब अंबादास भागवत यांचा भाचा.<br>
-    सौ. संगीता व श्री. दीपक काशिनाथ वाघ (वाकळा) यांचे चिरंजीव.
-   </div>
-   <div style="font-size:18px;color:#a77c43;margin:9px">❖</div>
-   <div class="family-block">
-    श्री. निवृत्ती शंभु पवार यांची नात,<br>
-    श्री. सोपान निवृत्ती राऊत यांची भाची.<br>
-    सौ. लता व श्री. विष्णु निवृत्ती पवार (जातेगाव) यांची कन्या.
-   </div>
-   <div class="gold-line"></div>
-   <div class="paper-text">मिती मार्गशीर्ष वद्य पंचमी शके १९४८</div>
-   <div class="paper-date">सोमवार, दि. २८ डिसेंबर २०२६</div>
-   <div class="paper-text"><b>दुपारी १:१० वाजता</b></div>
-   <p class="paper-text">शुभमुहूर्तावर करण्याचे योजिले आहे, तरी आपण सहपरिवार उपस्थित रहावे, ही नम्र विनंती.</p>
-   <div class="details-grid">
-    <div class="detail-box"><b>🌼 हळदी समारंभ</b><span>रविवार दि. २७/१२/२०२६<br>सायंकाळी ६ वा.</span></div>
-    <div class="detail-box"><b>📍 विवाह स्थळ</b><span>डांगरे वस्ती, जातेगाव,<br>ता. नांदगाव, जि. नाशिक.</span></div>
-   </div>
-   <div class="paper-text"><b>निमंत्रक</b></div>
-   <div class="family-block">
-    श्री. काशिनाथ शंकर वाघ • श्री. बाबासाहेब काशिनाथ वाघ<br>
-    श्री. पोपट काशिनाथ वाघ • श्री. कैलास काशिनाथ वाघ<br>
-    श्री. दीपक काशिनाथ वाघ • श्री. संतोष काशिनाथ वाघ<br>
-    <b>समस्त वाघ परिवार.</b>
-   </div>
-   <div style="font-size:22px;color:#a77c43;margin:10px">❀ ❖ ❀</div>
+  
+  <div class="couple-photo-frame">
+   <img class="couple-photo" src="img%20me.jpeg" alt="ऋतिकेश आणि सपना यांचा मूळ फोटो">
+   <div class="photo-caption">ऋतिकेश ♥ सपना • एका नव्या प्रवासाची सुरुवात</div>
   </div>
+  <div class="kicker" style="margin-top:24px">आमची अधिकृत विवाह निमंत्रण पत्रिका</div>
+  <div class="original-card-frame">
+   <button class="original-card-button" onclick="openCard()" aria-label="विवाह पत्रिका मोठी करून पहा">
+    <img class="original-card" src="file_000000005d4081f5b6609062251d8191.png" alt="ऋतिकेश आणि सपना यांची मूळ मराठी विवाह निमंत्रण पत्रिका">
+   </button>
+  </div>
+  <p class="card-hint">पत्रिकेवर टॅप करा आणि ती पूर्ण स्क्रीनमध्ये वाचा · Tap to enlarge</p>
   <div class="invite-actions">
    <a class="link-btn" href="https://maps.google.com/?q=Dangare+Vasti+Jategaon+Nandgaon+Nashik+Maharashtra+India" target="_blank" rel="noopener">📍 विवाह स्थळ · Map</a>
    <button class="link-btn" onclick="saveCalendar()">📅 तारीख जतन करा · Save Date</button>
@@ -143,7 +132,15 @@ p{font-size:16px;line-height:1.95;color:#f3e2c6;margin:12px auto}.sub{font:12px 
  </div>
 </section>
 
+
+<div class="card-modal" id="cardModal" onclick="closeCard()" role="dialog" aria-modal="true" aria-label="विवाह निमंत्रण पत्रिका">
+ <button class="card-modal-close" onclick="closeCard();event.stopPropagation()">✕ बंद करा · Close</button>
+ <img src="file_000000005d4081f5b6609062251d8191.png" alt="मूळ विवाह निमंत्रण पत्रिका" onclick="event.stopPropagation()">
+</div>
 <script>
+function openCard(){document.getElementById("cardModal").classList.add("open");document.body.style.overflow="hidden"}
+function closeCard(){document.getElementById("cardModal").classList.remove("open");document.body.style.overflow=""}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCard()});
 const clues=[
  {label:"पहिला संकेत",icon:"🪔",q:"दोन कुटुंबांना एका सुंदर नात्यात जोडणारा सोहळा कोणता?",sub:"What special occasion brings two families together?",hint:"हा आयुष्यभराच्या नव्या प्रवासाचा पहिला दिवस असतो.",choices:[["🎂","वाढदिवस","Birthday"],["💍","शुभविवाह","Wedding"],["🎉","स्नेहमेळावा","Get-together"]],answer:1,success:"अगदी बरोबर! दोन मनांचा सुंदर मिलाफ..."},
  {label:"दुसरा संकेत",icon:"🌺",q:"आमच्या आनंदाचा महिना कोणता?",sub:"A little hint: वर्षातील शेवटचा महिना.",hint:"या महिन्यात नाताळ आणि नववर्षाची चाहूल लागते.",choices:[["🍂","ऑक्टोबर","October"],["❄️","डिसेंबर","December"],["🌱","जानेवारी","January"]],answer:1,success:"छान! डिसेंबरमध्ये एक खास दिवस तुमची वाट पाहतोय."},
