@@ -548,12 +548,7 @@ h2{color:#214c43}
    <p class="journey-copy">तुमच्या मनातलं प्रेम, शुभेच्छा किंवा एखादी गोड आठवण आम्हाला लिहून पाठवा.</p>
    <div class="experience-panel">
     <label class="experience-label">तुमचे नाव</label><input class="experience-input" id="wishName" placeholder="तुमचे नाव">
-    <label class="experience-label">संदेश कोणासाठी आहे?</label>
-    <div class="experience-options">
-     <button type="button" data-recipient="groom">ऋतिकेशसाठी 🤵</button>
-     <button type="button" data-recipient="bride">सपनासाठी 👰</button>
-     <button type="button" data-recipient="both">दोघांसाठी 💚</button>
-    </div>
+    <div class="experience-note" style="margin:4px 0 12px;color:#31584d;font-family:'Tiro Devanagari Marathi',serif">तुमच्या शुभेच्छा थेट ऋतिकेशकडे पाठवा 🤵</div>
     <label class="experience-label">तुमचा खास संदेश</label><textarea class="experience-input experience-textarea" id="wishText" placeholder="मनापासून काहीतरी लिहा..."></textarea>
     <button class="experience-action" id="sendWish" type="button">WhatsApp वर शुभेच्छा पाठवा ↗</button>
     <div class="experience-note" id="wishNote">WhatsApp उघडल्यानंतर संदेश तपासा आणि स्वतः Send दाबा. संदेश आपोआप पाठवला जाणार नाही.</div>
@@ -717,7 +712,7 @@ tick();setInterval(tick,1000);
  if(!root) return;
  const pages=[1,2,3,4].map(n=>document.getElementById('journeyPage'+n));
  const dots=root.querySelectorAll('.progress-dot');
- let guest='', recipient='both';
+ let guest='';
  const answeredGroups=new Set();
  const autoAdvanced=new Set();
  const funGroups=['fun1','fun2','fun3','fun4','fun5'];
@@ -809,22 +804,15 @@ tick();setInterval(tick,1000);
     },900);
    }
   }
-  const rec=e.target.closest('[data-recipient]');
-  if(rec){
-   recipient=rec.dataset.recipient;
-   root.querySelectorAll('[data-recipient]').forEach(b=>b.classList.toggle('chosen',b===rec));
-  }
   if(e.target.id==='sendWish'){
    const name=(document.getElementById('wishName').value||'').trim();
    const msg=(document.getElementById('wishText').value||'').trim();
    const note=document.getElementById('wishNote');
    if(!name||!msg){note.textContent='कृपया तुमचे नाव आणि शुभेच्छा संदेश लिहा.';return;}
-   const text=encodeURIComponent(`ऋतिकेश आणि सपना यांच्या लग्नासाठी शुभेच्छा 💚\\nप्रेषक: ${name}\\nसंदेश: ${msg}`);
+   const text=encodeURIComponent(`ऋतिकेश आणि सपना यांच्या लग्नासाठी शुभेच्छा 💚\nप्रेषक: ${name}\nसंदेश: ${msg}`);
    const groomUrl='https://wa.me/917218736405?text='+text;
-   const brideUrl='https://wa.me/919307568861?text='+text;
-   if(recipient==='groom'){window.open(groomUrl,'_blank','noopener');note.textContent='ऋतिकेश यांच्यासाठी WhatsApp उघडले आहे. संदेश तपासून Send दाबा.';}
-   else if(recipient==='bride'){window.open(brideUrl,'_blank','noopener');note.textContent='सपना यांच्यासाठी WhatsApp उघडले आहे. संदेश तपासून Send दाबा.';}
-   else {note.innerHTML='दोघांनाही शुभेच्छा पाठवण्यासाठी खालील दोन्ही लिंक उघडा आणि प्रत्येक संदेशासाठी Send दाबा:<div class="experience-links"><a target="_blank" rel="noopener" href="'+groomUrl+'">🤵 ऋतिकेश यांना पाठवा ↗</a><a target="_blank" rel="noopener" href="'+brideUrl+'">👰 सपना यांना पाठवा ↗</a></div>';}
+   window.open(groomUrl,'_blank','noopener');
+   note.textContent='ऋतिकेश यांच्यासाठी WhatsApp उघडले आहे. संदेश तपासून Send दाबा.';
   }
   if(e.target.id==='showInvitation'||e.target.id==='skipMessage')finish();
  });
