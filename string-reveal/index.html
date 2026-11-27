@@ -462,8 +462,12 @@ h2{color:#214c43}
 .pull-date-handle{z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;width:58px;height:82px;padding:0;border:0;background:transparent;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;transform:translateY(var(--pull-distance,0px));transition:transform .12s ease-out}
 .pull-date-handle:active{cursor:grabbing}
 .pull-date-cord{display:block;width:2px;height:40px;background:linear-gradient(#f8e8b7,#d4a54e);box-shadow:0 0 5px #ffe6a1aa}
-.pull-date-tassel{display:grid;place-items:center;width:29px;height:29px;border:2px solid #f5dda1;border-radius:50%;background:radial-gradient(circle at 32% 25%,#fff0bf,#d0a24b 75%);color:#5a1429;font-size:14px;box-shadow:0 3px 8px #173e36aa}
-.pull-date-tassel:after{content:"";display:block;position:absolute;top:65px;width:10px;height:15px;background:linear-gradient(90deg,#b17b31,#f0d48b,#a66e29);clip-path:polygon(18% 0,82% 0,100% 100%,50% 75%,0 100%)}
+.pull-date-zip-teeth{position:absolute;z-index:1;top:44px;left:calc(50% - 19px);width:38px;height:94px;pointer-events:none;opacity:.82;filter:drop-shadow(0 1px 2px #143e35)}
+.pull-date-zip-teeth:before,.pull-date-zip-teeth:after{content:"";position:absolute;top:0;bottom:0;width:7px;background:repeating-linear-gradient(to bottom,#f0d18a 0 5px,transparent 5px 10px);border-left:1px solid #a97732;border-right:1px solid #fff0bd}
+.pull-date-zip-teeth:before{left:0}.pull-date-zip-teeth:after{right:0}
+.pull-date-zip-slider{position:relative;z-index:3;display:block;width:31px;height:25px;margin-top:0;border:2px solid #fff0bd;border-radius:6px 6px 9px 9px;background:linear-gradient(135deg,#fff0b7 0%,#d19d43 52%,#f6d995 100%);box-shadow:0 3px 8px #173e36aa,inset 0 1px 2px #fff9d8}
+.pull-date-zip-slider:before{content:"";position:absolute;left:8px;right:8px;top:4px;height:11px;border:1px solid #946426;border-radius:3px;background:linear-gradient(90deg,#7c572d,#b8863b)}
+.pull-date-zip-slider:after{content:"";position:absolute;left:50%;top:20px;width:12px;height:14px;transform:translateX(-50%);border:2px solid #f6dfa1;border-radius:4px 4px 8px 8px;background:linear-gradient(90deg,#c28e3c,#f3d58b,#c28e3c);box-shadow:0 2px 3px #173e3655}
 .pull-date-en{z-index:1;font:8px 'DM Sans',sans-serif;letter-spacing:.18em;color:#dfca95;margin-top:-1px}
 .pull-date-window.is-revealed .pull-date-cover{transform:translateY(-104%);opacity:.98}
 .pull-date-window.is-revealed .pull-date-content{animation:pull-date-unveil .8s .38s cubic-bezier(.2,.8,.2,1) forwards}
@@ -522,6 +526,21 @@ h2{color:#214c43}
 .invite-wishes .experience-input{background:#fffefa}
 .invite-wishes .experience-action{position:relative;z-index:1}
 .invite-wishes .experience-note{color:#887e73}
+
+/* Final typography polish: consistent display lettering on key Marathi headings */
+.hero h1,.hero h1 .marathi-word{
+ font-family:'Yatra One','Tiro Devanagari Marathi',serif!important;
+ font-weight:400;letter-spacing:0;line-height:1.28
+}
+.hero h1 .marathi-word{display:inline;white-space:nowrap;text-shadow:inherit}
+#invitation h2,.events h3,.location-panel h3,.person-detail .person-name{
+ font-family:'Yatra One','Tiro Devanagari Marathi',serif;
+ font-weight:400;letter-spacing:.01em
+}
+#invitation .date,.invite-venue strong,.hero-meta{
+ font-family:'Tiro Devanagari Marathi',serif;font-weight:600;letter-spacing:.01em
+}
+.invite-venue span{font-family:'Yatra One','Tiro Devanagari Marathi',serif}
 </style>
 </head>
 <body>
@@ -624,9 +643,10 @@ h2{color:#214c43}
      </div>
      <div class="pull-date-cover">
       <div class="pull-date-ornament">✦ ❖ ✦</div>
-      <div class="pull-date-prompt">तारीख पाहण्यासाठी दोरी खाली ओढा</div>
-      <button class="pull-date-handle" type="button" aria-label="तारीख उघडण्यासाठी सोनेरी दोरी खाली ओढा">
-       <span class="pull-date-cord"></span><span class="pull-date-tassel">❖</span>
+      <div class="pull-date-prompt">झिप खाली ओढून तारीख उघडा</div>
+      <span class="pull-date-zip-teeth" aria-hidden="true"></span>
+      <button class="pull-date-handle" type="button" aria-label="झिपर खाली ओढून तारीख उघडा">
+       <span class="pull-date-cord"></span><span class="pull-date-zip-slider" aria-hidden="true"><i></i></span>
       </button>
       <span class="pull-date-en">PULL THE GOLDEN STRING DOWN</span>
      </div>
@@ -750,7 +770,7 @@ h2{color:#214c43}
  <div class="wrap">
   <div class="section-kicker">Find your way</div><h2>विवाहस्थळ</h2>
   <div class="location">
-   <div class="location-panel"><h3>डांगरे वस्ती, जातेगाव</h3><p>ता. नांदगाव, जि. नाशिक, महाराष्ट्र</p><a class="map-link" href="https://maps.app.goo.gl/4RtM6Ux7xhdL5Gxs6?g_st=ac" target="_blank" rel="noopener">Google Maps वर दिशा पाहा ↗</a></div>
+   <div class="location-panel"><h3>डांगरे वस्ती, जातेगाव</h3><p>ता. नांदगाव, जि. नाशिक, महाराष्ट्र</p><a class="map-link" href="https://maps.app.goo.gl/ePYtTFHmDGu4ZixU6?g_st=ac" target="_blank" rel="noopener">Google Maps वर दिशा पाहा ↗</a></div>
    <div class="map-art"><div><div class="pin">📍</div><p>आपली उपस्थिती<br>आमच्यासाठी अनमोल आहे</p></div></div>
   </div>
  </div>
