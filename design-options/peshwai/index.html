@@ -446,101 +446,54 @@ h2{color:#214c43}
 @media(max-width:650px){.couple-memory{padding:10px 9px;margin:25px auto}.couple-memory img{max-height:420px}}
 
 
-/* Interactive pull-string wedding date reveal */
-.pull-date-card{width:min(100%,430px);margin:18px auto 22px;text-align:center}
-.pull-date-caption{font:600 10px 'DM Sans',sans-serif;letter-spacing:.12em;color:#b7785e;margin-bottom:8px}
-.pull-date-window{position:relative;min-height:148px;overflow:hidden;border:1px solid #d3b56f;border-radius:8px;background:linear-gradient(135deg,#fffdf5,#f8edd6 55%,#fffaf0);box-shadow:inset 0 0 0 5px #fffaf0,inset 0 0 0 6px #d9bd7c,0 10px 24px #315d4b12;isolation:isolate}
-.pull-date-content{position:relative;z-index:1;min-height:148px;padding:20px 10px 15px;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;transform:translateY(18px)}
-.pull-date-label{font:600 9px 'DM Sans',sans-serif;letter-spacing:.2em;color:#aa7d42}
-.pull-date-day{font:16px 'Tiro Devanagari Marathi',serif;color:#856346;margin:4px 0 0}
-.pull-date-full{font:clamp(24px,5.8vw,32px) 'Yatra One','Tiro Devanagari Marathi',serif;line-height:1.4;color:#9a2038;margin:1px 0}
-.pull-date-time{font:14px 'Tiro Devanagari Marathi',serif;color:#5c463b}
-.pull-date-cover{position:absolute;z-index:3;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:8px 10px 10px;background:linear-gradient(145deg,#1f5b50,#397c6c 55%,#1f5147);border:1px solid #c9a34e;box-shadow:inset 0 0 0 5px #285e53,inset 0 0 0 6px #dbb96c;transition:transform .9s cubic-bezier(.72,0,.2,1),opacity .35s ease}
-.pull-date-cover:before{content:"";position:absolute;inset:10px;border:1px solid #e4cc89;pointer-events:none}
-.pull-date-ornament{z-index:1;color:#efcf85;font-size:13px;letter-spacing:8px;margin:0 0 2px}
-.pull-date-prompt{z-index:1;color:#fff4d9;font:13px 'Tiro Devanagari Marathi',serif;margin:1px 0}
-.pull-date-handle{z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;width:58px;height:82px;padding:0;border:0;background:transparent;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;transform:translateY(var(--pull-distance,0px));transition:transform .12s ease-out}
-.pull-date-handle:active{cursor:grabbing}
-.pull-date-cord{display:block;width:2px;height:40px;background:linear-gradient(#f8e8b7,#d4a54e);box-shadow:0 0 5px #ffe6a1aa}
-.pull-date-zip-teeth{position:absolute;z-index:1;top:44px;left:calc(50% - 19px);width:38px;height:94px;pointer-events:none;opacity:.82;filter:drop-shadow(0 1px 2px #143e35)}
-.pull-date-zip-teeth:before,.pull-date-zip-teeth:after{content:"";position:absolute;top:0;bottom:0;width:7px;background:repeating-linear-gradient(to bottom,#f0d18a 0 5px,transparent 5px 10px);border-left:1px solid #a97732;border-right:1px solid #fff0bd}
-.pull-date-zip-teeth:before{left:0}.pull-date-zip-teeth:after{right:0}
-.pull-date-zip-slider{position:relative;z-index:3;display:block;width:31px;height:25px;margin-top:0;border:2px solid #fff0bd;border-radius:6px 6px 9px 9px;background:linear-gradient(135deg,#fff0b7 0%,#d19d43 52%,#f6d995 100%);box-shadow:0 3px 8px #173e36aa,inset 0 1px 2px #fff9d8}
-.pull-date-zip-slider:before{content:"";position:absolute;left:8px;right:8px;top:4px;height:11px;border:1px solid #946426;border-radius:3px;background:linear-gradient(90deg,#7c572d,#b8863b)}
-.pull-date-zip-slider:after{content:"";position:absolute;left:50%;top:20px;width:12px;height:14px;transform:translateX(-50%);border:2px solid #f6dfa1;border-radius:4px 4px 8px 8px;background:linear-gradient(90deg,#c28e3c,#f3d58b,#c28e3c);box-shadow:0 2px 3px #173e3655}
-.pull-date-en{z-index:1;font:8px 'DM Sans',sans-serif;letter-spacing:.18em;color:#dfca95;margin-top:-1px}
-.pull-date-window.is-revealed .pull-date-cover{transform:translateY(-104%);opacity:.98}
-.pull-date-window.is-revealed .pull-date-content{animation:pull-date-unveil .8s .38s cubic-bezier(.2,.8,.2,1) forwards}
-.pull-date-window.is-revealed .pull-date-day{animation:pull-date-rise .55s .58s ease-out both}
-.pull-date-window.is-revealed .pull-date-full{animation:pull-date-rise .75s .72s cubic-bezier(.2,.8,.2,1) both}
-.pull-date-window.is-revealed .pull-date-time{animation:pull-date-rise .65s .88s cubic-bezier(.2,.8,.2,1) both}
-@keyframes pull-date-unveil{to{opacity:1;transform:translateY(0)}}
-@keyframes pull-date-rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:480px){.pull-date-card{margin:15px auto 18px}.pull-date-window{min-height:142px}.pull-date-content{min-height:142px}.pull-date-prompt{font-size:12px}}
-@media(prefers-reduced-motion:reduce){.pull-date-cover,.pull-date-handle{transition:none!important}.pull-date-content{opacity:1;transform:none}.pull-date-window.is-revealed .pull-date-content,.pull-date-window.is-revealed .pull-date-day,.pull-date-window.is-revealed .pull-date-full,.pull-date-window.is-revealed .pull-date-time{animation:none;opacity:1;transform:none}}
-
-
-/* First-screen 3D wedding invitation book */
-.journey-book-stage{width:min(100%,390px);margin:22px auto 0;padding:8px 0 4px;perspective:1800px}
-.journey-book-wrap{width:min(68vw,270px);aspect-ratio:.73;margin:0 auto;position:relative;perspective:1800px;filter:drop-shadow(0 22px 18px #2b111b45);cursor:pointer;outline:none}
-.journey-book-wrap:focus-visible{outline:2px solid #c69c54;outline-offset:10px;border-radius:12px}
-.journey-book-glow{position:absolute;inset:-22px;border-radius:50%;background:radial-gradient(ellipse,#efc77930,transparent 66%);z-index:-1;animation:journey-glow 3s ease-in-out infinite}
-@keyframes journey-glow{50%{opacity:.4;transform:scale(1.1)}}
-.journey-book-inner{position:absolute;inset:0;border-radius:7px 12px 12px 7px;background:linear-gradient(90deg,#dfc58d 0,#fff2d4 5%,#f7e6c3 100%);border:2px solid #d8b56b;box-shadow:inset 9px 0 13px #5d351e25;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:17px 22px;color:#4c2027;overflow:hidden}
-.journey-book-inner:before{content:"";position:absolute;inset:12px;border:1px solid #ba8a3e;outline:1px solid #d1ad69;outline-offset:4px;pointer-events:none}
-.journey-inner-ganesh{font-size:clamp(24px,7vw,34px);color:#a87b31;margin-bottom:12px}
-.journey-inner-title{font-size:clamp(17px,4.4vw,22px);color:#8b182c}
-.journey-inner-names{font-size:clamp(17px,4vw,22px);color:#641024;margin:12px 0}
-.journey-inner-names span{color:#b88740}
-.journey-inner-rule{width:70px;height:1px;background:linear-gradient(90deg,transparent,#c3984e,transparent);margin:7px auto}
-.journey-inner-date{font-size:13px;color:#765b42}
-.journey-inner-flower{font-size:22px;color:#ae7e39;margin-top:14px}
-.journey-book-cover{position:absolute;inset:0;z-index:3;transform-origin:left center;transform-style:preserve-3d;transition:transform 1.75s cubic-bezier(.65,.05,.25,1);border-radius:7px 12px 12px 7px}
-.journey-book-wrap.opened .journey-book-cover{transform:rotateY(-166deg)}
-.journey-cover-front,.journey-cover-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:7px 12px 12px 7px;overflow:hidden}
-.journey-cover-back{background:linear-gradient(130deg,#5a0b1d,#8d1d32);border:2px solid #d6ad58;transform:rotateY(180deg)}
-.journey-cover-back:before{content:"";position:absolute;inset:14px;border:1px solid #e6c77f}
-.journey-cover-front{background:radial-gradient(circle at 50% 34%,#8d2536 0,#650d22 47%,#3a0713 100%);border:3px double #d6ad58;box-shadow:inset 0 0 0 8px #4a0a19,inset 0 0 0 10px #d0a24f,inset 0 0 38px #17030a}
-.journey-cover-front:before{content:"";position:absolute;inset:17px;border:1px solid #e4c47b;outline:1px dashed #c89c4e;outline-offset:5px}
-.journey-cover-front:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 19px,#f2d18d09 20px 21px),radial-gradient(circle at 50% 50%,transparent 0 36%,#e6c06b0c 37% 38%,transparent 39%);pointer-events:none}
-.journey-cover-arch{position:absolute;left:12%;right:12%;top:13%;height:57%;border:2px solid #dfbd70;border-bottom:0;border-radius:48% 48% 0 0;box-shadow:0 0 0 5px #dfbd701c,0 0 24px #e3bf6a20}
-.journey-cover-toran{position:absolute;top:7%;left:17%;right:17%;height:33px;border-top:2px solid #ddb963;text-align:center;color:#eaa13b;letter-spacing:5px;font-size:15px;text-shadow:0 2px 5px #2b0711}
-.journey-cover-spine{position:absolute;left:0;top:0;bottom:0;width:17px;background:linear-gradient(90deg,#310711,#79162c 45%,#d5ae60 52%,#611022);box-shadow:3px 0 8px #17030a88}
-.journey-cover-center{position:absolute;inset:17% 8% 12%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.journey-cover-ganesh{font-size:clamp(37px,9vw,49px);color:#f1d184;text-shadow:0 0 15px #f5cd77aa,0 3px 4px #26040d}
-.journey-cover-small{font-size:9px;color:#efd99f;letter-spacing:1px;margin-top:8px}
-.journey-cover-title{font:clamp(25px,6.5vw,34px) 'Yatra One','Tiro Devanagari Marathi',serif;color:#ffe5aa;margin-top:16px;text-shadow:0 2px 8px #25050d}
-.journey-cover-couple{font-size:clamp(16px,4vw,21px);color:#f7d99b;margin-top:11px;text-shadow:0 2px 5px #26040d}
-.journey-cover-divider{width:55px;height:1px;background:#d7b76f;margin:14px auto}
-.journey-cover-caption{font-size:12px;color:#f0d8a6;line-height:1.8}
-.journey-book-note{font-size:16px;color:#785b42;margin:22px 0 2px}
-.journey-book-note-en{font:600 9px 'DM Sans',sans-serif;letter-spacing:.22em;color:#a48b6b}
-.journey-book-wrap.opened{cursor:default}
-@media(max-width:430px){.journey-book-wrap{width:min(66vw,245px)}.journey-book-note{margin-top:18px}}
-@media(prefers-reduced-motion:reduce){.journey-book-cover{transition:none!important}}
-/* Wishes embedded in the main invitation card */
-.invite-wishes{position:relative;margin:28px auto 0;padding:22px 18px 18px;max-width:520px;border:1px solid #e5d7c2;border-radius:8px;background:linear-gradient(145deg,#fffdf8,#f7f0e5);text-align:left}
-.invite-wishes-mark{text-align:center;color:#b58a4a;font-size:27px;line-height:1}
-.invite-wishes h3{margin:8px 0 4px;text-align:center;font:400 24px 'Tiro Devanagari Marathi',serif;color:#493735}
-.invite-wishes>p{text-align:center;margin:0 0 12px;font:14px/1.8 'Tiro Devanagari Marathi',serif;color:#776e64}
-.invite-wishes .experience-input{background:#fffefa}
-.invite-wishes .experience-action{position:relative;z-index:1}
-.invite-wishes .experience-note{color:#887e73}
-
-/* Final typography polish: consistent display lettering on key Marathi headings */
-.hero h1,.hero h1 .marathi-word{
- font-family:'Yatra One','Tiro Devanagari Marathi',serif!important;
- font-weight:400;letter-spacing:0;line-height:1.28
-}
-.hero h1 .marathi-word{display:inline;white-space:nowrap;text-shadow:inherit}
-#invitation h2,.events h3,.location-panel h3,.person-detail .person-name{
- font-family:'Yatra One','Tiro Devanagari Marathi',serif;
- font-weight:400;letter-spacing:.01em
-}
-#invitation .date,.invite-venue strong,.hero-meta{
- font-family:'Tiro Devanagari Marathi',serif;font-weight:600;letter-spacing:.01em
-}
-.invite-venue span{font-family:'Yatra One','Tiro Devanagari Marathi',serif}
+/* Folded Peshwai wedding letter — tap the royal seal to open */
+.peshwai-letter-card{width:min(100%,410px);margin:20px auto 22px;text-align:center}
+.peshwai-letter-caption{font:600 10px 'DM Sans',sans-serif;letter-spacing:.18em;color:#a77c43;margin:0 0 7px;text-transform:uppercase}
+.peshwai-folded-letter{position:relative;display:block;width:min(100%,360px);height:310px;margin:0 auto;padding:0;border:0;background:transparent;perspective:1200px;isolation:isolate;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.peshwai-folded-letter:focus-visible{outline:2px solid #bb904c;outline-offset:7px;border-radius:12px}
+.letter-sheet{position:absolute;z-index:1;left:9%;top:3%;width:82%;height:94%;background:linear-gradient(145deg,#fffdf2,#f4e8ca 56%,#fff8e8);border:1px solid #c7a96b;box-shadow:0 9px 22px #24180f30;transform:translateY(82px) scale(.91);opacity:.78;transition:transform 1.05s cubic-bezier(.2,.82,.2,1) .12s,opacity .7s ease .12s,box-shadow .8s ease}
+.letter-sheet:before{content:"";position:absolute;inset:8px;border:1px solid #c5a368;outline:1px solid #dfc995;outline-offset:3px;pointer-events:none}
+.letter-sheet:after{content:"❖";position:absolute;left:50%;bottom:12px;transform:translateX(-50%);color:#b58a49;font-size:15px}
+.letter-sheet-inner{position:absolute;inset:20px 14px 30px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#50362b;font-family:'Tiro Devanagari Marathi',serif}
+.letter-blessing{font-size:clamp(14px,3.8vw,17px);color:#825d39;margin-bottom:9px}
+.letter-rule{width:76px;height:1px;margin:5px auto 12px;background:linear-gradient(90deg,transparent,#c39a52,transparent)}
+.letter-kicker{font-size:13px;color:#8d6d4b}
+.letter-weekday{font:600 17px 'Tiro Devanagari Marathi',serif;color:#6c4b38;margin-top:5px}
+.letter-date{font:800 clamp(24px,6.5vw,31px)/1.35 'Eczar','Tiro Devanagari Marathi',serif;color:#8c1f2e;margin:1px 0;letter-spacing:0}
+.letter-time{font-size:16px;color:#654a39;margin-top:2px}
+.letter-footer{font-size:11px;color:#967b5b;margin-top:12px}
+.letter-envelope-back{position:absolute;z-index:2;left:2%;right:2%;top:25%;bottom:3%;border:1px solid #c4a363;border-radius:5px;background:linear-gradient(145deg,#174b40,#2c6b59 54%,#194a40);box-shadow:0 18px 28px #172f2830,inset 0 0 0 6px #205747,inset 0 0 0 7px #cba75d;transition:opacity .55s ease .55s,transform .65s ease .45s}
+.letter-envelope-back:before{content:"";position:absolute;inset:12px;border:1px solid #e5cd8a;opacity:.8}
+.letter-fold-left,.letter-fold-right,.letter-fold-bottom,.letter-fold-top{position:absolute;display:block;pointer-events:none}
+.letter-fold-left{z-index:5;left:2%;top:25%;bottom:3%;width:49%;background:linear-gradient(135deg,#f4e8c9,#dfc99c);clip-path:polygon(0 0,100% 50%,0 100%);filter:drop-shadow(2px 0 2px #553a2020);transition:transform .82s cubic-bezier(.3,.8,.2,1),opacity .55s ease}
+.letter-fold-right{z-index:5;right:2%;top:25%;bottom:3%;width:49%;background:linear-gradient(225deg,#fff3d8,#d7c092);clip-path:polygon(100% 0,100% 100%,0 50%);filter:drop-shadow(-2px 0 2px #553a2020);transition:transform .82s cubic-bezier(.3,.8,.2,1),opacity .55s ease}
+.letter-fold-bottom{z-index:6;left:2%;right:2%;bottom:3%;height:72%;background:linear-gradient(160deg,#316f5c,#174b40 68%);clip-path:polygon(0 100%,100% 100%,50% 0);border-bottom:1px solid #d5b66d;transition:transform .8s cubic-bezier(.3,.8,.2,1),opacity .55s ease}
+.letter-fold-top{z-index:8;left:2%;right:2%;top:25%;height:49%;background:linear-gradient(155deg,#7d1d2c,#a3313c 52%,#681426);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;backface-visibility:hidden;filter:drop-shadow(0 4px 4px #29110e30);transition:transform 1s cubic-bezier(.62,.04,.27,1),opacity .45s ease}
+.letter-fold-top:before{content:"";position:absolute;inset:8px 11px 20px;border:1px solid #dfbd72;clip-path:polygon(0 0,100% 0,50% 100%)}
+.letter-fold-top:after{content:"❖";position:absolute;left:50%;top:16px;transform:translateX(-50%);color:#f1d89b;font-size:18px}
+.letter-seal{position:absolute;z-index:10;left:50%;top:54%;width:58px;height:58px;display:grid;place-items:center;transform:translate(-50%,-50%);border-radius:50%;border:3px double #e9c878;background:radial-gradient(circle at 35% 28%,#bd5360,#8d1c31 60%,#5d0e20);box-shadow:0 4px 10px #170c0b55,inset 0 0 0 3px #8f1d32;color:#f7df9d;font:22px 'Tiro Devanagari Marathi',serif;text-shadow:0 1px 2px #4e101c;transition:transform .55s ease,opacity .4s ease}
+.letter-front-title{position:absolute;z-index:9;left:0;right:0;bottom:12%;color:#f7e6bd;font:16px 'Tiro Devanagari Marathi',serif;text-shadow:0 2px 4px #0c2c25;transition:opacity .35s ease,transform .35s ease}
+.letter-front-title small{display:block;margin-top:6px;font:600 8px 'DM Sans',sans-serif;letter-spacing:.12em;color:#e2c787}
+.letter-tap-hint{display:block;margin-top:0;color:#8e7658;font:13px 'Tiro Devanagari Marathi',serif;animation:letter-hint 1.9s ease-in-out infinite}
+@keyframes letter-hint{50%{opacity:.55;transform:translateY(3px)}}
+.peshwai-folded-letter.is-open .letter-sheet{z-index:9;transform:translateY(-1px) scale(1);opacity:1;box-shadow:0 18px 36px #24180f35;transition-delay:.26s}
+.peshwai-folded-letter.is-open .letter-envelope-back{opacity:0;transform:translateY(48px)}
+.peshwai-folded-letter.is-open .letter-fold-left{transform:translateX(-42px) rotateY(24deg);opacity:0;transition-delay:.08s}
+.peshwai-folded-letter.is-open .letter-fold-right{transform:translateX(42px) rotateY(-24deg);opacity:0;transition-delay:.08s}
+.peshwai-folded-letter.is-open .letter-fold-bottom{transform:translateY(38px) rotateX(-22deg);opacity:0;transition-delay:.12s}
+.peshwai-folded-letter.is-open .letter-fold-top{transform:rotateX(180deg);opacity:0;transition-delay:.05s}
+.peshwai-folded-letter.is-open .letter-seal{transform:translate(-50%,-50%) scale(1.65) rotate(-18deg);opacity:0;transition-delay:.18s}
+.peshwai-folded-letter.is-open .letter-front-title{opacity:0;transform:translateY(10px)}
+.peshwai-folded-letter.is-open .letter-sheet-inner>*{animation:letter-content-rise .65s both}
+.peshwai-folded-letter.is-open .letter-sheet-inner>*:nth-child(1){animation-delay:.48s}
+.peshwai-folded-letter.is-open .letter-sheet-inner>*:nth-child(2){animation-delay:.56s}
+.peshwai-folded-letter.is-open .letter-sheet-inner>*:nth-child(3){animation-delay:.64s}
+.peshwai-folded-letter.is-open .letter-sheet-inner>*:nth-child(4){animation-delay:.72s}
+.peshwai-folded-letter.is-open .letter-sheet-inner>*:nth-child(5){animation-delay:.82s}
+.peshwai-folded-letter.is-open .letter-sheet-inner>*:nth-child(6){animation-delay:.92s}
+@keyframes letter-content-rise{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:430px){.peshwai-letter-card{margin:14px auto 18px}.peshwai-folded-letter{height:290px}.letter-seal{width:54px;height:54px}.letter-sheet-inner{inset:18px 12px 28px}}
+@media(prefers-reduced-motion:reduce){.letter-tap-hint{animation:none}.peshwai-folded-letter *{transition:none!important;animation:none!important}.peshwai-folded-letter.is-open .letter-sheet{transform:none;opacity:1}.peshwai-folded-letter.is-open .letter-envelope-back,.peshwai-folded-letter.is-open .letter-fold-left,.peshwai-folded-letter.is-open .letter-fold-right,.peshwai-folded-letter.is-open .letter-fold-bottom,.peshwai-folded-letter.is-open .letter-fold-top,.peshwai-folded-letter.is-open .letter-seal,.peshwai-folded-letter.is-open .letter-front-title{opacity:0}}
 
 /* CINEMATIC WEDDING INVITATION ENHANCEMENTS */
 .journey-book-stage{position:relative;isolation:isolate}
@@ -770,31 +723,37 @@ body.theme-peshwai .invite-ornament{color:#a77b3e}
   </div>
 
   <div class="journey-page" id="journeyPage3">
-   <div class="journey-kicker">टप्पा २ · शुभदिनाचा उलगडा</div>
-   <div class="journey-flower">✿</div>
-   <h1 class="mr">आता उलगडा करा आमच्या खास दिवसाचा ✨</h1>
-   <p class="journey-copy">सोनेरी दोरी खाली ओढा आणि विवाहाची तारीख व मुहूर्त उघडा.</p>
-   <div class="pull-date-card pull-date-quiz" data-pull-date>
-    <div class="pull-date-caption">एक खास क्षण तुमची वाट पाहतोय</div>
-    <div class="pull-date-window">
-     <div class="pull-date-content">
-      <span class="pull-date-label">शुभविवाह</span>
-      <strong class="pull-date-day">सोमवार</strong>
-      <strong class="pull-date-full">२८ डिसेंबर २०२६</strong>
-      <span class="pull-date-time">दुपारी १:१० वाजता</span>
-     </div>
-     <div class="pull-date-cover">
-      <div class="pull-date-ornament">✦ ❖ ✦</div>
-      <div class="pull-date-prompt">झिप खाली ओढून तारीख उघडा</div>
-      <span class="pull-date-zip-teeth" aria-hidden="true"></span>
-      <button class="pull-date-handle" type="button" aria-label="झिपर खाली ओढून तारीख उघडा">
-       <span class="pull-date-cord"></span><span class="pull-date-zip-slider" aria-hidden="true"><i></i></span>
-      </button>
-      <span class="pull-date-en">PULL THE GOLDEN STRING DOWN</span>
-     </div>
+    <div class="journey-kicker">टप्पा २ · शुभदिनाचा उलगडा</div>
+    <div class="journey-flower">✿</div>
+    <h1 class="mr">आता उलगडा करा आमच्या खास दिवसाचा ✨</h1>
+    <p class="journey-copy">पेशवाई थाटातील खास पत्र उघडा आणि विवाहाचा शुभमुहूर्त जाणून घ्या.</p>
+    <div class="peshwai-letter-card">
+     <div class="peshwai-letter-caption">राजेशाही निमंत्रणपत्र · पेशवाई थाट</div>
+     <button class="peshwai-folded-letter" type="button" data-peshwai-letter aria-expanded="false" aria-label="पत्र उघडून विवाहाची तारीख पाहा">
+      <span class="letter-sheet" aria-hidden="true">
+       <span class="letter-sheet-inner">
+        <span class="letter-blessing">॥ श्री गणेशाय नमः ॥</span>
+        <span class="letter-rule"></span>
+        <span class="letter-kicker">विवाहाचा शुभमुहूर्त</span>
+        <strong class="letter-weekday">सोमवार</strong>
+        <strong class="letter-date">२८ डिसेंबर २०२६</strong>
+        <span class="letter-time">दुपारी १:१० वाजता</span>
+        <span class="letter-footer">आपली उपस्थिती प्रार्थनीय</span>
+       </span>
+      </span>
+      <span class="letter-envelope-back" aria-hidden="true"></span>
+      <span class="letter-fold-left" aria-hidden="true"></span>
+      <span class="letter-fold-right" aria-hidden="true"></span>
+      <span class="letter-fold-bottom" aria-hidden="true"></span>
+      <span class="letter-fold-top" aria-hidden="true"></span>
+      <span class="letter-seal" aria-hidden="true">श्री</span>
+      <span class="letter-front-title">शुभविवाहाचे मंगल पत्र
+       <small>TOUCH THE SEAL TO OPEN</small>
+      </span>
+     </button>
+     <span class="letter-tap-hint">शिक्क्यावर स्पर्श करून पत्र उघडा ✦</span>
     </div>
-   </div>
-   <button class="journey-next" id="showInvitation" type="button" disabled>मुख्य आमंत्रण पाहा <span>✦</span></button>
+    <button class="journey-next" id="showInvitation" type="button" disabled>मुख्य आमंत्रण पाहा <span>✦</span></button>
    <button class="journey-back" id="backNames" type="button">← पाहुण्यांच्या प्रश्नांकडे परत जा</button>
   </div>
 
@@ -1041,7 +1000,7 @@ body.theme-peshwai .invite-ornament{color:#a77b3e}
  document.getElementById('backWelcome').addEventListener('click',()=>go(1));
  toDatesButton.addEventListener('click',()=>{if(funGroups.every(q=>answeredGroups.has(q)))go(3);});
  document.getElementById('backNames').addEventListener('click',()=>go(2));
- document.getElementById('showInvitation').addEventListener('click',()=>{if(root.querySelector('.pull-date-window.is-revealed'))finish();});
+ document.getElementById('showInvitation').addEventListener('click',()=>{if(root.querySelector('.peshwai-folded-letter.is-open'))finish();});
  root.addEventListener('click',e=>{
   const answer=e.target.closest('[data-answer]');if(!answer)return;
   const group=answer.dataset.answer;
@@ -1071,52 +1030,28 @@ body.theme-peshwai .invite-ornament{color:#a77b3e}
 </script>
 <script>
 (() => {
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- document.querySelectorAll('[data-pull-date]').forEach(card=>{
-  const windowEl=card.querySelector('.pull-date-window');
-  const handle=card.querySelector('.pull-date-handle');
-  if(!windowEl||!handle)return;
-  let startY=null,delta=0;
-  const reveal=()=>{
-   if(windowEl.classList.contains('is-revealed'))return;
-   windowEl.classList.add('is-revealed');
-   const continueButton=document.getElementById('showInvitation');
-   if(continueButton)continueButton.disabled=false;
-   handle.setAttribute('aria-expanded','true');
-   handle.setAttribute('aria-label','लग्नाची तारीख उघडली आहे');
-   handle.style.setProperty('--pull-distance','42px');
-   if(!reduced){
-    const r=windowEl.getBoundingClientRect();
-    for(let i=0;i<12;i++){
-     const bit=document.createElement('i');bit.textContent=i%2?'✦':'•';
-     bit.style.cssText='position:fixed;z-index:1300;pointer-events:none;color:#d3a54e;font-size:'+(10+i%7)+'px;left:'+(r.left+r.width/2)+'px;top:'+(r.top+r.height/2)+'px;transition:transform .9s ease,opacity .9s ease;opacity:1';
-     document.body.appendChild(bit);
-     requestAnimationFrame(()=>{bit.style.transform='translate('+(Math.random()*150-75)+'px,'+(Math.random()*-115-15)+'px) rotate('+(Math.random()*240)+'deg)';bit.style.opacity='0';});
-     setTimeout(()=>bit.remove(),1000);
-    }
-   }
-  };
-  handle.addEventListener('pointerdown',e=>{
-   if(windowEl.classList.contains('is-revealed'))return;
-   startY=e.clientY;delta=0;
-   try{handle.setPointerCapture(e.pointerId);}catch(_){}
-  });
-  handle.addEventListener('pointermove',e=>{
-   if(startY===null||windowEl.classList.contains('is-revealed'))return;
-   delta=Math.max(0,Math.min(65,e.clientY-startY));
-   handle.style.setProperty('--pull-distance',delta+'px');
-  });
-  handle.addEventListener('pointerup',()=>{
-   if(startY===null)return;
-   const didPull=delta>=16;startY=null;
-   if(didPull)reveal();else handle.style.setProperty('--pull-distance','0px');
-  });
-  handle.addEventListener('pointercancel',()=>{
-   startY=null;
-   if(!windowEl.classList.contains('is-revealed'))handle.style.setProperty('--pull-distance','0px');
-  });
-  handle.addEventListener('click',reveal);
- });
+ const letter=document.querySelector('[data-peshwai-letter]');
+ if(!letter)return;
+ const openLetter=()=>{
+  if(letter.classList.contains('is-open'))return;
+  letter.classList.add('is-open');
+  letter.setAttribute('aria-expanded','true');
+  letter.setAttribute('aria-label','विवाहाची तारीख उघडली आहे');
+  const continueButton=document.getElementById('showInvitation');
+  if(continueButton)continueButton.disabled=false;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const rect=letter.getBoundingClientRect();
+  const palette=['#d6b66d','#f0dfb2','#b9484b','#4e8b73'];
+  for(let i=0;i<18;i++){
+   const spark=document.createElement('i');
+   spark.textContent=i%3===0?'✦':'•';
+   spark.style.cssText='position:fixed;z-index:1400;pointer-events:none;left:'+(rect.left+rect.width/2)+'px;top:'+(rect.top+rect.height*.54)+'px;color:'+palette[i%palette.length]+';font-size:'+(10+i%9)+'px;transition:transform .9s ease,opacity .9s ease;opacity:1';
+   document.body.appendChild(spark);
+   requestAnimationFrame(()=>{spark.style.transform='translate('+(Math.random()*170-85)+'px,'+(-30-Math.random()*120)+'px) rotate('+(Math.random()*360)+'deg)';spark.style.opacity='0';});
+   setTimeout(()=>spark.remove(),1000);
+  }
+ };
+ letter.addEventListener('click',openLetter);
 })();
 </script>
 </body>
