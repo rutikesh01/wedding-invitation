@@ -475,6 +475,49 @@ h2{color:#214c43}
 @media(max-width:480px){.pull-date-card{margin:15px auto 18px}.pull-date-window{min-height:142px}.pull-date-content{min-height:142px}.pull-date-prompt{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.pull-date-cover,.pull-date-handle{transition:none!important}.pull-date-content{opacity:1;transform:none}.pull-date-window.is-revealed .pull-date-content,.pull-date-window.is-revealed .pull-date-day,.pull-date-window.is-revealed .pull-date-full,.pull-date-window.is-revealed .pull-date-time{animation:none;opacity:1;transform:none}}
 
+
+/* First-screen 3D wedding invitation book */
+.journey-book-stage{width:min(100%,390px);margin:22px auto 0;padding:8px 0 4px;perspective:1800px}
+.journey-book-wrap{width:min(68vw,270px);aspect-ratio:.73;margin:0 auto;position:relative;perspective:1800px;filter:drop-shadow(0 22px 18px #2b111b45);cursor:pointer;outline:none}
+.journey-book-wrap:focus-visible{outline:2px solid #c69c54;outline-offset:10px;border-radius:12px}
+.journey-book-inner{position:absolute;inset:0;border-radius:7px 12px 12px 7px;background:linear-gradient(90deg,#dfc58d 0,#fff2d4 5%,#f7e6c3 100%);border:2px solid #d8b56b;box-shadow:inset 9px 0 13px #5d351e25;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:17px 22px;color:#4c2027;overflow:hidden}
+.journey-book-inner:before{content:"";position:absolute;inset:12px;border:1px solid #ba8a3e;outline:1px solid #d1ad69;outline-offset:4px;pointer-events:none}
+.journey-inner-ganesh{font-size:clamp(24px,7vw,34px);color:#a87b31;margin-bottom:12px}
+.journey-inner-title{font-size:clamp(17px,4.4vw,22px);color:#8b182c}
+.journey-inner-names{font-size:clamp(17px,4vw,22px);color:#641024;margin:12px 0}
+.journey-inner-names span{color:#b88740}
+.journey-inner-rule{width:70px;height:1px;background:linear-gradient(90deg,transparent,#c3984e,transparent);margin:7px auto}
+.journey-inner-date{font-size:13px;color:#765b42}
+.journey-inner-flower{font-size:22px;color:#ae7e39;margin-top:14px}
+.journey-book-cover{position:absolute;inset:0;z-index:3;transform-origin:left center;transform-style:preserve-3d;transition:transform 1.75s cubic-bezier(.65,.05,.25,1);border-radius:7px 12px 12px 7px}
+.journey-book-wrap.opened .journey-book-cover{transform:rotateY(-166deg)}
+.journey-cover-front,.journey-cover-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:7px 12px 12px 7px;overflow:hidden}
+.journey-cover-front{background:radial-gradient(circle at 50% 34%,#8d2536 0,#650d22 47%,#3a0713 100%);border:3px double #d6ad58;box-shadow:inset 0 0 0 8px #4a0a19,inset 0 0 0 10px #d0a24f,inset 0 0 38px #17030a}
+.journey-cover-front:before{content:"";position:absolute;inset:17px;border:1px solid #e4c47b;outline:1px dashed #c89c4e;outline-offset:5px}
+.journey-cover-front:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 19px,#f2d18d09 20px 21px),radial-gradient(circle at 50% 50%,transparent 0 36%,#e6c06b0c 37% 38%,transparent 39%);pointer-events:none}
+.journey-cover-arch{position:absolute;left:12%;right:12%;top:13%;height:57%;border:2px solid #dfbd70;border-bottom:0;border-radius:48% 48% 0 0;box-shadow:0 0 0 5px #dfbd701c,0 0 24px #e3bf6a20}
+.journey-cover-toran{position:absolute;top:7%;left:17%;right:17%;height:33px;border-top:2px solid #ddb963;text-align:center;color:#eaa13b;letter-spacing:5px;font-size:15px;text-shadow:0 2px 5px #2b0711}
+.journey-cover-spine{position:absolute;left:0;top:0;bottom:0;width:17px;background:linear-gradient(90deg,#310711,#79162c 45%,#d5ae60 52%,#611022);box-shadow:3px 0 8px #17030a88}
+.journey-cover-center{position:absolute;inset:17% 8% 12%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.journey-cover-ganesh{font-size:clamp(37px,9vw,49px);color:#f1d184;text-shadow:0 0 15px #f5cd77aa,0 3px 4px #26040d}
+.journey-cover-small{font-size:9px;color:#efd99f;letter-spacing:1px;margin-top:8px}
+.journey-cover-title{font:clamp(25px,6.5vw,34px) 'Yatra One','Tiro Devanagari Marathi',serif;color:#ffe5aa;margin-top:16px;text-shadow:0 2px 8px #25050d}
+.journey-cover-couple{font-size:clamp(16px,4vw,21px);color:#f7d99b;margin-top:11px;text-shadow:0 2px 5px #26040d}
+.journey-cover-divider{width:55px;height:1px;background:#d7b76f;margin:14px auto}
+.journey-cover-caption{font-size:12px;color:#f0d8a6;line-height:1.8}
+.journey-book-note{font-size:16px;color:#785b42;margin:22px 0 2px}
+.journey-book-note-en{font:600 9px 'DM Sans',sans-serif;letter-spacing:.22em;color:#a48b6b}
+.journey-book-wrap.opened{cursor:default}
+@media(max-width:430px){.journey-book-wrap{width:min(66vw,245px)}.journey-book-note{margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.journey-book-cover{transition:none!important}}
+/* Wishes embedded in the main invitation card */
+.invite-wishes{position:relative;margin:28px auto 0;padding:22px 18px 18px;max-width:520px;border:1px solid #e5d7c2;border-radius:8px;background:linear-gradient(145deg,#fffdf8,#f7f0e5);text-align:left}
+.invite-wishes-mark{text-align:center;color:#b58a4a;font-size:27px;line-height:1}
+.invite-wishes h3{margin:8px 0 4px;text-align:center;font:400 24px 'Tiro Devanagari Marathi',serif;color:#493735}
+.invite-wishes>p{text-align:center;margin:0 0 12px;font:14px/1.8 'Tiro Devanagari Marathi',serif;color:#776e64}
+.invite-wishes .experience-input{background:#fffefa}
+.invite-wishes .experience-action{position:relative;z-index:1}
+.invite-wishes .experience-note{color:#887e73}
 </style>
 </head>
 <body>
@@ -483,43 +526,38 @@ h2{color:#214c43}
  <div class="journey-orbit orbit-a"></div><div class="journey-orbit orbit-b"></div>
  <div class="journey-shell">
   <div class="journey-page active" id="journeyPage1">
-   <div class="journey-kicker">A LITTLE CELEBRATION BEFORE THE CELEBRATION</div>
-   <div class="journey-flower">✿</div>
-   <div class="journey-monogram">R <i>&</i> S</div>
-   <h1 class="mr">आमच्या आनंदात<br>तुमचं स्वागत आहे!</h1>
-   <p class="journey-copy">ऋतिकेश आणि सपनाच्या खास दिवसापर्यंतचा छोटासा मजेशीर प्रवास सुरू करूया.</p>
-   <div class="pull-date-card" data-pull-date>
-    <div class="pull-date-caption">एक खास क्षण तुमची वाट पाहतोय</div>
-    <div class="pull-date-window">
-     <div class="pull-date-content">
-      <span class="pull-date-label">शुभविवाह</span>
-      <strong class="pull-date-day">सोमवार</strong>
-      <strong class="pull-date-full">२८ डिसेंबर २०२६</strong>
-      <span class="pull-date-time">दुपारी १:१० वाजता</span>
+   <div class="journey-kicker">A TRADITIONAL INVITATION · A BEAUTIFUL BEGINNING</div>
+   <div class="journey-book-stage">
+    <div class="journey-book-wrap" id="journeyBook" role="button" tabindex="0" aria-label="शुभविवाहाचे आमंत्रण पुस्तक उघडा">
+     <div class="journey-book-inner">
+      <div class="journey-inner-ganesh">॥ श्री गणेशाय नमः ॥</div>
+      <div class="journey-inner-title mr">सस्नेह निमंत्रण</div>
+      <div class="journey-inner-names mr">ऋतिकेश <span>♥</span> सपना</div>
+      <div class="journey-inner-rule"></div>
+      <div class="journey-inner-date mr">एक मंगल सोहळा</div>
+      <div class="journey-inner-flower">❖ ✧ ❖</div>
      </div>
-     <div class="pull-date-cover">
-      <div class="pull-date-ornament">✦ ❖ ✦</div>
-      <div class="pull-date-prompt">तारीख पाहण्यासाठी दोरी खाली ओढा</div>
-      <button class="pull-date-handle" type="button" aria-label="तारीख उघडण्यासाठी सोनेरी दोरी खाली ओढा">
-       <span class="pull-date-cord"></span><span class="pull-date-tassel">❖</span>
-      </button>
-      <span class="pull-date-en">PULL THE GOLDEN STRING DOWN</span>
+     <div class="journey-book-cover">
+      <div class="journey-cover-front">
+       <div class="journey-cover-arch"></div><div class="journey-cover-toran">✿ ❋ ✿ ❋ ✿</div><div class="journey-cover-spine"></div>
+       <div class="journey-cover-center">
+        <div class="journey-cover-ganesh">ॐ</div>
+        <div class="journey-cover-small mr">॥ श्री गणेशाय नमः ॥</div>
+        <div class="journey-cover-title mr">शुभ विवाह</div>
+        <div class="journey-cover-couple mr">ऋतिकेश ♥ सपना</div>
+        <div class="journey-cover-divider"></div>
+        <div class="journey-cover-caption mr">एक मंगल सोहळा तुमची वाट पाहतोय</div>
+       </div>
+      </div>
+      <div class="journey-cover-back"></div>
      </div>
     </div>
+    <div class="journey-book-note mr" id="journeyBookNote">पुस्तक उघडण्यासाठी स्पर्श करा</div>
+    <div class="journey-book-note-en">TAP THE BOOK TO OPEN</div>
    </div>
-   <div class="journey-question">तुम्ही कोणत्या टीमकडून आलात?</div>
-   <div class="guest-choices">
-    <button type="button" data-guest="वरपक्ष">💚 वरपक्ष</button>
-    <button type="button" data-guest="वधूपक्ष">🌸 वधूपक्ष</button>
-    <button type="button" data-guest="दोन्ही कुटुंबे">✨ दोन्ही कुटुंबांचे पाहुणे</button>
-   </div>
-   <button class="journey-next" id="journeyStart" disabled>प्रवास सुरू करा <span>→</span></button>
-   <div class="journey-footnote">थोडी मजा · खूप साऱ्या शुभेच्छा</div>
-   <button class="journey-skip" id="skipWelcome" type="button">हा टप्पा वगळा · पुढे जा →</button>
   </div>
-
-  <div class="journey-progress" aria-label="तीन टप्पे">
-   <span class="progress-dot active"></span><span class="progress-line"></span><span class="progress-dot"></span><span class="progress-line"></span><span class="progress-dot"></span>
+  <div class="journey-progress" aria-label="दोन टप्पे">
+   <span class="progress-dot active"></span><span class="progress-line"></span><span class="progress-dot"></span>
   </div>
 
   <div class="journey-page" id="journeyPage2">
@@ -565,12 +603,12 @@ h2{color:#214c43}
   </div>
 
   <div class="journey-page" id="journeyPage3">
-   <div class="journey-kicker">टप्पा २ · तारीख आणि ठिकाण ओळखा</div>
+   <div class="journey-kicker">टप्पा २ · शुभदिनाचा उलगडा</div>
    <div class="journey-flower">✿</div>
-   <h1 class="mr">आमच्या खास दिवसाची माहिती 📅</h1>
-   <p class="journey-copy">हळद, विवाहाचा मुहूर्त आणि स्थळ — किती माहिती आहे पाहूया!</p>
+   <h1 class="mr">आता उलगडा करा आमच्या खास दिवसाचा ✨</h1>
+   <p class="journey-copy">सोनेरी दोरी खाली ओढा आणि विवाहाची तारीख व मुहूर्त उघडा.</p>
    <div class="pull-date-card pull-date-quiz" data-pull-date>
-    <div class="pull-date-caption">आता उलगडा करा विवाहाचा खास दिवस</div>
+    <div class="pull-date-caption">एक खास क्षण तुमची वाट पाहतोय</div>
     <div class="pull-date-window">
      <div class="pull-date-content">
       <span class="pull-date-label">शुभविवाह</span>
@@ -588,50 +626,11 @@ h2{color:#214c43}
      </div>
     </div>
    </div>
-   <div class="experience-panel">
-    <h3>१. हळदी समारंभ कुठल्या दिवशी आहे?</h3><p>योग्य तारीख निवडा.</p>
-    <div class="experience-options">
-     <button type="button" data-answer="date1" data-correct="false">२६ डिसेंबर २०२६</button>
-     <button type="button" data-answer="date1" data-correct="true">२७ डिसेंबर २०२६</button>
-     <button type="button" data-answer="date1" data-correct="false">२८ डिसेंबर २०२६</button>
-     <button type="button" data-answer="date1" data-correct="false">२९ डिसेंबर २०२६</button>
-    </div><div class="experience-result" id="feedback-date1">एक पर्याय निवडा.</div>
-    <h3>२. विवाहस्थळ कोणते आहे?</h3><p>आमच्या लग्नाचे ठिकाण ओळखा.</p>
-    <div class="experience-options">
-     <button type="button" data-answer="date2" data-correct="true">डांगरे वस्ती, जातेगाव</button>
-     <button type="button" data-answer="date2" data-correct="false">पुणे शहर</button>
-     <button type="button" data-answer="date2" data-correct="false">भोकरगाव</button>
-     <button type="button" data-answer="date2" data-correct="false">नाशिक शहर</button>
-    </div><div class="experience-result" id="feedback-date2">एक पर्याय निवडा.</div>
-    <h3>३. विवाहाचा मुहूर्त किती वाजता आहे?</h3><p>योग्य वेळ निवडा.</p>
-    <div class="experience-options">
-     <button type="button" data-answer="date3" data-correct="false">दुपारी १२:१०</button>
-     <button type="button" data-answer="date3" data-correct="true">दुपारी १:१०</button>
-     <button type="button" data-answer="date3" data-correct="false">दुपारी २:१०</button>
-     <button type="button" data-answer="date3" data-correct="false">सायंकाळी ६:१०</button>
-    </div><div class="experience-result" id="feedback-date3">एक पर्याय निवडा.</div>
-   </div>
-   <button class="journey-next" id="toMessage">पुढील टप्पा <span>→</span></button>
-   <button class="journey-skip" id="skipDates" type="button">प्रश्न वगळा · पुढे जा →</button>
-   <button class="journey-back" id="backNames">← मागील टप्पा</button>
+   <button class="journey-next" id="showInvitation" type="button" disabled>मुख्य आमंत्रण पाहा <span>✦</span></button>
+   <button class="journey-back" id="backNames" type="button">← पाहुण्यांच्या प्रश्नांकडे परत जा</button>
   </div>
 
-  <div class="journey-page" id="journeyPage4">
-   <div class="journey-kicker">टप्पा ३ · शुभेच्छा पाठवा</div>
-   <div class="journey-flower">✿</div>
-   <h1 class="mr">आम्हाला शुभेच्छा द्या 💌</h1>
-   <p class="journey-copy">तुमच्या मनातलं प्रेम, शुभेच्छा किंवा एखादी गोड आठवण आम्हाला लिहून पाठवा.</p>
-   <div class="experience-panel">
-    <label class="experience-label">तुमचे नाव</label><input class="experience-input" id="wishName" placeholder="तुमचे नाव">
-    <div class="experience-note" style="margin:4px 0 12px;color:#31584d;font-family:'Tiro Devanagari Marathi',serif">तुमच्या शुभेच्छा पाठवा</div>
-    <label class="experience-label">तुमचा खास संदेश</label><textarea class="experience-input experience-textarea" id="wishText" placeholder="मनापासून काहीतरी लिहा..."></textarea>
-    <button class="experience-action" id="sendWish" type="button">WhatsApp वर शुभेच्छा पाठवा ↗</button>
-    <div class="experience-note" id="wishNote">WhatsApp उघडल्यानंतर संदेश तपासा आणि स्वतः Send दाबा. संदेश आपोआप पाठवला जाणार नाही.</div>
-   </div>
-   <button class="journey-next" id="showInvitation">आमंत्रण पाहा <span>✦</span></button>
-   <button class="journey-back" id="backDates">← मागील टप्पा</button>
-   <button class="journey-skip" id="skipMessage" type="button">हा टप्पा वगळा · आमंत्रण पाहा →</button>
-  </div>
+  
  </div>
 </div>
 
@@ -682,6 +681,17 @@ h2{color:#214c43}
    <p class="date">सोमवार, दि. २८ डिसेंबर २०२६, दुपारी १:१० वाजता.</p>
    <p class="mr muhurta-note">शुभमुहूर्तावर करण्याचे योजिले आहे, तरी आपण सहपरिवार<br>उपस्थित राहावे, ही नम्र विनंती.</p>
    <div class="invite-venue"><span>📍 विवाह स्थळ</span><strong>डांगरे वस्ती, जातेगाव,<br>ता. नांदगाव, जि. नाशिक.</strong></div>
+   <div class="invite-wishes" aria-label="पाहुण्यांच्या शुभेच्छा">
+    <div class="invite-wishes-mark">♡</div>
+    <h3 class="mr">तुमच्या शुभेच्छा पाठवा</h3>
+    <p class="mr">तुमच्या मनातला खास संदेश आम्हाला लिहून पाठवा.</p>
+    <label class="experience-label" for="wishName">तुमचे नाव</label>
+    <input class="experience-input" id="wishName" placeholder="तुमचे नाव" maxlength="60">
+    <label class="experience-label" for="wishText">तुमचा खास संदेश</label>
+    <textarea class="experience-input experience-textarea" id="wishText" placeholder="मनापासून काहीतरी लिहा..." maxlength="800"></textarea>
+    <button class="experience-action" id="sendWish" type="button">WhatsApp वर शुभेच्छा पाठवा ↗</button>
+    <div class="experience-note" id="wishNote">WhatsApp उघडल्यानंतर संदेश तपासा आणि स्वतः Send दाबा.</div>
+   </div>
   </div>
   <div class="family-hosts">
    <div class="family-hosts-title">निमंत्रक</div>
@@ -784,119 +794,78 @@ tick();setInterval(tick,1000);
 <script>
 (() => {
  const root=document.getElementById('guestJourney');
- if(!root) return;
- const pages=[1,2,3,4].map(n=>document.getElementById('journeyPage'+n));
+ if(!root)return;
+ const pages=[1,2,3].map(n=>document.getElementById('journeyPage'+n));
  const dots=root.querySelectorAll('.progress-dot');
- let guest='';
  const answeredGroups=new Set();
  const autoAdvanced=new Set();
  const funGroups=['fun1','fun2','fun3','fun4','fun5'];
- const dateGroups=['date1','date2','date3'];
  const toDatesButton=document.getElementById('toDates');
- const toMessageButton=document.getElementById('toMessage');
  const syncProgressButtons=()=>{
-  const funComplete=funGroups.every(q=>answeredGroups.has(q));
-  const datesComplete=dateGroups.every(q=>answeredGroups.has(q));
-  toDatesButton.disabled=!funComplete;
-  toMessageButton.disabled=!datesComplete;
-  toDatesButton.innerHTML=funComplete?'सर्व उत्तरे मिळाली · पुढे जात आहोत <span>→</span>':'सर्व ५ प्रश्नांची उत्तरे द्या <span>→</span>';
-  toMessageButton.innerHTML=datesComplete?'सर्व उत्तरे मिळाली · पुढे जात आहोत <span>→</span>':'सर्व ३ प्रश्नांची उत्तरे द्या <span>→</span>';
+  const complete=funGroups.every(q=>answeredGroups.has(q));
+  toDatesButton.disabled=!complete;
+  toDatesButton.innerHTML=complete?'सर्व उत्तरे मिळाली · पुढे जा <span>→</span>':'सर्व ५ प्रश्नांची उत्तरे द्या <span>→</span>';
  };
- const go=(n)=>{
+ const go=n=>{
   pages.forEach((p,i)=>p.classList.toggle('active',i===n-1));
   dots.forEach((d,i)=>d.classList.toggle('active',i===n-2));
   root.querySelector('.journey-progress').style.display=n===1?'none':'flex';
   root.scrollTop=0;
  };
- const celebrate=(origin)=>{
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const rect=origin.getBoundingClientRect();
-  const colors=['#d9ad59','#dc806b','#4d8b76','#f0dcae','#8d739e'];
-  for(let i=0;i<34;i++){
+ const celebrate=origin=>{
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const rect=origin.getBoundingClientRect(),colors=['#d9ad59','#dc806b','#4d8b76','#f0dcae','#8d739e'];
+  for(let i=0;i<28;i++){
    const bit=document.createElement('i');
-   bit.className='celebration-burst';
-   bit.style.left=(rect.left+rect.width/2)+'px';
-   bit.style.top=(rect.top+rect.height/2)+'px';
-   bit.style.background=colors[i%colors.length];
-   bit.style.borderRadius=i%3===0?'50%':'2px';
-   bit.style.setProperty('--dx',((Math.random()-.5)*260)+'px');
-   bit.style.setProperty('--dy',(-35-Math.random()*190)+'px');
-   bit.style.setProperty('--spin',(Math.random()*720-360)+'deg');
-   document.body.appendChild(bit);
-   setTimeout(()=>bit.remove(),1550);
+   bit.className='celebration-burst';bit.style.left=(rect.left+rect.width/2)+'px';bit.style.top=(rect.top+rect.height/2)+'px';
+   bit.style.background=colors[i%colors.length];bit.style.borderRadius=i%3===0?'50%':'2px';
+   bit.style.setProperty('--dx',((Math.random()-.5)*230)+'px');bit.style.setProperty('--dy',(-35-Math.random()*175)+'px');bit.style.setProperty('--spin',(Math.random()*720-360)+'deg');
+   document.body.appendChild(bit);setTimeout(()=>bit.remove(),1550);
   }
  };
- const finish=()=>{
-  root.classList.add('dismissed');
-  document.body.style.overflow='';
-  setTimeout(()=>root.remove(),750);
+ const finish=()=>{root.classList.add('dismissed');document.body.style.overflow='';setTimeout(()=>root.remove(),750);};
+ root.querySelector('.journey-progress').style.display='none';syncProgressButtons();
+ const book=document.getElementById('journeyBook');
+ const openBook=()=>{
+  if(book.classList.contains('opened'))return;
+  book.classList.add('opened');document.getElementById('journeyBookNote').textContent='आपले सस्नेह स्वागत आहे…';celebrate(book);
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setTimeout(()=>{if(root.isConnected)go(2);},reduced?100:1850);
  };
- root.querySelector('.journey-progress').style.display='none';
- syncProgressButtons();
- root.querySelectorAll('[data-guest]').forEach(btn=>btn.addEventListener('click',()=>{
-  root.querySelectorAll('[data-guest]').forEach(b=>b.classList.remove('selected'));
-  btn.classList.add('selected');guest=btn.dataset.guest;
-  document.getElementById('journeyStart').disabled=false;
- }));
- document.getElementById('journeyStart').addEventListener('click',()=>go(2));
- document.getElementById('skipWelcome').addEventListener('click',()=>go(2));
+ book.addEventListener('click',openBook);
+ book.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openBook();}});
  document.getElementById('skipFun').addEventListener('click',()=>go(3));
- document.getElementById('skipDates').addEventListener('click',()=>go(4));
  document.getElementById('backWelcome').addEventListener('click',()=>go(1));
  toDatesButton.addEventListener('click',()=>{if(funGroups.every(q=>answeredGroups.has(q)))go(3);});
  document.getElementById('backNames').addEventListener('click',()=>go(2));
- toMessageButton.addEventListener('click',()=>{if(dateGroups.every(q=>answeredGroups.has(q)))go(4);});
- document.getElementById('backDates').addEventListener('click',()=>go(3));
+ document.getElementById('showInvitation').addEventListener('click',()=>{if(root.querySelector('.pull-date-window.is-revealed'))finish();});
  root.addEventListener('click',e=>{
-  const answer=e.target.closest('[data-answer]');
-  if(answer){
-   const group=answer.dataset.answer;
-   root.querySelectorAll(`[data-answer="${group}"]`).forEach(b=>b.classList.remove('chosen'));
-   answer.classList.add('chosen');
-   const box=document.getElementById('feedback-'+group);
-   const ok=answer.dataset.correct==='true';
-   const correct={
-    fun1:'सपना 👰',fun2:'दोघेही 💚',fun3:'ऋतिकेश 🤵',fun4:'दोघेही 💚',fun5:'सपना 👰',
-    date1:'२७ डिसेंबर २०२६',date2:'डांगरे वस्ती, जातेगाव',date3:'दुपारी १:१०'
-   };
-   box.textContent=ok?'वा! अगदी बरोबर! 🎉 तुम्ही योग्य उत्तर दिलंत!':'अरेरे! यावेळी चुकलंत. 😊 योग्य उत्तर: '+correct[group]+'.';
-   box.style.background=ok?'#e5f2e7':'#fff0e8';
-   box.style.color=ok?'#24634e':'#a45d48';
-   box.classList.remove('answer-correct');
-   void box.offsetWidth;
-   if(ok){box.classList.add('answer-correct');celebrate(answer);}
-   answeredGroups.add(group);
-   syncProgressButtons();
-   if(funGroups.every(q=>answeredGroups.has(q)) && !autoAdvanced.has('fun')){
-    autoAdvanced.add('fun');
-    box.textContent += ' सर्व ५ प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
-    setTimeout(()=>{
-     if(root.isConnected && pages[1].classList.contains('active'))go(3);
-    },900);
-   }
-   if(dateGroups.every(q=>answeredGroups.has(q)) && !autoAdvanced.has('date')){
-    autoAdvanced.add('date');
-    box.textContent += ' सर्व ३ प्रश्न पूर्ण! पुढील टप्पा उघडत आहे…';
-    setTimeout(()=>{
-     if(root.isConnected && pages[2].classList.contains('active'))go(4);
-    },900);
-   }
+  const answer=e.target.closest('[data-answer]');if(!answer)return;
+  const group=answer.dataset.answer;
+  root.querySelectorAll('[data-answer="'+group+'"]').forEach(b=>b.classList.remove('chosen'));
+  answer.classList.add('chosen');
+  const box=document.getElementById('feedback-'+group);
+  const correct={fun1:'सपना 👰',fun2:'दोघेही 💚',fun3:'ऋतिकेश 🤵',fun4:'दोघेही 💚',fun5:'सपना 👰'};
+  const ok=answer.dataset.correct==='true';
+  box.textContent=ok?'वा! अगदी बरोबर! 🎉 तुम्ही योग्य उत्तर दिलंत!':'अरेरे! यावेळी चुकलंत. 😊 योग्य उत्तर: '+correct[group]+'.';
+  box.style.background=ok?'#e5f2e7':'#fff0e8';box.style.color=ok?'#24634e':'#a45d48';
+  box.classList.remove('answer-correct');void box.offsetWidth;if(ok){box.classList.add('answer-correct');celebrate(answer);}
+  answeredGroups.add(group);syncProgressButtons();
+  if(funGroups.every(q=>answeredGroups.has(q))&&!autoAdvanced.has('fun')){
+   autoAdvanced.add('fun');box.textContent+=' सर्व ५ प्रश्न पूर्ण! आता विवाहाची तारीख उलगडूया…';
+   setTimeout(()=>{if(root.isConnected&&pages[1].classList.contains('active'))go(3);},900);
   }
-  if(e.target.id==='sendWish'){
-   const name=(document.getElementById('wishName').value||'').trim();
-   const msg=(document.getElementById('wishText').value||'').trim();
-   const note=document.getElementById('wishNote');
-   if(!name||!msg){note.textContent='कृपया तुमचे नाव आणि शुभेच्छा संदेश लिहा.';return;}
-   const text=encodeURIComponent(`ऋतिकेश आणि सपना यांच्या लग्नासाठी शुभेच्छा 💚\nप्रेषक: ${name}\nसंदेश: ${msg}`);
-   const groomUrl='https://wa.me/917218736405?text='+text;
-   window.open(groomUrl,'_blank','noopener');
-   note.textContent='ऋतिकेश यांच्यासाठी WhatsApp उघडले आहे. संदेश तपासून Send दाबा.';
-  }
-  if(e.target.id==='showInvitation'||e.target.id==='skipMessage')finish();
+ });
+ document.getElementById('sendWish').addEventListener('click',()=>{
+  const name=(document.getElementById('wishName').value||'').trim(),msg=(document.getElementById('wishText').value||'').trim();
+  const note=document.getElementById('wishNote');
+  if(!name||!msg){note.textContent='कृपया तुमचे नाव आणि शुभेच्छा संदेश लिहा.';return;}
+  const encoded=encodeURIComponent('ऋतिकेश आणि सपना यांच्या लग्नासाठी शुभेच्छा 💚\nप्रेषक: '+name+'\nसंदेश: '+msg);
+  window.open('https://wa.me/917218736405?text='+encoded,'_blank','noopener');
+  note.textContent='ऋतिकेश यांच्यासाठी WhatsApp उघडले आहे. संदेश तपासून Send दाबा.';
  });
 })();
 </script>
-
 <script>
 (() => {
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -908,6 +877,8 @@ tick();setInterval(tick,1000);
   const reveal=()=>{
    if(windowEl.classList.contains('is-revealed'))return;
    windowEl.classList.add('is-revealed');
+   const continueButton=document.getElementById('showInvitation');
+   if(continueButton)continueButton.disabled=false;
    handle.setAttribute('aria-expanded','true');
    handle.setAttribute('aria-label','लग्नाची तारीख उघडली आहे');
    handle.style.setProperty('--pull-distance','42px');
