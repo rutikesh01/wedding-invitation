@@ -495,6 +495,69 @@ h2{color:#214c43}
 @media(max-width:430px){.peshwai-letter-card{margin:14px auto 18px}.peshwai-folded-letter{height:290px}.letter-seal{width:54px;height:54px}.letter-sheet-inner{inset:18px 12px 28px}}
 @media(prefers-reduced-motion:reduce){.letter-tap-hint{animation:none}.peshwai-folded-letter *{transition:none!important;animation:none!important}.peshwai-folded-letter.is-open .letter-sheet{transform:none;opacity:1}.peshwai-folded-letter.is-open .letter-envelope-back,.peshwai-folded-letter.is-open .letter-fold-left,.peshwai-folded-letter.is-open .letter-fold-right,.peshwai-folded-letter.is-open .letter-fold-bottom,.peshwai-folded-letter.is-open .letter-fold-top,.peshwai-folded-letter.is-open .letter-seal,.peshwai-folded-letter.is-open .letter-front-title{opacity:0}}
 
+/* First-screen 3D wedding invitation book */
+.journey-book-stage{width:min(100%,390px);margin:22px auto 0;padding:8px 0 4px;perspective:1800px}
+.journey-book-wrap{width:min(68vw,270px);aspect-ratio:.73;margin:0 auto;position:relative;perspective:1800px;filter:drop-shadow(0 22px 18px #2b111b45);cursor:pointer;outline:none}
+.journey-book-wrap:focus-visible{outline:2px solid #c69c54;outline-offset:10px;border-radius:12px}
+.journey-book-glow{position:absolute;inset:-22px;border-radius:50%;background:radial-gradient(ellipse,#efc77930,transparent 66%);z-index:-1;animation:journey-glow 3s ease-in-out infinite}
+@keyframes journey-glow{50%{opacity:.4;transform:scale(1.1)}}
+.journey-book-inner{position:absolute;inset:0;border-radius:7px 12px 12px 7px;background:linear-gradient(90deg,#dfc58d 0,#fff2d4 5%,#f7e6c3 100%);border:2px solid #d8b56b;box-shadow:inset 9px 0 13px #5d351e25;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:17px 22px;color:#4c2027;overflow:hidden}
+.journey-book-inner:before{content:"";position:absolute;inset:12px;border:1px solid #ba8a3e;outline:1px solid #d1ad69;outline-offset:4px;pointer-events:none}
+.journey-inner-ganesh{font-size:clamp(24px,7vw,34px);color:#a87b31;margin-bottom:12px}
+.journey-inner-title{font-size:clamp(17px,4.4vw,22px);color:#8b182c}
+.journey-inner-names{font-size:clamp(17px,4vw,22px);color:#641024;margin:12px 0}
+.journey-inner-names span{color:#b88740}
+.journey-inner-rule{width:70px;height:1px;background:linear-gradient(90deg,transparent,#c3984e,transparent);margin:7px auto}
+.journey-inner-date{font-size:13px;color:#765b42}
+.journey-inner-flower{font-size:22px;color:#ae7e39;margin-top:14px}
+.journey-book-cover{position:absolute;inset:0;z-index:3;transform-origin:left center;transform-style:preserve-3d;transition:transform 1.75s cubic-bezier(.65,.05,.25,1);border-radius:7px 12px 12px 7px}
+.journey-book-wrap.opened .journey-book-cover{transform:rotateY(-166deg)}
+.journey-cover-front,.journey-cover-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:7px 12px 12px 7px;overflow:hidden}
+.journey-cover-back{background:linear-gradient(130deg,#5a0b1d,#8d1d32);border:2px solid #d6ad58;transform:rotateY(180deg)}
+.journey-cover-back:before{content:"";position:absolute;inset:14px;border:1px solid #e6c77f}
+.journey-cover-front{background:radial-gradient(circle at 50% 34%,#8d2536 0,#650d22 47%,#3a0713 100%);border:3px double #d6ad58;box-shadow:inset 0 0 0 8px #4a0a19,inset 0 0 0 10px #d0a24f,inset 0 0 38px #17030a}
+.journey-cover-front:before{content:"";position:absolute;inset:17px;border:1px solid #e4c47b;outline:1px dashed #c89c4e;outline-offset:5px}
+.journey-cover-front:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 19px,#f2d18d09 20px 21px),radial-gradient(circle at 50% 50%,transparent 0 36%,#e6c06b0c 37% 38%,transparent 39%);pointer-events:none}
+.journey-cover-arch{position:absolute;left:12%;right:12%;top:13%;height:57%;border:2px solid #dfbd70;border-bottom:0;border-radius:48% 48% 0 0;box-shadow:0 0 0 5px #dfbd701c,0 0 24px #e3bf6a20}
+.journey-cover-toran{position:absolute;top:7%;left:17%;right:17%;height:33px;border-top:2px solid #ddb963;text-align:center;color:#eaa13b;letter-spacing:5px;font-size:15px;text-shadow:0 2px 5px #2b0711}
+.journey-cover-spine{position:absolute;left:0;top:0;bottom:0;width:17px;background:linear-gradient(90deg,#310711,#79162c 45%,#d5ae60 52%,#611022);box-shadow:3px 0 8px #17030a88}
+.journey-cover-center{position:absolute;inset:17% 8% 12%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.journey-cover-ganesh{font-size:clamp(37px,9vw,49px);color:#f1d184;text-shadow:0 0 15px #f5cd77aa,0 3px 4px #26040d}
+.journey-cover-small{font-size:9px;color:#efd99f;letter-spacing:1px;margin-top:8px}
+.journey-cover-title{font:clamp(25px,6.5vw,34px) 'Yatra One','Tiro Devanagari Marathi',serif;color:#ffe5aa;margin-top:16px;text-shadow:0 2px 8px #25050d}
+.journey-cover-couple{font-size:clamp(16px,4vw,21px);color:#f7d99b;margin-top:11px;text-shadow:0 2px 5px #26040d}
+.journey-cover-divider{width:55px;height:1px;background:#d7b76f;margin:14px auto}
+.journey-cover-caption{font-size:12px;color:#f0d8a6;line-height:1.8}
+.journey-book-note{font-size:16px;color:#785b42;margin:22px 0 2px}
+.journey-book-note-en{font:600 9px 'DM Sans',sans-serif;letter-spacing:.22em;color:#a48b6b}
+.journey-book-wrap.opened{cursor:default}
+@media(max-width:430px){.journey-book-wrap{width:min(66vw,245px)}.journey-book-note{margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.journey-book-cover{transition:none!important}}
+/* Wishes embedded in the main invitation card */
+.invite-wishes{position:relative;margin:28px auto 0;padding:22px 18px 18px;max-width:520px;border:1px solid #e5d7c2;border-radius:8px;background:linear-gradient(145deg,#fffdf8,#f7f0e5);text-align:left}
+.invite-wishes-mark{text-align:center;color:#b58a4a;font-size:27px;line-height:1}
+.invite-wishes h3{margin:8px 0 4px;text-align:center;font:400 24px 'Tiro Devanagari Marathi',serif;color:#493735}
+.invite-wishes>p{text-align:center;margin:0 0 12px;font:14px/1.8 'Tiro Devanagari Marathi',serif;color:#776e64}
+.invite-wishes .experience-input{background:#fffefa}
+.invite-wishes .experience-action{position:relative;z-index:1}
+.invite-wishes .experience-note{color:#887e73}
+
+/* Final typography polish: consistent display lettering on key Marathi headings */
+.hero h1,.hero h1 .marathi-word{
+ font-family:'Yatra One','Tiro Devanagari Marathi',serif!important;
+ font-weight:400;letter-spacing:0;line-height:1.28
+}
+.hero h1 .marathi-word{display:inline;white-space:nowrap;text-shadow:inherit}
+#invitation h2,.events h3,.location-panel h3,.person-detail .person-name{
+ font-family:'Yatra One','Tiro Devanagari Marathi',serif;
+ font-weight:400;letter-spacing:.01em
+}
+#invitation .date,.invite-venue strong,.hero-meta{
+ font-family:'Tiro Devanagari Marathi',serif;font-weight:600;letter-spacing:.01em
+}
+.invite-venue span{font-family:'Yatra One','Tiro Devanagari Marathi',serif}
+
+
 /* CINEMATIC WEDDING INVITATION ENHANCEMENTS */
 .journey-book-stage{position:relative;isolation:isolate}
 .book-petals{position:absolute;inset:-30px -38px;z-index:0;pointer-events:none;overflow:hidden}
