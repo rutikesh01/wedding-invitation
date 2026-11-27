@@ -92,6 +92,30 @@ button:focus-visible,a:focus-visible{outline:2px solid #f7d984;outline-offset:4p
 .couple-names{font:clamp(26px,6vw,42px) 'Yatra One','Tiro Devanagari Marathi',serif;color:#74172d;line-height:1.5;margin:13px auto}
 .parent-line{font-size:14px;line-height:1.9;color:#6c4b3c;margin:5px auto}
 .main-date{font-size:clamp(21px,4.8vw,30px);color:#a11b32;line-height:1.6;margin:10px auto}
+.date-reveal{width:min(100%,570px);margin:22px auto 18px;text-align:center}
+.date-reveal-eyebrow{font:600 9px 'DM Sans',sans-serif;letter-spacing:.2em;color:#9b6c38;margin-bottom:9px}
+.date-reveal-stage{position:relative;isolation:isolate;overflow:hidden;padding:18px 12px 20px;min-height:154px;background:linear-gradient(120deg,#fffaf0,#f2dfb9 50%,#fff8e9);border-top:1px solid #c99d50;border-bottom:1px solid #c99d50;box-shadow:inset 0 0 0 5px #fff8e9,inset 0 0 0 6px #dfc183}
+.date-reveal-stage:before{content:"✦";position:absolute;top:7px;left:50%;transform:translateX(-50%);font-size:13px;color:#b98b42;z-index:1}
+.date-reveal-copy{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:115px}
+.date-day{font-size:16px;color:#806044;opacity:0;transform:translateY(22px)}
+.date-full{font:clamp(26px,6vw,38px) 'Yatra One','Tiro Devanagari Marathi',serif;line-height:1.45;color:#8d1b30;opacity:0;transform:translateY(28px)}
+.date-time{font-size:16px;color:#60372f;opacity:0;transform:translateY(23px)}
+.date-shutter{position:absolute;z-index:3;top:0;bottom:0;width:51%;background:linear-gradient(135deg,#4a0818,#83182d 52%,#530b1b);border:1px solid #d8b96f;box-shadow:inset 0 0 0 5px #5b0d20,inset 0 0 0 6px #d7b56d,0 3px 14px #4e102733;transition:transform 1.15s cubic-bezier(.72,0,.2,1)}
+.date-shutter:after{content:"❖";position:absolute;top:50%;color:#e8c77f;font-size:20px;text-shadow:0 0 10px #f4d99366}
+.date-shutter.left{left:0;border-right:2px solid #e4c274}
+.date-shutter.left:after{right:12px;transform:translateY(-50%)}
+.date-shutter.right{right:0;border-left:2px solid #e4c274}
+.date-shutter.right:after{left:12px;transform:translateY(-50%)}
+.date-reveal.is-playing .date-shutter.left{transform:translateX(-102%)}
+.date-reveal.is-playing .date-shutter.right{transform:translateX(102%)}
+.date-reveal.is-playing .date-day{animation:date-slide-up .65s .52s cubic-bezier(.2,.8,.2,1) forwards}
+.date-reveal.is-playing .date-full{animation:date-slide-up .8s .68s cubic-bezier(.2,.8,.2,1) forwards}
+.date-reveal.is-playing .date-time{animation:date-slide-up .7s .86s cubic-bezier(.2,.8,.2,1) forwards}
+.date-reveal.is-playing .date-reveal-stage:after{content:"";position:absolute;z-index:2;top:-20%;bottom:-20%;left:-30%;width:20%;background:linear-gradient(90deg,transparent,#fff8d9aa,transparent);transform:skewX(-18deg);animation:date-glint .9s .48s ease-out forwards}
+@keyframes date-slide-up{to{opacity:1;transform:translateY(0)}}
+@keyframes date-glint{to{left:125%}}
+@media(prefers-reduced-motion:reduce){.date-day,.date-full,.date-time{opacity:1;transform:none}.date-shutter{display:none}.date-reveal.is-playing .date-day,.date-reveal.is-playing .date-full,.date-reveal.is-playing .date-time{animation:none;opacity:1;transform:none}.date-reveal.is-playing .date-reveal-stage:after{display:none}}
+
 .invitation-message{max-width:630px;font-size:15px;line-height:2;color:#5d3e34;margin:15px auto}
 .decorated-separator{font-size:22px;color:#bd8c42;margin:16px 0}
 .page-photo{width:min(100%,450px);margin:20px auto 0;position:relative}
@@ -158,7 +182,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #f7d984;outline-offset:4p
     <div class="inner-title">सस्नेह निमंत्रण</div>
     <div class="inner-names">ऋतिकेश ♥ सपना</div>
     <div class="inner-rule"></div>
-    <div class="inner-date">२८ डिसेंबर २०२६</div>
+    <div class="inner-date">एक मंगल सोहळा</div>
     <div style="font-size:23px;color:#ae7e39;margin-top:15px">❖ ✧ ❖</div>
    </div>
    <div class="book-cover" id="bookCover">
@@ -170,7 +194,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #f7d984;outline-offset:4p
       <div class="cover-main">शुभ विवाह</div>
       <div class="cover-couple">ऋतिकेश ♥ सपना</div>
       <div class="cover-divider"></div>
-      <div class="cover-date">२८ डिसेंबर २०२६</div>
+      <div class="cover-date">एक मंगल सोहळा तुमची वाट पाहतोय</div>
      </div>
     </div>
     <div class="cover-back"></div>
@@ -200,8 +224,18 @@ button:focus-visible,a:focus-visible{outline:2px solid #f7d984;outline-offset:4p
     <div class="couple-names">चि. ऋतिकेश <span style="color:#b88740">♥</span> चि. सौ. कां. सपना</div>
     <p class="invitation-message">आनंदाचे क्षण, प्रेमाची साथ आणि नव्या आयुष्याची सुंदर सुरुवात… या मंगल सोहळ्याचे साक्षीदार होण्यासाठी आपण सहकुटुंब उपस्थित राहावे, ही आग्रहाची विनंती.</p>
     <div class="gold-rule"></div>
-    <div class="main-date">सोमवार, दि. २८ डिसेंबर २०२६</div>
-    <div class="page-subtitle">दुपारी १:१० वाजता</div>
+    <div class="date-reveal" id="dateRevealMain">
+     <div class="date-reveal-eyebrow">शुभदिनाची तारीख · THE WEDDING DATE</div>
+     <div class="date-reveal-stage">
+      <div class="date-reveal-copy">
+       <div class="date-day">सोमवार</div>
+       <div class="date-full">दि. २८ डिसेंबर २०२६</div>
+       <div class="date-time">दुपारी १:१० वाजता</div>
+      </div>
+      <div class="date-shutter left" aria-hidden="true"></div>
+      <div class="date-shutter right" aria-hidden="true"></div>
+     </div>
+    </div>
     <div class="parent-line">सौ. संगीता व श्री. दीपक काशिनाथ वाघ</div>
     <div class="parent-line">सौ. लता व श्री. विष्णू निवृत्ती पवार</div>
     <div class="decorated-separator">❖ ✦ ❖</div>
@@ -219,8 +253,18 @@ button:focus-visible,a:focus-visible{outline:2px solid #f7d984;outline-offset:4p
     <h2 class="page-title">तारीख लक्षात ठेवा</h2>
     <p class="page-subtitle">आमच्या आयुष्यातील या मंगल दिवसासाठी आपणांस सस्नेह निमंत्रण.</p>
     <div class="decorated-separator">❖</div>
-    <div class="main-date">सोमवार, २८ डिसेंबर २०२६</div>
-    <div class="page-subtitle">विवाह मुहूर्त · दुपारी १:१० वाजता</div>
+    <div class="date-reveal" id="dateRevealSave">
+     <div class="date-reveal-eyebrow">SAVE THE DATE · शुभविवाह</div>
+     <div class="date-reveal-stage">
+      <div class="date-reveal-copy">
+       <div class="date-day">सोमवार</div>
+       <div class="date-full">२८ डिसेंबर २०२६</div>
+       <div class="date-time">विवाह मुहूर्त · दुपारी १:१० वाजता</div>
+      </div>
+      <div class="date-shutter left" aria-hidden="true"></div>
+      <div class="date-shutter right" aria-hidden="true"></div>
+     </div>
+    </div>
     <div class="countdown-panel" id="countdown">
      <div class="count-box"><strong>--</strong><span>दिवस</span></div>
      <div class="count-box"><strong>--</strong><span>तास</span></div>
@@ -388,10 +432,18 @@ button:focus-visible,a:focus-visible{outline:2px solid #f7d984;outline-offset:4p
  book.addEventListener('click',openBook);
  book.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openBook();}});
  document.getElementById('skipIntro').addEventListener('click',showMain);
+ function replayDateReveal(page){
+  page.querySelectorAll('.date-reveal').forEach(el=>{
+   el.classList.remove('is-playing');
+   void el.offsetWidth;
+   requestAnimationFrame(()=>el.classList.add('is-playing'));
+  });
+ }
  function showPage(n){
   current=Math.max(0,Math.min(5,n));
   pages.forEach((p,i)=>p.classList.toggle('active',i===current));
   dots.forEach((d,i)=>d.classList.toggle('active',i===current));
+  replayDateReveal(pages[current]);
   counter.textContent=String(current+1).padStart(2,'0')+' / 06';
   previous.disabled=current===0;
   next.textContent=current===5?'पुन्हा सुरुवात ↺':'पुढे →';
