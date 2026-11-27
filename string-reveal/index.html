@@ -541,6 +541,87 @@ h2{color:#214c43}
  font-family:'Tiro Devanagari Marathi',serif;font-weight:600;letter-spacing:.01em
 }
 .invite-venue span{font-family:'Yatra One','Tiro Devanagari Marathi',serif}
+
+/* CINEMATIC WEDDING INVITATION ENHANCEMENTS */
+.journey-book-stage{position:relative;isolation:isolate}
+.book-petals{position:absolute;inset:-30px -38px;z-index:0;pointer-events:none;overflow:hidden}
+.book-petals i{position:absolute;display:block;color:#c89a4e;font-style:normal;font-size:17px;opacity:0;filter:drop-shadow(0 2px 4px #b88b4b33);animation:book-petal-drift 5.8s ease-in-out infinite}
+.book-petals i:nth-child(1){left:6%;top:19%;animation-delay:-.4s}
+.book-petals i:nth-child(2){left:14%;top:74%;font-size:12px;animation-delay:-2.2s}
+.book-petals i:nth-child(3){right:8%;top:16%;animation-delay:-3.1s}
+.book-petals i:nth-child(4){right:12%;top:69%;font-size:20px;animation-delay:-1.4s}
+.book-petals i:nth-child(5){left:28%;top:3%;font-size:11px;animation-delay:-4.3s}
+.book-petals i:nth-child(6){right:29%;bottom:0;font-size:13px;animation-delay:-2.7s}
+@keyframes book-petal-drift{0%{opacity:0;transform:translate3d(0,16px,0) rotate(-25deg) scale(.75)}18%{opacity:.82}72%{opacity:.7}100%{opacity:0;transform:translate3d(12px,-40px,0) rotate(45deg) scale(1.08)}}
+
+/* The zipper teeth separate as the slider travels down. */
+.pull-date-zip-teeth{transition:opacity .55s ease,transform .65s cubic-bezier(.2,.8,.2,1)}
+.pull-date-zip-teeth:before,.pull-date-zip-teeth:after{transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .55s ease}
+.pull-date-window.is-revealed .pull-date-zip-teeth:before{transform:translate(-7px,28px) rotate(-3deg);opacity:0}
+.pull-date-window.is-revealed .pull-date-zip-teeth:after{transform:translate(7px,28px) rotate(3deg);opacity:0}
+.pull-date-window.is-revealed .pull-date-zip-teeth{opacity:0}
+.pull-date-zip-slider{filter:drop-shadow(0 0 5px #ffe5a0aa);transition:filter .5s ease}
+.pull-date-window.is-revealed .pull-date-zip-slider{filter:drop-shadow(0 0 10px #ffe5a0)}
+
+/* Main invitation: draw the gold outline, then reveal the printed details in sequence. */
+.cinematic-invite-card:after{clip-path:inset(0 100% 0 0)}
+.cinematic-invite-card.card-inview:after{animation:invitation-border-draw 1.35s .1s ease-out forwards}
+@keyframes invitation-border-draw{to{clip-path:inset(0 0 0 0)}}
+.cinematic-invite-card>.couple-details,.cinematic-invite-card>p,.cinematic-invite-card>.invite-venue,.cinematic-invite-card>.invite-wishes{opacity:0;transform:translateY(16px);transition:opacity .72s ease,transform .72s cubic-bezier(.2,.75,.25,1)}
+.cinematic-invite-card.card-inview>.couple-details{opacity:1;transform:none;transition-delay:.18s}
+.cinematic-invite-card.card-inview>p:nth-of-type(1){opacity:1;transform:none;transition-delay:.35s}
+.cinematic-invite-card.card-inview>p:nth-of-type(2){opacity:1;transform:none;transition-delay:.52s}
+.cinematic-invite-card.card-inview>p:nth-of-type(3){opacity:1;transform:none;transition-delay:.68s}
+.cinematic-invite-card.card-inview>p:nth-of-type(4){opacity:1;transform:none;transition-delay:.84s}
+.cinematic-invite-card.card-inview>.invite-venue{opacity:1;transform:none;transition-delay:1s}
+.cinematic-invite-card.card-inview>.invite-wishes{opacity:1;transform:none;transition-delay:1.18s}
+.invitation-heading-mark{position:relative;text-shadow:0 0 16px #c6a66a22}
+.invitation-heading-mark:after{content:"";display:block;width:0;height:1px;margin:8px auto 0;background:linear-gradient(90deg,transparent,#c6a66a,transparent);transition:width 1.2s ease}
+#invitation.visible .invitation-heading-mark:after{width:min(240px,65%)}
+
+/* Flip-clock countdown */
+.countdown{position:relative;isolation:isolate;overflow:hidden}
+.countdown-glow{position:absolute;z-index:-1;left:50%;top:-150px;width:min(90vw,680px);height:360px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,#c6a66a24,transparent 68%);pointer-events:none}
+.flip-clock{gap:clamp(9px,2vw,16px);margin-top:30px}
+.flip-count-box{min-width:clamp(67px,15vw,112px);padding:13px 10px 12px;border:1px solid #c6a66a88;background:linear-gradient(145deg,#ffffff0d,#ffffff03);box-shadow:0 12px 28px #140d0b26,inset 0 1px #fff2d533;border-radius:4px}
+.flip-number{position:relative;display:grid;place-items:center;min-height:58px;padding:0 4px;font:600 clamp(27px,6vw,39px)/1 'DM Sans',sans-serif;color:#f0d79c;font-variant-numeric:tabular-nums;letter-spacing:.04em;text-shadow:0 2px 14px #e2be7133;transform-style:preserve-3d}
+.flip-number:after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#f0d79c38;box-shadow:0 1px #20171455}
+.flip-number.is-flipping{animation:count-flip .42s cubic-bezier(.2,.7,.25,1)}
+@keyframes count-flip{0%{transform:rotateX(0);opacity:1}45%{transform:rotateX(-72deg);opacity:.42}100%{transform:rotateX(0);opacity:1}}
+.flip-count-box span{display:block;margin-top:8px;font:12px 'Tiro Devanagari Marathi',serif;color:#e2d4c0}
+.countdown-message{min-height:25px;margin:16px 0 0;color:#f3d99e;font-size:16px}
+
+/* Memories and event cards lift into view as guests scroll. */
+.memory-enter{opacity:0;translate:0 22px;transition:opacity .78s ease,translate .78s cubic-bezier(.2,.75,.25,1)}
+.memory-enter.memory-visible{opacity:1;translate:0 0}
+.couple-memory img{filter:blur(4px);transform:scale(1.025);transition:filter .9s ease,transform 1.2s cubic-bezier(.2,.75,.25,1)}
+.couple-memory.memory-visible img{filter:blur(0);transform:scale(1)}
+.memory-card{will-change:translate}
+.memory-card:hover{translate:0 -4px}
+.event{will-change:translate}
+.event:hover{translate:0 -3px}
+
+/* Soft halo around the haldi and wedding symbols. */
+.event .symbol{position:relative}
+.event .symbol:after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid #c6a66a33;animation:diya-aura 3.2s ease-in-out infinite}
+.event:nth-child(2) .symbol:after{animation-delay:1.1s}
+@keyframes diya-aura{0%,100%{transform:scale(.9);opacity:.3}50%{transform:scale(1.18);opacity:.8}}
+@media(max-width:480px){
+ .flip-count-box{padding:11px 7px 10px;min-width:64px}
+ .flip-number{min-height:49px;font-size:clamp(25px,8vw,32px)}
+ .countdown{padding:54px 12px}
+ .book-petals{inset:-18px -14px}
+}
+@media(prefers-reduced-motion:reduce){
+ .book-petals i{animation:none;opacity:.3}
+ .pull-date-zip-teeth,.pull-date-zip-teeth:before,.pull-date-zip-teeth:after{transition:none}
+ .cinematic-invite-card>.couple-details,.cinematic-invite-card>p,.cinematic-invite-card>.invite-venue,.cinematic-invite-card>.invite-wishes{opacity:1;transform:none;transition:none}
+ .cinematic-invite-card:after{clip-path:none;animation:none}
+ .flip-number.is-flipping{animation:none}
+ .memory-enter{opacity:1;translate:0 0;transition:none}
+ .couple-memory img{filter:none;transform:none;transition:none}
+ .event .symbol:after{animation:none}
+}
 </style>
 </head>
 <body>
@@ -552,6 +633,7 @@ h2{color:#214c43}
   <div class="journey-page active" id="journeyPage1">
    <div class="journey-kicker">A TRADITIONAL INVITATION · A BEAUTIFUL BEGINNING</div>
    <div class="journey-book-stage">
+    <div class="book-petals" aria-hidden="true"><i>✿</i><i>✦</i><i>❋</i><i>✿</i><i>✧</i><i>❋</i></div>
     <div class="journey-book-wrap" id="journeyBook" role="button" tabindex="0" aria-expanded="false" aria-label="शुभविवाहाचे आमंत्रण पुस्तक उघडा">
      <div class="journey-book-glow"></div>
      <div class="journey-book-inner">
@@ -686,7 +768,7 @@ h2{color:#214c43}
   <div class="invite-ornament" aria-hidden="true">❖</div>
   <h2>आपले सहर्ष निमंत्रण</h2>
   <p class="intro">आनंदाचे क्षण, प्रेमाची साथ आणि नव्या आयुष्याची सुरुवात… या मंगल सोहळ्याचे साक्षीदार होण्यासाठी आपण सहकुटुंब उपस्थित राहावे, ही आग्रहाची विनंती.</p>
-  <div class="invite-card">
+  <div class="invite-card cinematic-invite-card">
    <div class="couple-details">
     <div class="person-detail">
      <p class="person-name">चि. ऋतिकेश</p>
@@ -736,7 +818,18 @@ h2{color:#214c43}
   </div>
  </div>
 </section>
-<div class="countdown"><div class="section-kicker" style="color:#e6c982">The big day is approaching</div><h2 class="mr" style="color:#fff6e8">आनंदाच्या दिवसाची उलटगणती</h2><div class="count-grid" id="timer"><div class="count-box"><strong>—</strong><span>दिवस</span></div><div class="count-box"><strong>—</strong><span>तास</span></div><div class="count-box"><strong>—</strong><span>मिनिटे</span></div><div class="count-box"><strong>—</strong><span>सेकंद</span></div></div></div>
+<div class="countdown" id="countdownSection">
+ <div class="countdown-glow" aria-hidden="true"></div>
+ <div class="section-kicker" style="color:#e6c982">The big day is approaching</div>
+ <h2 class="mr" style="color:#fff6e8">आनंदाच्या दिवसाची उलटगणती</h2>
+ <div class="count-grid flip-clock" id="timer" role="timer" aria-label="विवाह सोहळ्याची उलटगणती">
+  <div class="flip-count-box"><div class="flip-number" data-unit="days">--</div><span>दिवस</span></div>
+  <div class="flip-count-box"><div class="flip-number" data-unit="hours">--</div><span>तास</span></div>
+  <div class="flip-count-box"><div class="flip-number" data-unit="minutes">--</div><span>मिनिटे</span></div>
+  <div class="flip-count-box"><div class="flip-number" data-unit="seconds">--</div><span>सेकंद</span></div>
+ </div>
+ <p class="countdown-message mr" id="countdownMessage" aria-live="polite"></p>
+</div>
 <section id="memories" style="background:#f2e9d9">
  <div class="wrap">
   <div class="section-kicker">A little scroll through our story</div>
@@ -778,22 +871,40 @@ h2{color:#214c43}
 </main>
 <footer class="footer"><div class="mr" style="color:#e6c982">॥ श्री गणेशाय नमः ॥</div><div class="names mr">ऋतिकेश & सपना</div><p>आपली उपस्थिती आणि आशीर्वाद<br>हीच आमच्यासाठी अनमोल भेट.</p><div class="small">With love, from both families · 2026</div></footer>
 <script>
-const target = new Date('2026-12-28T13:10:00+05:30').getTime();
-const timer = document.getElementById('timer');
-function tick(){
- const diff=target-Date.now();
- if(diff<=0){timer.innerHTML='<p class="mr">आज आपल्या आनंदाचा दिवस आहे! 🎉</p>';return;}
- const vals=[Math.floor(diff/86400000),Math.floor(diff%86400000/3600000),Math.floor(diff%3600000/60000),Math.floor(diff%60000/1000)];
- const labels=['दिवस','तास','मिनिटे','सेकंद'];
- timer.innerHTML=vals.map((v,i)=>`<div class="count-box"><strong>${String(v).padStart(2,'0')}</strong><span>${labels[i]}</span></div>`).join('');
-}
-tick();setInterval(tick,1000);
+(() => {
+ const target=new Date('2026-12-28T13:10:00+05:30').getTime();
+ const numbers=Array.from(document.querySelectorAll('#timer .flip-number'));
+ const message=document.getElementById('countdownMessage');
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let finished=false;
+ function setNumber(node,value){
+  const next=String(value).padStart(2,'0');
+  if(node.textContent===next)return;
+  node.textContent=next;
+  if(reduced)return;
+  node.classList.remove('is-flipping');void node.offsetWidth;node.classList.add('is-flipping');
+ }
+ function tick(){
+  const diff=Math.max(0,target-Date.now());
+  const values=[Math.floor(diff/86400000),Math.floor(diff%86400000/3600000),Math.floor(diff%3600000/60000),Math.floor(diff%60000/1000)];
+  numbers.forEach((node,index)=>setNumber(node,values[index]));
+  if(diff===0&&!finished){finished=true;message.textContent='आज आपल्या आनंदाचा दिवस आहे! शुभमंगल! ✨';}
+ }
+ tick();window.setInterval(tick,1000);
+})();
 </script>
 
 <script>
 (() => {
  const revealTargets=document.querySelectorAll('main section, .countdown, .footer, .hero-inner');
  revealTargets.forEach(el=>el.classList.add('reveal'));
+ const memoryTargets=document.querySelectorAll('#memories .couple-memory, #memories .memory-card, .events .event');
+ memoryTargets.forEach((el,i)=>{el.classList.add('memory-enter');el.style.transitionDelay=(Math.min(i%3,2)*120)+'ms';});
+ const memoryObserver=('IntersectionObserver' in window)?new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('memory-visible');memoryObserver.unobserve(entry.target);}});
+ },{threshold:.16}):null;
+ if(memoryObserver)memoryTargets.forEach(el=>memoryObserver.observe(el));
+ else memoryTargets.forEach(el=>el.classList.add('memory-visible'));
  const textTargets=document.querySelectorAll('#invitation h2,#invitation .intro,#invitation .person-detail,#invitation .invite-card>p,.event h3,.event p,#memories h2,#memories .intro,.location-panel h3,.location-panel p');
  textTargets.forEach((el,i)=>{el.classList.add('text-reveal');el.style.transitionDelay=(Math.min(i%5,4)*90)+'ms';});
  if ('IntersectionObserver' in window) {
@@ -801,6 +912,8 @@ tick();setInterval(tick,1000);
      entries.forEach(entry=>{
        if(entry.isIntersecting){
          entry.target.classList.add('visible');
+         const featuredCard=entry.target.querySelector('.cinematic-invite-card');
+         if(featuredCard)featuredCard.classList.add('card-inview');
          entry.target.querySelectorAll('.text-reveal').forEach(el=>el.classList.add('text-visible'));
          if(entry.target.classList.contains('text-reveal')) entry.target.classList.add('text-visible');
          observer.unobserve(entry.target);
@@ -809,7 +922,11 @@ tick();setInterval(tick,1000);
    },{threshold:.12});
    revealTargets.forEach(el=>observer.observe(el));
  } else {
-   revealTargets.forEach(el=>el.classList.add('visible'));
+   revealTargets.forEach(el=>{
+    el.classList.add('visible');
+    const featuredCard=el.querySelector('.cinematic-invite-card');
+    if(featuredCard)featuredCard.classList.add('card-inview');
+   });
    textTargets.forEach(el=>el.classList.add('text-visible'));
  }
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) textTargets.forEach(el=>el.classList.add('text-visible'));
