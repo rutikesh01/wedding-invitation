@@ -480,6 +480,8 @@ h2{color:#214c43}
 .journey-book-stage{width:min(100%,390px);margin:22px auto 0;padding:8px 0 4px;perspective:1800px}
 .journey-book-wrap{width:min(68vw,270px);aspect-ratio:.73;margin:0 auto;position:relative;perspective:1800px;filter:drop-shadow(0 22px 18px #2b111b45);cursor:pointer;outline:none}
 .journey-book-wrap:focus-visible{outline:2px solid #c69c54;outline-offset:10px;border-radius:12px}
+.journey-book-glow{position:absolute;inset:-22px;border-radius:50%;background:radial-gradient(ellipse,#efc77930,transparent 66%);z-index:-1;animation:journey-glow 3s ease-in-out infinite}
+@keyframes journey-glow{50%{opacity:.4;transform:scale(1.1)}}
 .journey-book-inner{position:absolute;inset:0;border-radius:7px 12px 12px 7px;background:linear-gradient(90deg,#dfc58d 0,#fff2d4 5%,#f7e6c3 100%);border:2px solid #d8b56b;box-shadow:inset 9px 0 13px #5d351e25;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:17px 22px;color:#4c2027;overflow:hidden}
 .journey-book-inner:before{content:"";position:absolute;inset:12px;border:1px solid #ba8a3e;outline:1px solid #d1ad69;outline-offset:4px;pointer-events:none}
 .journey-inner-ganesh{font-size:clamp(24px,7vw,34px);color:#a87b31;margin-bottom:12px}
@@ -492,6 +494,8 @@ h2{color:#214c43}
 .journey-book-cover{position:absolute;inset:0;z-index:3;transform-origin:left center;transform-style:preserve-3d;transition:transform 1.75s cubic-bezier(.65,.05,.25,1);border-radius:7px 12px 12px 7px}
 .journey-book-wrap.opened .journey-book-cover{transform:rotateY(-166deg)}
 .journey-cover-front,.journey-cover-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:7px 12px 12px 7px;overflow:hidden}
+.journey-cover-back{background:linear-gradient(130deg,#5a0b1d,#8d1d32);border:2px solid #d6ad58;transform:rotateY(180deg)}
+.journey-cover-back:before{content:"";position:absolute;inset:14px;border:1px solid #e6c77f}
 .journey-cover-front{background:radial-gradient(circle at 50% 34%,#8d2536 0,#650d22 47%,#3a0713 100%);border:3px double #d6ad58;box-shadow:inset 0 0 0 8px #4a0a19,inset 0 0 0 10px #d0a24f,inset 0 0 38px #17030a}
 .journey-cover-front:before{content:"";position:absolute;inset:17px;border:1px solid #e4c47b;outline:1px dashed #c89c4e;outline-offset:5px}
 .journey-cover-front:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 19px,#f2d18d09 20px 21px),radial-gradient(circle at 50% 50%,transparent 0 36%,#e6c06b0c 37% 38%,transparent 39%);pointer-events:none}
@@ -528,7 +532,8 @@ h2{color:#214c43}
   <div class="journey-page active" id="journeyPage1">
    <div class="journey-kicker">A TRADITIONAL INVITATION · A BEAUTIFUL BEGINNING</div>
    <div class="journey-book-stage">
-    <div class="journey-book-wrap" id="journeyBook" role="button" tabindex="0" aria-label="शुभविवाहाचे आमंत्रण पुस्तक उघडा">
+    <div class="journey-book-wrap" id="journeyBook" role="button" tabindex="0" aria-expanded="false" aria-label="शुभविवाहाचे आमंत्रण पुस्तक उघडा">
+     <div class="journey-book-glow"></div>
      <div class="journey-book-inner">
       <div class="journey-inner-ganesh">॥ श्री गणेशाय नमः ॥</div>
       <div class="journey-inner-title mr">सस्नेह निमंत्रण</div>
@@ -828,7 +833,7 @@ tick();setInterval(tick,1000);
  const book=document.getElementById('journeyBook');
  const openBook=()=>{
   if(book.classList.contains('opened'))return;
-  book.classList.add('opened');document.getElementById('journeyBookNote').textContent='आपले सस्नेह स्वागत आहे…';celebrate(book);
+  book.classList.add('opened');book.setAttribute('aria-expanded','true');document.getElementById('journeyBookNote').textContent='आपले सस्नेह स्वागत आहे…';celebrate(book);
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   setTimeout(()=>{if(root.isConnected)go(2);},reduced?100:1850);
  };
