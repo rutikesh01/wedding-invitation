@@ -1046,6 +1046,8 @@ body.theme-peshwai .invite-ornament{color:#a77b3e}
   stage.classList.add('is-open');
   handle.setAttribute('aria-expanded','true');
   handle.setAttribute('aria-label','राजदरबारी पत्र उघडले आहे');
+  const documentEl=stage.querySelector('.royal-document');
+  if(documentEl)documentEl.setAttribute('aria-hidden','false');
   handle.style.setProperty('--pull-offset','65px');
   const continueButton=document.getElementById('showInvitation');
   if(continueButton)continueButton.disabled=false;
